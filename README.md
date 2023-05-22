@@ -1,5 +1,8 @@
 # userscripts
 
+# Trackers
+https://raw.githubusercontent.com/rushiranpise/userscripts/main/trackers.txt
+
 Install
 
 [BypassAllShortlinks](https://github.com/rushiranpise/userscripts/raw/main/Bypass%20All%20Shortlinks.user.js)

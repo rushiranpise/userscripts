@@ -16,10 +16,9 @@
 // @match      *://namemegablog.com/*
 // @match      *://doctor-groups.com/*
 // @match      *://link.turkdown.com/*
-// @match      *://intercelestial.com/*
 // @match      *://safe.intipanime.com/*
 // @grant      none
-// @version    3.9
+// @version    4.0
 // @author     Bloggerpemula
 // @run-at     document-start
 // @description Bypass Addition for Bypass All Shortlinks

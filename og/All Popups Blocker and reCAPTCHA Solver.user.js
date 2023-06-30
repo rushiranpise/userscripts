@@ -1,9 +1,8 @@
 // ==UserScript==
 // @name        All Popups Blocker and reCAPTCHA Solver
 // @namespace   Violentmonkey Scripts
-// @include     /^(https?:\/\/)(.+)?(shortzon|coinadfly|fc-lc|claimclicks)(\.com)(\/.*)/
+// @include     /^(https?:\/\/)(.+)?(shortzon|coinadfly|fc-lc)(\.com)(\/.*)/
 // @include     /^(https?:\/\/)(.+)?(downfile|promo-visits)(\.site)(\/.*)/
-// @include     /^(https?:\/\/)(.+)?(bcvc|satoshi-win)(\.xyz)(\/.*)/
 // @include     /^(https?:\/\/)(1dogecoin|faucet)(\.work)(\/.*)/
 // @match       *://*.filesearch.link/*
 // @match       *://*.trangchu.news/*
@@ -11,16 +10,13 @@
 // @match       *://*.bitcoinly.in/*
 // @match       *://*.cryptosh.pro/*
 // @match       *://*.vshort.link/*
-// @match       *://*.linka.click/*
-// @match       *://*.linkres.in/*
 // @match       *://*.cashurl.in/*
-// @match       *://*.linkad.in/*
 // @match       *://*.cuturl.in/*
 // @match       *://*.mitly.us/*
 // @match       *://*.aii.sh/*
 // @match       *://*.iir.ai/*
 // @match       *://*/recaptcha/*
-// @version     4.6
+// @version     4.7
 // @author      Blogger Pemula
 // @run-at      document-start
 // @license     GPL-3.0-or-later

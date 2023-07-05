@@ -1,5 +1,9 @@
 // ==UserScript==
 // @name        All Popups Blocker and reCAPTCHA Solver
+// @updateURL https://github.com/rushiranpise/userscripts/raw/main/All Popups Blocker and reCAPTCHA Solver.user.js
+// @downloadURL https://github.com/rushiranpise/userscripts/raw/main/All Popups Blocker and reCAPTCHA Solver.user.js
+// @updateURL https://github.com/rushiranpise/userscripts/raw/main/All%20Popups%20Blocker%20and%20reCAPTCHA%20Solver.user.js
+// @downloadURL https://github.com/rushiranpise/userscripts/raw/main/All%20Popups%20Blocker%20and%20reCAPTCHA%20Solver.user.js
 // @namespace   Violentmonkey Scripts
 // @include     /^(https?:\/\/)(.+)?(shortzon|coinadfly|fc-lc)(\.com)(\/.*)/
 // @include     /^(https?:\/\/)(.+)?(downfile|promo-visits)(\.site)(\/.*)/
@@ -15,7 +19,7 @@
 // @match       *://*.mitly.us/*
 // @match       *://*.aii.sh/*
 // @match       *://*.iir.ai/*
-// @match       *://*/recaptcha/*
+// @match       *://*/adguardteam.github.io/*
 // @version     4.7
 // @author      Blogger Pemula
 // @run-at      document-start

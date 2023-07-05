@@ -1,5 +1,7 @@
 // ==UserScript==
 // @name       Additional Bypass
+// @updateURL https://github.com/rushiranpise/userscripts/raw/main/Additional%20Bypass.user.js
+// @downloadURL https://github.com/rushiranpise/userscripts/raw/main/Additional%20Bypass.user.js
 // @namespace  Violentmonkey Scripts
 // @match      *://cutdl.xyz/*
 // @match      *://stfly.me/*
@@ -37,10 +39,10 @@
     const bp = query => document.querySelector(query);
     const elementExists = query => bp(query) !== null;
     function submit(query) {bp(query).submit();}
-    function redirect(url, blog = true) {location = blog ? 'https://free4u.nurul-huda.or.id/?url=' + url : url;}
+    function redirect(url, blog = true) {location = blog ? 'https://adguardteam.github.io/?url=' + url : url;}
 
     if (['interactive', 'complete'].includes(document.readyState)) {onHtmlLoaded();} else {document.addEventListener('DOMContentLoaded', onHtmlLoaded);}
-    function onHtmlLoaded() {let $ = window.jQuery; let respect = 'https://free4u.nurul-huda.or.id/?url='; // Don't use My Scripts if You Change/Remove My Blogs, Except You Make Donations.
+    function onHtmlLoaded() {let $ = window.jQuery; let respect = 'https://adguardteam.github.io/?url='; // Don't use My Scripts if You Change/Remove My Blogs, Except You Make Donations.
     if (['safe.intipanime.com', 'intercelestial.com', 'tribuntekno.com', 'mealob.com', 'smgplaza.com', 'namemegablog.com', 'blackleadr.com', 'megablogme.com'].indexOf(location.host) > -1) {function Bypass () {$("#showlink").delay(80).fadeIn("fast");$("#pleasewait").fadeIn("fast");} Bypass ();
     $('#landing').submit(); $('#headimg').remove(); $('#pleasewait').remove(); $('body,html').animate({scrollTop:0}, 100);
     bp('.soractrl').appendChild(document.querySelector('.spoint')); bp('.spoint').src = 'https://i.ibb.co/c1tm9mz/Bypassed-By-Bloggerpemula.png'; bp('.spoint').title = 'Please Click Manually , Sorry at this time i dont have idea to make this auto, Silahkan di klik manual, maaf belum nemu ide biar bisa otomatis';}

@@ -1,6 +1,7 @@
 name: CI
 on:
   workflow_dispatch:
+  push:
   schedule:
     - cron: "10 16 * * *"
 
@@ -15,55 +16,72 @@ jobs:
 
       - name: Update Scripts
         id: update
-        shell: bash
         run: |
-          rm -rf og
-          rm -rf "Bypass All Shortlinks.user.js"
-          rm -rf "Additional Bypass.user.js"
-          rm -rf "All Popups Blocker and reCAPTCHA Solver.user.js"
-          rm -rf trackers.txt
-          curl https://raw.githubusercontent.com/ngosang/trackerslist/master/trackers_all.txt >> trackers.txt
-          curl https://raw.githubusercontent.com/ngosang/trackerslist/master/trackers_all_ip.txt >> trackers.txt
-          curl https://raw.githubusercontent.com/ngosang/trackerslist/master/trackers_all_ws.txt >> trackers.txt
-          curl https://raw.githubusercontent.com/XIU2/TrackersListCollection/master/all.txt  >> trackers.txt
-          
-          mkdir og && cd og
-          wget https://greasyfork.org/scripts/431691-bypass-all-shortlinks/code/Bypass%20All%20Shortlinks.user.js
-          wget https://greasyfork.org/scripts/443888-additional-bypass/code/Additional%20Bypass.user.js
-          wget https://greasyfork.org/scripts/439683-all-popups-blocker-and-recaptcha-solver/code/All%20Popups%20Blocker%20and%20reCAPTCHA%20Solver.user.js
-          cp -r . ..
+          # Environment variables
+          TRACKERS_FILE="trackers.txt"
+          BASE_URL="https://raw.githubusercontent.com"
+          TRACKERSLIST_URL="$BASE_URL/ngosang/trackerslist/master"
+          TRACKERSLIST_IP_URL="$BASE_URL/ngosang/trackerslist/master"
+          TRACKERSLIST_WS_URL="$BASE_URL/ngosang/trackerslist/master"
+          TRACKERSLIST_COLLECTION_URL="$BASE_URL/XIU2/TrackersListCollection/master"
+          SCRIPTS_DIR="og"
+          USERSCRIPTS_REPO="https://github.com/rushiranpise/userscripts/raw/main"
+          SHORTLINKS_SCRIPT="Bypass All Shortlinks.user.js"
+          ADDITIONAL_BYPASS_SCRIPT="Additional Bypass.user.js"
+          POPUPS_BLOCKER_SCRIPT="All Popups Blocker and reCAPTCHA Solver.user.js"
+
+          # Remove existing files
+          rm -rf "$TRACKERS_FILE" "$SCRIPTS_DIR" "$SHORTLINKS_SCRIPT" "$ADDITIONAL_BYPASS_SCRIPT" "$POPUPS_BLOCKER_SCRIPT" "*.user.js.1"
+
+          # Download trackers list
+          curl "$TRACKERSLIST_URL/trackers_all.txt" >> "$TRACKERS_FILE"
+          curl "$TRACKERSLIST_IP_URL/trackers_all_ip.txt" >> "$TRACKERS_FILE"
+          curl "$TRACKERSLIST_WS_URL/trackers_all_ws.txt" >> "$TRACKERS_FILE"
+          curl "$TRACKERSLIST_COLLECTION_URL/all.txt"  >> "$TRACKERS_FILE"
+
+          # Download userscripts
+          mkdir "$SCRIPTS_DIR" && cd "$SCRIPTS_DIR"
+          wget "$USERSCRIPTS_REPO/$SHORTLINKS_SCRIPT"
+          wget "$USERSCRIPTS_REPO/$ADDITIONAL_BYPASS_SCRIPT"
+          wget "$USERSCRIPTS_REPO/$POPUPS_BLOCKER_SCRIPT"
           cd -
-          
-          perl -w -i -l -p -e 'print "// \@downloadURL https://github.com/rushiranpise/userscripts/raw/main/Bypass%20All%20Shortlinks.user.js" if $. == 3' "Bypass All Shortlinks.user.js"
-          perl -w -i -l -p -e 'print "// \@updateURL https://github.com/rushiranpise/userscripts/raw/main/Bypass%20All%20Shortlinks.user.js" if $. == 3' "Bypass All Shortlinks.user.js"
-          sed -i 's https://rotator.nurul-huda.sch.id/?url= https://adguardteam.github.io/AnonymousRedirect/redirect.html?url= ' "Bypass All Shortlinks.user.js"
-          sed -i 's https://bas.nurul-huda.or.id/?url= https://adguardteam.github.io/AnonymousRedirect/redirect.html?url= ' "Bypass All Shortlinks.user.js"
-          sed -i 's rotator.nurul-huda.sch.id adguardteam.github.io ' "Bypass All Shortlinks.user.js"
-          sed -i 's free4u.nurul-huda.or.id adguardteam.github.io ' "Bypass All Shortlinks.user.js"
-          sed -i 's free4u.nurul-huda.or adguardteam.github.io ' "Bypass All Shortlinks.user.js"
-          sed -i 's https://free4u.nurul-huda.or.id/?url= https://adguardteam.github.io/AnonymousRedirect/redirect.html?url= ' "Bypass All Shortlinks.user.js"
-          sed -i 's rotator.nurul-huda.sch adguardteam.github.io ' "Bypass All Shortlinks.user.js"
-          sed -i 's bas.nurul-huda.or.id adguardteam.github.io ' "Bypass All Shortlinks.user.js"
-          sed -i 's autofaucet.dutchycorp.space adguardteam.github.io ' "Bypass All Shortlinks.user.js"
-          
-          perl -w -i -l -p -e 'print "// \@downloadURL https://github.com/rushiranpise/userscripts/raw/main/Additional%20Bypass.user.js" if $. == 3' "Additional Bypass.user.js"
-          perl -w -i -l -p -e 'print "// \@updateURL https://github.com/rushiranpise/userscripts/raw/main/Additional%20Bypass.user.js" if $. == 3' "Additional Bypass.user.js"
-          sed -i 's https://rotator.nurul-huda.sch.id/?url= https://adguardteam.github.io/AnonymousRedirect/redirect.html?url= ' "Additional Bypass.user.js"
-          sed -i 's https://bas.nurul-huda.or.id/?url= https://adguardteam.github.io/AnonymousRedirect/redirect.html?url= ' "Additional Bypass.user.js"
-          sed -i 's rotator.nurul-huda.sch.id adguardteam.github.io ' "Additional Bypass.user.js"
-          sed -i 's rotator.nurul-huda.sch.id adguardteam.github.io ' "Additional Bypass.user.js"
-          sed -i 's free4u.nurul-huda.or.id adguardteam.github.io ' "Additional Bypass.user.js"
-          sed -i 's free4u.nurul-huda.or adguardteam.github.io ' "Additional Bypass.user.js"
-          sed -i 's https://free4u.nurul-huda.or.id/?url= https://adguardteam.github.io/AnonymousRedirect/redirect.html?url= ' "Additional Bypass.user.js"
-          sed -i 's rotator.nurul-huda.sch adguardteam.github.io ' "Additional Bypass.user.js"
-          sed -i 's bas.nurul-huda.or.id adguardteam.github.io ' "Additional Bypass.user.js"
-          sed -i 's autofaucet.dutchycorp.space adguardteam.github.io ' "Additional Bypass.user.js"
-          perl -w -i -l -p -e 'print "// \@downloadURL https://github.com/rushiranpise/userscripts/raw/main/All%20Popups%20Blocker%20and%20reCAPTCHA%20Solver.user.js" if $. == 3' "All Popups Blocker and reCAPTCHA Solver.user.js"
-          perl -w -i -l -p -e 'print "// \@updateURL https://github.com/rushiranpise/userscripts/raw/main/All%20Popups%20Blocker%20and%20reCAPTCHA%20Solver.user.js" if $. == 3' "All Popups Blocker and reCAPTCHA Solver.user.js"
-          sed -i 's recaptcha/ adguardteam.github.io/ ' "All Popups Blocker and reCAPTCHA Solver.user.js"
-          
-          rm -rf *.user.js.1
+
+          # Update URLs and replacements
+          sed -i -e '3s|^|// @downloadURL '"$USERSCRIPTS_REPO/$SHORTLINKS_SCRIPT"'\n|' \
+                 -e '3s|^|// @updateURL '"$USERSCRIPTS_REPO/$SHORTLINKS_SCRIPT"'\n|' \
+                 -e 's|https://rotator.nurul-huda.sch.id/?url=|https://adguardteam.github.io/AnonymousRedirect/redirect.html?url=|' \
+                 -e 's|https://bas.nurul-huda.or.id/?url=|https://adguardteam.github.io/AnonymousRedirect/redirect.html?url=|' \
+                 -e 's|rotator.nurul-huda.sch.id|adguardteam.github.io|' \
+                 -e 's|free4u.nurul-huda.or.id|adguardteam.github.io|' \
+                 -e 's|free4u.nurul-huda.or|adguardteam.github.io|' \
+                 -e 's|https://free4u.nurul-huda.or.id/?url=|https://adguardteam.github.io/AnonymousRedirect/redirect.html?url=|' \
+                 -e 's|rotator.nurul-huda.sch|adguardteam.github.io|' \
+                 -e 's|bas.nurul-huda.or.id|adguardteam.github.io|'
+                 -e 's|autofaucet.dutchycorp.space|adguardteam.github.io|' \
+                 "$SHORTLINKS_SCRIPT"
+
+          sed -i -e '3s|^|// @downloadURL '"$USERSCRIPTS_REPO/$ADDITIONAL_BYPASS_SCRIPT"'\n|' \
+                 -e '3s|^|// @updateURL '"$USERSCRIPTS_REPO/$ADDITIONAL_BYPASS_SCRIPT"'\n|' \
+                 -e 's|https://rotator.nurul-huda.sch.id/?url=|https://adguardteam.github.io/AnonymousRedirect/redirect.html?url=|' \
+                 -e 's|https://bas.nurul-huda.or.id/?url=|https://adguardteam.github.io/AnonymousRedirect/redirect.html?url=|' \
+                 -e 's|rotator.nurul-huda.sch.id|adguardteam.github.io|' \
+                 -e 's|free4u.nurul-huda.or.id|adguardteam.github.io|' \
+                 -e 's|free4u.nurul-huda.or|adguardteam.github.io|' \
+                 -e 's|https://free4u.nurul-huda.or.id/?url=|https://adguardteam.github.io/AnonymousRedirect/redirect.html?url=|' \
+                 -e 's|rotator.nurul-huda.sch|adguardteam.github.io|' \
+                 -e 's|bas.nurul-huda.or.id|adguardteam.github.io|' \
+                 -e 's|autofaucet.dutchycorp.space|adguardteam.github.io|' \
+                 "$ADDITIONAL_BYPASS_SCRIPT"
+
+          sed -i -e '3s|^|// @downloadURL '"$USERSCRIPTS_REPO/$POPUPS_BLOCKER_SCRIPT"'\n|' \
+                 -e '3s|^|// @updateURL '"$USERSCRIPTS_REPO/$POPUPS_BLOCKER_SCRIPT"'\n|' \
+                 -e 's|recaptcha/|adguardteam.github.io/|' \
+                 "$POPUPS_BLOCKER_SCRIPT"
+
+          # Git configuration
           git config --global user.email "rushiranpise17@gmail.com"
           git config --global user.name "Rushi Ranpise"
           git config --global color.ui true
+
+          # Git operations
           git status && git add . && git commit -m "Updated Scripts on $(date -u +"%D")" && git push || echo done

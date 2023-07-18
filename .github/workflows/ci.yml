@@ -34,7 +34,7 @@ jobs:
             curl "${urls[$i]}" -o "${files[$i]}"
           done
           
-          mkdir og && cd og && cp -r . .. && cd -
+          mkdir og && cp -r . ..
           
           curl -sS "https://raw.githubusercontent.com/ngosang/trackerslist/master/trackers_all.txt" >> trackers.txt
           curl -sS "https://raw.githubusercontent.com/ngosang/trackerslist/master/trackers_all_ip.txt" >> trackers.txt

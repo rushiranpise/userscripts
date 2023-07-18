@@ -29,12 +29,13 @@ jobs:
           rm -rf og
           rm -rf "${files[@]}"
           rm -rf trackers.txt
+          mkdir og
 
           for ((i=0; i<${#files[@]}; i++)); do
             curl "${urls[$i]}" -o "${files[$i]}"
           done
           
-          mkdir og && cp -r . ..
+           cp -r *.js og
           
           curl -sS "https://raw.githubusercontent.com/ngosang/trackerslist/master/trackers_all.txt" >> trackers.txt
           curl -sS "https://raw.githubusercontent.com/ngosang/trackerslist/master/trackers_all_ip.txt" >> trackers.txt
@@ -56,6 +57,17 @@ jobs:
           sed -i 's|rotator.nurul-huda.sch|adguardteam.github.io|' "Bypass All Shortlinks.user.js"
           sed -i 's|bas.nurul-huda.or.id|adguardteam.github.io|' "Bypass All Shortlinks.user.js"
           sed -i 's|autofaucet.dutchycorp.space|adguardteam.github.io|' "Bypass All Shortlinks.user.js"
+          
+          sed -i 's|https://rotator.nurul-huda.sch.id/?url=|https://adguardteam.github.io/AnonymousRedirect/redirect.html?url=|' "Additional Bypass.user.js"
+          sed -i 's|https://bas.nurul-huda.or.id/?url=|https://adguardteam.github.io/AnonymousRedirect/redirect.html?url=|' "Additional Bypass.user.js"
+          sed -i 's|rotator.nurul-huda.sch.id|adguardteam.github.io|' "Additional Bypass.user.js"
+          sed -i 's|rotator.nurul-huda.sch.id|adguardteam.github.io|' "Additional Bypass.user.js"
+          sed -i 's|free4u.nurul-huda.or.id|adguardteam.github.io|' "Additional Bypass.user.js"
+          sed -i 's|free4u.nurul-huda.or|adguardteam.github.io|' "Additional Bypass.user.js"
+          sed -i 's|https://free4u.nurul-huda.or.id/?url=|https://adguardteam.github.io/AnonymousRedirect/redirect.html?url=|' "Additional Bypass.user.js"
+          sed -i 's|rotator.nurul-huda.sch|adguardteam.github.io|' "Additional Bypass.user.js"
+          sed -i 's|bas.nurul-huda.or.id|adguardteam.github.io|' "Additional Bypass.user.js"
+          sed -i 's|autofaucet.dutchycorp.space|adguardteam.github.io|' "Additional Bypass.user.js"
 
           rm -rf *.user.js.1
 

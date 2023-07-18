@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name       Additional Bypass
-// @updateURL https://github.com/rushiranpise/userscripts/raw/main/Additional Bypass.user.js// @downloadURL https://github.com/rushiranpise/userscripts/raw/main/Additional Bypass.user.js// @namespace  Violentmonkey Scripts
+// @namespace  Violentmonkey Scripts
 // @match      *://cutdl.xyz/*
 // @match      *://stfly.me/*
 // @match      *://shrinke.me/*
@@ -42,7 +42,7 @@
   }
 
   function redirect(url, blog = true) {
-    location = blog ? 'https://adguardteam.github.io/?url=' + url : url;
+    location = blog ? 'https://free4u.nurul-huda.or.id/?url=' + url : url;
   }
 
   if (['interactive', 'complete'].includes(document.readyState)) {
@@ -53,7 +53,7 @@
 
   function onHtmlLoaded() {
     let $ = window.jQuery;
-    let respect = 'https://adguardteam.github.io/?url='; // Don't use My Scripts if You Change/Remove My Blogs, Except You Make Donations.
+    let respect = 'https://free4u.nurul-huda.or.id/?url='; // Don't use My Scripts if You Change/Remove My Blogs, Except You Make Donations.
     if (['safe.intipanime.com', 'intercelestial.com', 'tribuntekno.com', 'mealob.com', 'smgplaza.com', 'namemegablog.com', 'blackleadr.com', 'megablogme.com'].indexOf(location.host) > -1) {
       function Bypass() {
         $("#showlink").delay(80).fadeIn("fast");

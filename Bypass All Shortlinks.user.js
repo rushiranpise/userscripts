@@ -1,6 +1,8 @@
 // ==UserScript==
 // @name       Bypass All Shortlinks
-// @updateURL https://github.com/rushiranpise/userscripts/raw/main/Bypass All Shortlinks.user.js// @downloadURL https://github.com/rushiranpise/userscripts/raw/main/Bypass All Shortlinks.user.js// @name:id    Bypass Semua Shortlink
+// @updateURL https://github.com/rushiranpise/userscripts/raw/main/Bypass%20All%20Shortlinks.user.js
+// @downloadURL https://github.com/rushiranpise/userscripts/raw/main/Bypass%20All%20Shortlinks.user.js
+// @name:id    Bypass Semua Shortlink
 // @name:ug    Bypass بارلىق قىسقا ئۇلىنىشلار
 // @name:ar    تجاوز الجميع الروابط المختصرة
 // @name:he    לַעֲקוֹף את כל קישורים קצרים

@@ -1,5 +1,7 @@
 // ==UserScript==
 // @name       Additional Bypass
+// @updateURL https://github.com/rushiranpise/userscripts/raw/main/Additional%20Bypass.user.js
+// @downloadURL https://github.com/rushiranpise/userscripts/raw/main/Additional%20Bypass.user.js
 // @namespace  Violentmonkey Scripts
 // @match      *://cutdl.xyz/*
 // @match      *://stfly.me/*

@@ -45,6 +45,8 @@ jobs:
           # Modify scripts
           perl -w -i -l -p -e 'print "// \@downloadURL https://github.com/rushiranpise/userscripts/raw/main/Bypass%20All%20Shortlinks.user.js" if $. == 3' "Bypass All Shortlinks.user.js"
           perl -w -i -l -p -e 'print "// \@updateURL https://github.com/rushiranpise/userscripts/raw/main/Bypass%20All%20Shortlinks.user.js" if $. == 3' "Bypass All Shortlinks.user.js"
+          perl -w -i -l -p -e 'print "// \@downloadURL https://github.com/rushiranpise/userscripts/raw/main/Additional%20Bypass.user.js" if $. == 3' "Additional Bypass.user.js"
+          perl -w -i -l -p -e 'print "// \@updateURL https://github.com/rushiranpise/userscripts/raw/main/Additional%20Bypass.user.js" if $. == 3' "Additional Bypass.user.js"
 
           sed -i -e 's|https://rotator.nurul-huda.sch.id/?url=|https://adguardteam.github.io/AnonymousRedirect/redirect.html?url=|' \
                  -e 's|https://bas.nurul-huda.or.id/?url=|https://adguardteam.github.io/AnonymousRedirect/redirect.html?url=|' \

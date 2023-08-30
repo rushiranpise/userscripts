@@ -460,19 +460,27 @@ http://bt.endpot.com:80/announce
 
 http://bt.okmp3.ru:2710/announce
 
+http://ch3oh.ru:6969/announce
+
 http://montreal.nyap2p.com:8080/announce
+
+http://movies.zsw.ca:6969/announce
 
 http://nyaa.tracker.wf:7777/announce
 
+http://open.8a.is:6969/announce
+
 http://open.acgnxtracker.com:80/announce
 
+http://open.acgtracker.com:1096/announce
+
 http://open.tracker.ink:6969/announce
+
+http://p2p.0g.cx:6969/announce
 
 http://retracker.hotplug.ru:2710/announce
 
 http://share.camoe.cn:8080/announce
-
-http://shubt.net:2710/announce
 
 http://t.acg.rip:6699/announce
 
@@ -507,6 +515,10 @@ http://tracker.renfei.net:8080/announce
 http://tracker.sheesh.rip:6969/announce
 
 http://tracker.skyts.net:6969/announce
+
+http://tracker.swateam.org.uk:2710/announce
+
+http://tracker1.bt.moack.co.kr:80/announce
 
 http://tracker2.dler.org:80/announce
 
@@ -561,6 +573,8 @@ https://tracker1.520.jp:443/announce
 https://trackers.mlsub.net:443/announce
 
 https://www.peckservers.com:9443/announce
+
+udp://107.182.30.76.16clouds.com:6969/announce
 
 udp://119.28.71.45:8080/announce
 
@@ -636,6 +650,8 @@ udp://ipv6.fuuuuuck.com:6969/announce
 
 udp://isk.richardsw.club:6969/announce
 
+udp://linfan.moe:6969/announce
+
 udp://mail.artixlinux.org:6969/announce
 
 udp://mail.segso.net:6969/announce
@@ -707,6 +723,8 @@ udp://t.133335.xyz:6969/announce
 udp://t.zerg.pw:6969/announce
 
 udp://tamas3.ynh.fr:6969/announce
+
+udp://thinking.duckdns.org:6969/announce
 
 udp://thouvenin.cloud:6969/announce
 

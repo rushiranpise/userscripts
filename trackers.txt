@@ -460,15 +460,11 @@ http://bt.endpot.com:80/announce
 
 http://bt.okmp3.ru:2710/announce
 
-http://ch3oh.ru:6969/announce
+http://buny.uk:6969/announce
 
 http://montreal.nyap2p.com:8080/announce
 
-http://movies.zsw.ca:6969/announce
-
 http://nyaa.tracker.wf:7777/announce
-
-http://open.8a.is:6969/announce
 
 http://open.acgnxtracker.com:80/announce
 
@@ -496,6 +492,8 @@ http://tracker.dler.com:6969/announce
 
 http://tracker.dler.org:6969/announce
 
+http://tracker.edkj.club:6969/announce
+
 http://tracker.electro-torrent.pl:80/announce
 
 http://tracker.files.fm:6969/announce
@@ -514,13 +512,13 @@ http://tracker.renfei.net:8080/announce
 
 http://tracker.sheesh.rip:6969/announce
 
-http://tracker.skyts.net:6969/announce
-
 http://tracker.swateam.org.uk:2710/announce
 
-http://tracker1.bt.moack.co.kr:80/announce
-
 http://tracker2.dler.org:80/announce
+
+http://tracker2.itzmx.com:6961/announce
+
+http://tracker3.itzmx.com:6961/announce
 
 http://tracker4.itzmx.com:2710/announce
 
@@ -801,6 +799,10 @@ udp://tracker1.myporn.club:9337/announce
 udp://tracker2.dler.com:80/announce
 
 udp://tracker2.dler.org:80/announce
+
+udp://tracker2.itzmx.com:6961/announce
+
+udp://tracker3.itzmx.com:6961/announce
 
 udp://tracker4.itzmx.com:2710/announce
 

@@ -7,18 +7,15 @@
 // @match      *://gplinks.co/*
 // @match      *://linksly.co/*
 // @match      *://smgplaza.com/*
-// @match      *://shortzon.com/*
 // @match      *://icutlink.com/*
 // @match      *://*.hamody.pro/*
 // @match      *://*.mealob.com/*
 // @match      *://megablogme.com/*
 // @match      *://tribuntekno.com/*
-// @match      *://namemegablog.com/*
-// @match      *://doctor-groups.com/*
 // @match      *://link.turkdown.com/*
 // @match      *://safe.intipanime.com/*
 // @grant      none
-// @version    4.1
+// @version    4.2
 // @author     Bloggerpemula
 // @run-at     document-start
 // @description Bypass Addition for Bypass All Shortlinks
@@ -54,7 +51,7 @@
   function onHtmlLoaded() {
     let $ = window.jQuery;
     let respect = 'https://free4u.nurul-huda.or.id/?url='; // Don't use My Scripts if You Change/Remove My Blogs, Except You Make Donations.
-    if (['safe.intipanime.com', 'intercelestial.com', 'tribuntekno.com', 'mealob.com', 'smgplaza.com', 'namemegablog.com', 'blackleadr.com', 'megablogme.com'].indexOf(location.host) > -1) {
+    if (['safe.intipanime.com', 'intercelestial.com', 'tribuntekno.com', 'mealob.com', 'smgplaza.com', 'blackleadr.com', 'megablogme.com'].indexOf(location.host) > -1) {
       function Bypass() {
         $("#showlink").delay(80).fadeIn("fast");
         $("#pleasewait").fadeIn("fast");

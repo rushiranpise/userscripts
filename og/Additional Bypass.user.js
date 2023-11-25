@@ -20,6 +20,8 @@
 // @run-at     document-start
 // @description Bypass Addition for Bypass All Shortlinks
 // @require    https://code.jquery.com/jquery-3.6.0.min.js
+// @downloadURL https://update.greasyfork.org/scripts/443888/Additional%20Bypass.user.js
+// @updateURL https://update.greasyfork.org/scripts/443888/Additional%20Bypass.meta.js
 // ==/UserScript==
 // ==========================================================================================================================================
 //                                      PLEASE READ SCRIPT INFO BEFORE USE

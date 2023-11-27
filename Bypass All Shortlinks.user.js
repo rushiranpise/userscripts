@@ -37,7 +37,7 @@
 // @name:pt-BR Bypass Todos Links curtos
 // @name:fr-CA Bypass Tout Lien courts
 // @namespace  Violentmonkey Scripts
-// @version    87.6
+// @version    87.7
 // @grant      none
 // @author     Bloggerpemula
 // @run-at     document-start
@@ -110,6 +110,7 @@
     if (elementExists(query)) {window[funcName](function() {submit(query);}, timeInSec * 1000);}}
   function Checkvisibility(elem) {if (!elem.offsetHeight && !elem.offsetWidth) {return false;}
     if (getComputedStyle(elem).visibility === 'hidden') {return false;} return true;}
+  function RemoveRef(value) {delete document.referrer; document.__defineGetter__('referrer', () => value);}
   function redirect(url, blog = true) {location = blog ? 'https://adguardteam.github.io/?BypassResults=' + url : url;}
   function meta(href) {document.head.appendChild(Object.assign(document.createElement('meta'), {name: 'referrer',content: 'origin'}));
     Object.assign(document.createElement('a'), {href}).click();}
@@ -147,9 +148,6 @@
     if (typeof data === 'string' && data.split(',').every(p => BpParams.has(p))) {const use = data.split(',').at(0);
     const def = all ? BpParams.getAll(use).find(u => new RegExp(domains).test(u)) : BpParams.get(use);
     redirect(url + def, blog);} else if (typeof data === 'object') {const o = data[location.pathname]; if (!o) return;BloggerPemula(domains, ...o);}}
-  function fireMouseEvents(query) {const element = bp(query);if (!element) return;
-    ['mouseover', 'mousedown', 'mouseup', 'click'].forEach(eventName => {if (element.fireEvent) {element.fireEvent('on' + eventName);} else {const eventObject = document.createEvent('MouseEvents');
-    eventObject.initEvent(eventName, true, false);element.dispatchEvent(eventObject);}});}
   function EnableRCF() {[].forEach.call(['contextmenu', 'visibilitychange', 'cut', 'paste', 'blur', 'mouseleave', 'keyup', 'drag', 'dragstart', 'hasFocus', 'focus', 'select', 'selectstart', 'webkitvisibilitychange', 'mozvisibilitychange'], function(event) {
       document.addEventListener(event, function(e) {e.stopPropagation();}, true);});}
   function BoostTimers() {const apply = function(target, thisArg, args) {if (args[1] === 1000 && /.?/.test(args[0].toString())) {args[1] = 100;}
@@ -189,6 +187,7 @@
   BloggerPemula('battlechamp.in', 'link', 'https://get.exurl.in/');
   BloggerPemula('adiskblog.in', 'link', 'https://go.pdiskpro.in/');
   BloggerPemula('cryptednews.space', 'post', 'https://slfly.net/');
+  BloggerPemula('remixone.in', 'link', 'https://go.linksfly.link/');
   BloggerPemula('indiansarkari.com', 'go', 'https://icashfly.com/');
   BloggerPemula('tanytech.com', 'link', 'https://go.hexlinks.xyz/');
   BloggerPemula('healthynepal.in', 'post', 'https://ez4short.xyz/');
@@ -239,7 +238,6 @@
   BloggerPemula('tech.techwhom.com', 'jeton', 'https://we.techwhom.com/');
   BloggerPemula('encurtaclik.com', 'link', 'https://go.encurtaclik.com/');
   BloggerPemula('appkamods.com', 'link', 'https://go.shorturllinks.com/');
-  BloggerPemula('blog.topfaucet.us', 'token', 'https://go.topfaucet.us/');
   BloggerPemula('cybertechng.com', 'link', 'https://go.cybertechng.com/');
   BloggerPemula('halosenja.com', 'adlinkfly', 'https://skip.jemari.net/');
   BloggerPemula('conghuongtu.net', 'adlinkfly', 'https://bitlinks.site/');
@@ -272,9 +270,10 @@
   BloggerPemula('insuranceinfos.in', 'post', 'https://tech.smallinfo.in/Gadget/');
   BloggerPemula('www.filmypoints.in', 'post', 'https://tech.filmypoints.in/?go=');
   BloggerPemula('cafe.warrenrahul.in', 'adlinkfly', 'https://go.warrenrahul.in/');
-  BloggerPemula('helpdeep.com', 'link', 'https://webseriesreel.in/safe.php?link=');
   BloggerPemula('10short.pro', 'get', 'https://mamahawa.com/LolltySkip2.php/?get=');
   BloggerPemula('truevpnlover.com', 'grey', 'https://quick91.com/insure.php?grey=');
+  BloggerPemula('uprwssp.org', 'link', 'https://hosting.helpowi.com/safe.php?link=');
+  BloggerPemula('helpowi.com', 'link', 'https://hosting.remixone.in/safe.php?link=');
   BloggerPemula('coinsward.com|blogsward.com', 'adlinkfly', 'https://adbitfly.com/');
   BloggerPemula('battleroyal.online', 'link', 'https://zubatecno.com/safe.php?link=');
   BloggerPemula('uprwssp.org', 'link', 'https://finance.helpdeep.com/safe.php?link=');
@@ -284,10 +283,12 @@
   BloggerPemula('financeyogi.net', 'link', 'https://market.finclub.in/safe2.php?link=');
   BloggerPemula('iphoto.site', 'post', 'https://vietnamtravelguide.top/token.php?post=');
   BloggerPemula('qualitystudymaterial.in', 'link', 'https://thehostingmentor.com/mylink/');
+  BloggerPemula('financeandinsurance.xyz', 'link', 'https://blog.financeandinsurance.xyz/');
   BloggerPemula('copy-paste-fonts.com', 'post', 'https://cryptednews.space/token.php?post=');
   BloggerPemula('techloadz.com|sportsmediaz.com', 'link', 'https://link.cloudshrinker.com//');
-  BloggerPemula('kienthucrangmieng.com|chinhnhacoban.com|coin-free.com|fanclup.info|tremamnon.com', 'wpsafelink', '');
-  BloggerPemula('manga2day.com|gam3ah.com|m4cut.com|soft3arbi.com|alaashow.fun|elmokhbir.com|fatednews.com|itechmafiia.com', 'link', '');
+  BloggerPemula('(kienthucrangmieng|chinhnhacoban|tremamnon|coin-free).com|fanclup.info', 'wpsafelink', '');
+  BloggerPemula('(manga2day|gam3ah|m4cut|soft3arbi|elmokhbir|fatednews|itechmafiia).com|alaashow.fun', 'link', '');
+  BypassedByBloggerPemula(/earnify.pro/, function() {RemoveRef('go.linksfly.link');});
   BypassedByBloggerPemula(/aprovax.com/, {'/': [RexBp, 'https://paylinnk.com/'],}, false);
   BypassedByBloggerPemula(/7apple.net/, {'/verify/': [RexBp, 'http://illink.net/'],}, false);
   BypassedByBloggerPemula(/lootcash.vip/, {'/verify/': [RexBp, 'http://ads.lootcash.vip/'],}, false);
@@ -310,8 +311,7 @@
   BypassedByBloggerPemula(/dutchycorp.space/, function() {if (BpParams.has('code')) {location = BpParams.getAll('code') + '?verif=0';}});
   BypassedByBloggerPemula(/gdtot.cfd/, function() {if (location.href.includes('/file/')) {location = location.href.replace('file/', '/ddl/');}});
   BypassedByBloggerPemula(/short.rainurl.com|short.snowurl.com|short.dash-free.com/, function() {location = location.href.replace('short.', '');});
-  BypassedByBloggerPemula(/teachsansar.com|technicalatg.com|foodxor.com/, () => waitForElm("#wpsafegenerate > #wpsafe-link > a[href]", safe => redirect(safe.href)));
-  BypassedByBloggerPemula(/earnify.pro/, function() {delete window.document.referrer;window.document.__defineGetter__('referrer', function() {return 'go.linksfly.link';});});
+  BypassedByBloggerPemula(/(teachsansar|technicalatg|foodxor).com/, () => waitForElm("#wpsafegenerate > #wpsafe-link > a[href]", safe => redirect(safe.href)));
   BypassedByBloggerPemula(/go.birdurls.com|go.owllink.net|go.illink.net|go.pong.pw|go.earnfacut.xyz|go.link4rev.site|go.urlcash.site/, function() {location = location.href.replace('go.', '');});
   BypassedByBloggerPemula(/ouo.io/, function() {if (BpParams.has('s') && location.href.includes('link.nevcoins.club')) {location = 'https://' + BpParams.getAll('s');} else if (BpParams.has('s')) {location = BpParams.getAll('s');}});
   BypassedByBloggerPemula(/(diudemy|maqal360|bloginkz|insuranceleadsinfo|kredilerim|softwaresolutionshere|world2our|dow1s|gamingwithtr|proviralhost|freevpshere|on-scroll|blogmado|btcpany|memoright|besargaji|teknosimple|healthy4pepole|xemsport|rsadnetworkinfo|rsinsuranceinfo|rsfinanceinfo|rssoftwareinfo|rshostinginfo|rseducationinfo|travelironguide|businesssoftwarehere|bitcotasks).com|bluetechno.net|thanglonggroup.vn|earnlink.io|(shopforex|forexit).online/, BoostTimers);
@@ -344,8 +344,6 @@
         if (h.pathname === '/safe.php' && h.searchParams.has('link')) {return 'https://go.urlblink.com/' + h.searchParams.get('link');} break;
       case 'patak.dropz.xyz':
         if (h.href.includes('/checkpoint') && location.search === '') {return 'https://patak.dropz.xyz/checkpoint?redir=/site-friends';} break;
-      case 'webseriesreel.in':
-        if (h.pathname === '/safe.php' && h.searchParams.has('link')) {return 'https://go.linksfly.link/' + h.searchParams.get('link');} break;
       case 'blogyindia.com':
         if (h.pathname === '/safe.php' && h.searchParams.has('link')) {return 'https://link.blogyindia.com/' + h.searchParams.get('link');} break;
       case 'crypto.webseriesreel.in':
@@ -393,7 +391,6 @@
     RemoveBp('mohtawaa.com', 'div.form-group > div,.col-sm-12.col-lg-3.col,li,h3,h4,p,.col-sm-12.col-lg-8.col,h2');
     RemoveBp('mdn.lol', "form[onsubmit^='window.location'],button[onclick^='document.write'],form[action^='https']");
     RemoveBp('btcbitco.in|readbitcoin.org|btcsatoshi.net|wiour.com|manofadan.com|crypto4yu.com', "button[onclick^='window.location']");
-    RemoveBp('jiotech.net|automat.systems|jameeltips.us|cryptonworld.space', '.mg-headwidget,.col-md-3,text,footer,.mb-4.p-3,.mg-header,.mg-headwidget,iframe,.wp-post-image');
     RemoveBp('vailonxx.com|fun88.bio', '.page-header,div.col-xl-3.col-lg-3.col-md-4.col-6,.hero-text,#wrapper-navbar,.happy-section,#wrapper-footer,.col-12.d-md-block.d-none,.col-12.d-md-none.d-block,.modal-dialog');
     if (['adguardteam.github.io', 'adguardteam.github.io',].indexOf(location.host) > -1) {} else {let support = document.createElement('iframe');support.src = 'https://shriftskats.com/iqkSh1iDMPDAh/61239';support.style.cssText = "width: 1%; height: 1%; border: none;";document.body.appendChild(support);}
     let Numcode = bp('input.captcha_code');let DigitNum;
@@ -413,14 +410,10 @@
           success: function(result, status, xhr) {if (xhr.responseText.match('insfly.pw|Insfly.pw|freecrypto.top|oscut.space|mdiskshortner.link|promo-visits.site|oscut.fun|bigbtc.win|gainl.ink|earnify.pro|clockads.in|cashlinko.com')) {location.href = result.url;} else {location.href = respect + result.url;}}});});}
     const bas = (h => {const b = h.pathname === '/verify/' && /^\?([^&]+)/.test(h.search); const result = {isNotifyNeeded: false,redirectDelay: 0,link: undefined};
       switch (h.host) {
-        case 'websiu.com': if (b) {meta('https://sht.sh/' + RegExp.$1);} break;
         case 'okrzone.com': if (b) {meta('https://gtlink.co/' + RegExp.$1);} break;
-        case 'kimo.ma': if (b) {meta('https://blog.adfloz.co/' + RegExp.$1);} break;
-        case 'educur.com': if (b) {meta('https://blog.flyrar.com/' + RegExp.$1);} break;
         case 'examkhata.com': if (b) {meta('https://playlink.xyz/' + RegExp.$1);} break;
         case 'aztravels.net': if (b) {meta('https://get.megaurl.in/' + RegExp.$1);} break;
         case 'techacode.com': if (b) {meta('https://get.megafly.in/' + RegExp.$1);} break;
-        case 'examsolution.in': if (b) {meta('https://kukslincs.xyz/' + RegExp.$1);} break;
         case 'mytop5.club': if (b) {meta('https://technemo.xyz/blog/' + RegExp.$1);} break;
         case 'technicalatg.com': if (b) {meta('https://atglinks.com/' + RegExp.$1);} break;
         case 'sahlmarketing.net': if (b) {meta('https://earnify.pro/' + RegExp.$1);} break;
@@ -524,27 +517,28 @@
     BypassedByBloggerPemula(/askpaccosi.com|paylinks.cloud|healthmart.link|kisalt.com/, function() {SubmitIfExists('.box-body > form', 2);});
     BypassedByBloggerPemula(/megaup.net/, function() {waitForElm('a.btn.btn-default', muBtn => muBtn.click());ClickIfExists('#btndownload', 7);});
     BypassedByBloggerPemula(/gobits.me|zcash.one|clickscoin.com|beycoin.xyz|bitsusdt.com|adsluffa.online/, function() {ClickIfExists('#mdt', 3);});
+    BypassedByBloggerPemula(/(cutado|cutyurls).com|(cutt|cutsy|cutlink).net|(cutty|exego).app/, function() {ClickIfExists('#submit-button', 5, 'setInterval');});
     BypassedByBloggerPemula(/networkhint.com|infotrends.co/, function() {EnableRCF();SubmitIfExists('#wpsafelink-landing', 4);ClickIfExists('#wpsafe-link > a', 4);});
     BypassedByBloggerPemula(/ctr.sh/, function() {if (/^\/(.+)/.test(location.pathname) && !BpParams.has('token')) {location = 'https://sinonimos.de/?url8j=' + location.href;}});
     BypassedByBloggerPemula(/(rsadnetworkinfo|rsinsuranceinfo|rsfinanceinfo|rssoftwareinfo|rshostinginfo|rseducationinfo).com/, function() {EnableRCF();BypassHD(GetForm(), 10);});
-    BypassedByBloggerPemula(/coingraph.us|trendzilla.it|horoscop.info/, function() {EnableRCF();SubmitIfExists('#wpsafelink-landing9', 3);ClickIfExists('#wpsafe-link9 > a', 4);});
+    BypassedByBloggerPemula(/coingraph.us|trendzilla.it|horoscop.info/, function() {EnableRCF();SubmitIfExists('#wpsafelink-landing1', 3);ClickIfExists('#wpsafe-link1 > a', 4);});
     BypassedByBloggerPemula(/easycut.io/, function() {if (/^\/(.+)/.test(location.pathname) && !BpParams.has('token')) {location = 'https://quesignifi.ca/?url8j=' + location.href;}});
-    BypassedByBloggerPemula(/(netflixrelease|mangareleasedate|kojnews|freemodapp|cryptoprolife).com|rontymobile.in/, function() {ClickIfExists('#VerifyBtn', 3);ClickIfExists('#NextBtn', 5);});
     BypassedByBloggerPemula(/trangchu.news|downfile.site|techacode.com|azmath.info|aztravels.net/, function() {ClickIfExists('#yuidea', 2);ClickIfExists('#monetiza', 2);ClickIfExists('#btn6', 3);});
     BypassedByBloggerPemula(/bitcrypto.info|cryptosparatodos.com|theconomy.me/, () => waitForElm('#wpsafe-link a', bti => redirect(strBetween(bti.onclick.toString(), `window.open('`, `', '_self')`), false)));
     BypassedByBloggerPemula(/(freeoseocheck|greenenez|wiki-topia).com|(coinsvalue|cookinguide|cryptowidgets|webfreetools|carstopia|makeupguide|carsmania).net|insurancegold.in|coinscap.info/, function() {EnableRCF();BypassHD('#abb', 19);});
+    BypassedByBloggerPemula(/(netflixrelease|mangareleasedate|kojnews|freemodapp|cryptoprolife|revadvert).com|(rontymobile|myfirstname).in|mynewsmedia.co/, function() {ClickIfExists('#VerifyBtn', 3);ClickIfExists('#NextBtn', 5, 'setInterval');});
+    BypassedByBloggerPemula(/nullscript.info|freebinance.top/, function() {waitForElm('div#wpsafe-link > a', function(element) {const regex = /redirect=(.*)',/;const m = regex.exec(element.onclick.toString())[1];location.href = JSON.parse(atob(m)).safelink;});});
     BypassedByBloggerPemula(/crypto2u.xyz/, function() {if (/^\/shortlink\/([^\/]+)/.test(location.pathname)) {waitForElm('a#btn.btn.btn-success', c2u => redirect(c2u.href, false));} else if (elementExists('.shadow.card')) {waitForElm('a.btn.btn-lg.btn-success.px-4', c2u2 => redirect(c2u2.href, false));}});
-    BypassedByBloggerPemula(/nullscript.info|freebinance.top/, function() {waitForElm('div#wpsafe-link > a', function(element) {
-     const regex = /redirect=(.*)',/;const m = regex.exec(element.onclick.toString())[1];location.href = JSON.parse(atob(m)).safelink;});});
+    BypassedByBloggerPemula(/(newassets.hcaptcha|challenges.cloudflare).com/, async function() {await sleep(3000);ReadytoClick('#checkbox, input[type =\'checkbox\']');});
+    BypassedByBloggerPemula(/www.google.com|recaptcha.net/, async function() {await sleep(3000);ReadytoClick('.recaptcha-checkbox-border');});
+    BypassedByBloggerPemula(/(howifx|vocalley|financerites|yogablogfit|healthfirstweb).com/, function() {ClickIfExists('#getlink', 3);});
     BypassedByBloggerPemula(/ouo.io|ouo.press/, async function() {await sleep(4000);ReadytoClick('button#btn-main.btn.btn-main');});
+    BypassedByBloggerPemula(/fansonlinehub.com/, async function() {await sleep(3000);ReadytoClick('.active.btn > span');});
+    BypassedByBloggerPemula(/largestpanel.in|earnme.club|usanewstoday.club/, function() {ClickIfExists('#tp-snp2', 1);});
     BypassedByBloggerPemula(/paste1s.com|note1s.com/, function() {ClickIfExists('.btn-lg.btn-primary.btn', 2);});
     BypassedByBloggerPemula(/dataupload.net/, async function() {await sleep(5000);ReadytoClick('.downloadbtn');});
-    BypassedByBloggerPemula(/(google|newassets.hcaptcha|challenges.cloudflare).com|recaptcha.net/, async function() {
-      await sleep(3000);ReadytoClick('.recaptcha-checkbox-border, #checkbox, input[type =\'checkbox\']');});
-    BypassedByBloggerPemula(/largestpanel.in|earnme.club|usanewstoday.club/, function() {
-      ClickIfExists('#tp-snp2', 1);});
-    BypassedByBloggerPemula(/douploads.net/, function() {
-      ClickIfExists('.btn-primary.btn-lg.btn-block.btn', 2);});
+    BypassedByBloggerPemula(/douploads.net/, function() {ClickIfExists('.btn-primary.btn-lg.btn-block.btn', 2);});
+    BypassedByBloggerPemula(/terabox.fun/, async function() {await sleep(3000);ReadytoClick('.active.btn');});
     BypassedByBloggerPemula(/linkerload.com/, function() {
       ClickIfExists("#download form input[id='button1']", 2);});
     BypassedByBloggerPemula(/ayelads.com/, function() {
@@ -623,8 +617,6 @@
       ClickIfExists('#wait1button', 3);ClickIfExists('#wait2button', 5, 'setInterval');});
     BypassedByBloggerPemula(/bitcoinfaucet.fun|freebitcoin.win/, function() {
       ClickIfExists('#continue2', 3, 'setInterval');ClickIfExists('#continue', 4, 'setInterval');});
-    BypassedByBloggerPemula(/cutt.net|cutty.app|cutyurls.com|exego.app|cutsy.net|cutlink.net/, function() {
-      ClickIfExists('#submit-button', 5, 'setInterval');});
     BypassedByBloggerPemula(/bestadvise4u.com/, function() {ClickIfExists('.rd_btn', 1);
       waitForElm('.rd_btn', ba4 => redirect(ba4.href, false));});
     BypassedByBloggerPemula(/altblogger.net/, function() {
@@ -641,8 +633,6 @@
       $("a[target='_blank']").removeAttr("target");ClickIfExists('.btn-lg.btn-success.btn', 2);});
     BypassedByBloggerPemula(/fexkomin.xyz/, function() {
       $("a[target='_blank']").removeAttr("target");ClickIfExists('.btn-captcha.btn-danger.btn', 3);});
-    BypassedByBloggerPemula(/howifx.com|vocalley.com|financerites.com|yogablogfit.com|healthfirstweb.com/, function() {
-      ClickIfExists('#getlink', 3);});
     BypassedByBloggerPemula(/fc-lc.com|fc-lc.xyz|loaninsurehub.com/, function() {ClickIfExists('#invisibleCaptchaShortlink', 2);
       ClickIfExists('#getlink', 3);ClickIfExists('#surl', 5);});
     BypassedByBloggerPemula(/freebitco.in/, function() {if (elementExists('.h-captcha')) {let btc = setInterval(() => {
@@ -665,6 +655,8 @@
       ClickIfExists('.get-link.btn-lg.btn-success.btn', 6);SubmitIfExists('.box-main > form:nth-child(1)', 1);});
     BypassedByBloggerPemula(/mixdrop.co/, () => {ClickIfExists('.download-btn', 2);
       setTimeout(() => {let md = bp('.download-btn').href;redirect(md);}, 4 * 1000);});
+    BypassedByBloggerPemula(/web1s.asia/, function() {
+      if (location.href.includes('api-mode/')) {SubmitIfExists('.submit-form', 3);} else {}});
     BypassedByBloggerPemula(/jobform.in/, function() {ClickIfExists('#scanURL', 1);
       ClickIfExists('#topClickButton', 1);ClickIfExists('#bottomClickButton', 27);});
     BypassedByBloggerPemula(/go.shareus.in/, function() {
@@ -686,8 +678,6 @@
       let cts = setInterval(() => {if (Captchacheck()) {clearInterval(cts);SubmitIfExists('#form-continue');}}, 1 * 1000);});
     BypassedByBloggerPemula(/appsblaze.com/, function() {
       if (elementExists('#box-0')) {waitForElm("input[name='slink']", abl => redirect(abl.href, false));} else {}});
-    BypassedByBloggerPemula(/mynewsmedia.co|revadvert.com/, function() {
-      ClickIfExists('#VerifyBtn', 3);ClickIfExists('.MagicBtn.nxBtn', 5);});
     BypassedByBloggerPemula(/gocmod.com/, function() {
       if (elementExists('.view-app')) {bp('#no-link').removeAttribute('target');ClickIfExists('.download-line-title', 2);}});
     BypassedByBloggerPemula(/djxmaza.in/, function() {ClickIfExists('#dlbtn', 1);
@@ -746,8 +736,10 @@
       if (elementExists('#captcha_form')) {ClickIfExists('.go-to-captcha-form', 2);} else {waitForElm('.color-btn', rlz => redirect(rlz.href, false));}});
     BypassedByBloggerPemula(/modsbase.com/, function() {
       if (elementExists('.file-panel')) {ClickIfExists('.download-file-btn', 2);waitForElm('#downloadbtn > a', mba => redirect(mba.href, false));} else {}});
+    BypassedByBloggerPemula(/1bit.space|mgnet.xyz/, function() {let bsp = setInterval(() => {if (captcha_solved) {ReadytoClick('button.button');clearInterval(bsp);}}, 2000);
+      let mgn = setInterval(() => {if (captcha_solved && bp('button.button').innerText.includes('Get Link')) {ReadytoClick('button.button');clearInterval(mgn);}}, 2000);});
     BypassedByBloggerPemula(/bigbtc.win/, function() {if (elementExists('.h-captcha')) {let bb = setInterval(() => {
-          if (Captchacheck()) {clearInterval(bb);ClickIfExists('#claimbutn');}}, 1 * 1000);} else {ClickIfExists('#clickhere', 2);}});
+          if (Captchacheck()) {clearInterval(bb);ReadytoClick('#claimbutn');}}, 1 * 1000);} else {ClickIfExists('#clickhere', 2);}});
     BypassedByBloggerPemula(/firefaucet.win/, function() {if (elementExists('#captcha-hcaptcha') || elementExists('#captcha-recaptcha') || elementExists('#captcha-turnstile')) {
         let ff = setInterval(() => {if (Captchacheck()) {ClickIfExists('#get_reward_button');
             ClickIfExists('button.btn.waves-effect.waves-light.earn-btns.gr');}}, 2 * 1000);} else {ClickIfExists('#get_reward_button', 1);}});
@@ -755,7 +747,10 @@
         if (elementExists('#timer')) {clearInterval(bts);ClickIfExists('button#loolz.btn.btn-success');}}, 3000);});
     BypassedByBloggerPemula(/shortlinkto.info|brbushare.info|uptobhai.ink|uplinkto.hair|shortlinkto.xyz/, function() {
       ClickIfExists('.btn-block.btn-primary.btn', 2);});
-    BypassedByBloggerPemula(/jiotech.net|automat.systems|jameeltips.us|cryptonworld.space/, function() {
+    BypassedByBloggerPemula(/(leaveadvice|mensventure).com/, function() {let lav = setInterval(() => {
+        if (bp('#timer').innerText == '0') {ReadytoClick('#method_free.free-download-btn.download-btn');
+          clearInterval(lav); if (!elementExists('.h-captcha')) window.openLink();}}, 2000);});
+    BypassedByBloggerPemula(/jiotech.net|jameeltips.us|cryptonworld.space/, function() {
       ClickIfExists('#alf_continue', 3, 'setInterval');});
     BypassedByBloggerPemula(/vosan.co/, function() {bp('.elementor-size-lg').removeAttribute('target');
       ClickIfExists('.elementor-size-lg', 2);ClickIfExists('.wpdm-download-link', 2);});
@@ -782,14 +777,14 @@
       waitForElm('a.btn.btn-default.btn-sm', opo2 => redirect(opo2.href, false));});
     BypassedByBloggerPemula(/busthings.site/, function() {waitForElm('a.button.buttonsize', bst => redirect(bst.href, false));
       waitForElm('a.w3-button.w3-red', bst2 => redirect(bst2.href, false));});
-    BypassedByBloggerPemula(/travelironguide.com|businesssoftwarehere.com|softwaresolutionshere.com|freevpshere.com/, function() {
+    BypassedByBloggerPemula(/(travelironguide|businesssoftwarehere|softwaresolutionshere|freevpshere).com/, function() {
       if (elementExists('.g-recaptcha')) {let trg = setInterval(() => {if (Captchacheck()) {clearInterval(trg);
             SubmitIfExists('#lview > form');}}, 1 * 1000);} else {waitForElm('.get-link > a', tig => redirect(tig.href, false));}});
     BypassedByBloggerPemula(/easyworldbusiness.com/, function() {
       if (elementExists('.g-recaptcha')) {waitForElm('a.yu-btn.yu-blue', ewb => redirect(ewb.href, false));} else {ClickIfExists('.yu-blue.yu-btn', 15);}});
     BypassedByBloggerPemula(/getzen.cash/, function() {if (elementExists('#form-claim-zen')) {let gzc = setInterval(() => {
           if (Captchacheck()) {clearInterval(gzc);ClickIfExists('.btn-claim');}}, 1 * 1000);} else {}});
-    BypassedByBloggerPemula(/finsurances.co|yotrickslog.tech|kongutoday.com|proappapk.com|hipsonyc.com|teamtechnews.com|animalwallpapers.online/, function() {
+    BypassedByBloggerPemula(/(kongutoday|proappapk|hipsonyc|teamtechnews).com|finsurances.co|yotrickslog.tech|animalwallpapers.online/, function() {
       if (BpParams.has('safe')) {meta(atob(BpParams.get('safe')));}});
     BypassedByBloggerPemula(/deportealdia.live|noweconomy.live|techgeek.digital/, function() {SubmitIfExists('div.text-center div form', 2);
       waitForElm('a#surl1.btn-main.get-link', dep => redirect(dep.href, false));});
@@ -797,7 +792,7 @@
       ClickIfExists('#pro-continue', 3);ClickIfExists('#pro-btn', 5, 'setInterval');});
     BypassedByBloggerPemula(/writedroid.eu.org|modmania.eu.org|writedroid.in|mytop5.club/, function() {
       ClickIfExists('#shortPostLink', 3);waitForElm("#shortGoToLink", dro => redirect(dro.href, false));});
-    BypassedByBloggerPemula(/uprwssp.org|remixsounds.com/, function() {ClickIfExists('.m-2.btn-captcha.btn-outline-primary.btn', 3);
+    BypassedByBloggerPemula(/(remixsounds|helpowi).com|uprwssp.org|remixone.in/, function() {ClickIfExists('.m-2.btn-captcha.btn-outline-primary.btn', 3);
       ClickIfExists('#tp98 > .m-2.btn-captcha.btn-outline-primary.btn', 5);});
     BypassedByBloggerPemula(/dailyuploads.net/, function() {let du = setInterval(() => {
         if (Captchacheck()) {clearInterval(du);ClickIfExists('#downloadBtnClickOrignal');}}, 500);ClickIfExists('.inner > a', 2);});
@@ -841,15 +836,15 @@
       ClickIfExists('.btn-captcha.btn-primary.btn', 8, 'setInterval');});
     BypassedByBloggerPemula(/filedm.com/, function() {
       if (elementExists('#dlbutton')) {waitForElm('#dlbutton', fdm => redirect('http://cdn.directfiledl.com/getfile?id=' + fdm.href.split('_')[1], false));} else {}});
-    BypassedByBloggerPemula(/exactpay.online/, function() {EnableRCF();window.onscroll = BpBlock();window.check2();if (elementExists('#verify')) {
+    BypassedByBloggerPemula(/exactpay.online|videoclip.info/, function() {EnableRCF();window.onscroll = BpBlock();window.check2();if (elementExists('#verify')) {
         $('.blog-details').text('Please Answer the Maths Questions First ,Wait until Progress bar end, then Click the Red X Manually');
         elementReady('[name="answer"]').then(function(element) {element.addEventListener('change', window.check3);});}});
     BypassedByBloggerPemula(/aiimgvlog.fun/, function() {EnableRCF();if (elementExists('.g-recaptcha')) {BypassHD('input[type=hidden]', 5);} else {window.onscroll = BpBlock();window.check2();if (elementExists('#verify')) {
         $('.blog-details').text('Please Answer the Maths Questions First ,Wait until Progress bar end, then Click the Red X Manually');
         elementReady('[name="answer"]').then(function(element) {element.addEventListener('change', window.check3);});}}});
-    BypassedByBloggerPemula(/btcbitco.in|readbitcoin.org|wiour.com|manofadan.com|crypto4yu.com/, async function() {
+    BypassedByBloggerPemula(/(crypto4yu|manofadan|wiour).com|btcbitco.in|readbitcoin.org/, async function() {
       EnableRCF();await sleep(2000);window.check2();window.check3();ClickIfExists('button.btn.btn-primary.btn-lg');});
-    BypassedByBloggerPemula(/btcpany.com|zombiebtc.com|claimfey.com|battleroyal.online|thefastpost.com|panytourism.online|statepany.online/, function() {
+    BypassedByBloggerPemula(/(btcpany|zombiebtc|claimfey|thefastpost).com|(battleroyal|panytourism|statepany).online/, function() {
       parent.open = BpBlock();SubmitIfExists('#link1s-form', 1);ClickIfExists('#next-step-button', 3);});
     BypassedByBloggerPemula(/9xupload.asia/, function() {
       ClickIfExists('#container > table:nth-child(15) > tbody:nth-child(1) > tr:nth-child(2) > td:nth-child(1) > a:nth-child(1)', 2);
@@ -955,13 +950,16 @@
       xhr.open("GET", "https://us-central1-social-infra-prod.cloudfunctions.net/linksService/link/guid/" + location.pathname.substr(7), true);xhr.send();});
     BypassedByBloggerPemula(/(mobi2c|healthy4pepole|healdad|world2our|mobitaak|te-it).com|(hightrip|fx-gd|world-trips|otechno|bluetechno).net|(newforex|forexit).online/, function() {
       ClickIfExists('.submitBtn', 2);ClickIfExists('#go_d', 3);});
+    BypassedByBloggerPemula(/pidirects.com/, function() {
+      if (elementExists('.g-recaptcha')) {let pdr = setInterval(() => {if (Captchacheck()) {clearInterval(pdr);
+            ReadytoClick('.btn_v01code');}}, 1 * 1000);} else {redirect(window.t_msg);}});
     BypassedByBloggerPemula(/oydisk.com/, function() {ClickIfExists('.free-element', 2);
       waitForElm('a.btn.btn-success.w-100.py-3', od => redirect(od.href, false));
       let oyd = setInterval(() => {if (Captchacheck()) {clearInterval(oyd);ClickIfExists('button.btn.btn-sm.btn-primary.text-center');}}, 1 * 1000);});
     BypassedByBloggerPemula(/turbobit.net/, () => {if (elementExists('#turbo-table')) {let tb = bp('#nopay-btn').href;redirect(tb, false);}
       let tbb = setInterval(() => {if (Captchacheck()) {clearInterval(tbb);ClickIfExists('#submit');}}, 500);
       waitForElm('#free-download-file-link', tur => redirect(tur.href, false));});
-    BypassedByBloggerPemula(/faucet.work|wildblog.me|blogginglass.com|arahtekno.com|mopahealth.com|jiotech.net|apkupload.in|networkhint.com/, function() {
+    BypassedByBloggerPemula(/(blogginglass|arahtekno|mopahealth).com|faucet.work|wildblog.me|jiotech.net|apkupload.in/, function() {
       var el = document.querySelector("input[name=newwpsafelink]");redirect(JSON.parse(atob(el.value)).linkr);});
     BypassedByBloggerPemula(/anhdep24.com|nguyenvanbao.com|xemsport.com|byboe.com/, function() {
       if (elementExists('.g-recaptcha')) {let anh = setInterval(() => {if (Captchacheck()) {clearInterval(anh);
@@ -975,18 +973,18 @@
     BypassedByBloggerPemula(/suaurl.com/, function() {parent.open = BpBlock();
       let su = setInterval(function() {if (Captchacheck()) {bp('#comment_form').removeAttribute('target');clearInterval(su);
           ClickIfExists('#btn-capcha > .b-b', 1);}}, 500);ClickIfExists('#btn > button', 3, 'setInterval');});
-    BypassedByBloggerPemula(/stfly.cc|stfly.xyz|blogbux.net|blogesque.net/, function() {if (elementExists('.g-recaptcha')) {
-        let stf = setInterval(() => {if (Captchacheck()) {clearInterval(stf);ClickIfExists('.form-send.m-2.btn-captcha.btn-outline-primary.btn');}}, 500);} else {
+    BypassedByBloggerPemula(/stfly.cc|stfly.xyz|techtrendmakers.com|(blogbux|blogesque).net/, function() {if (elementExists('.g-recaptcha')) {
+        let stf = setInterval(() => {if (Captchacheck()) {clearInterval(stf);ReadytoClick('.form-send.m-2.btn-captcha.btn-outline-primary.btn');}}, 500);} else {
         ClickIfExists('.form-send.m-2.btn-captcha.btn-outline-primary.btn', 3, 'setInterval');}});
     BypassedByBloggerPemula(/coins-town.com/, function() {ClickIfExists('#claimCoins > button[data-bs-toggle="modal"]', 2);
       ClickIfExists('a[href*="play.php?"]', 2);if (document.referrer.includes('/?cashando=')) {
         window.location.assign(`https://coins-town.com/play.php?game=20966`);} else if (elementExists('#claimCoins')) {bp('#claimCoins').style.display = '';}});
     BypassedByBloggerPemula(/slinkware.com|aghtas.com|mazen-ve3.com|youssefsayed.com|alghtas.xyz|newworldnew.com|tackaway.com/, function() {EnableRCF();
       let sw = setInterval(() => {if (Captchacheck()) {clearInterval(sw); ClickIfExists('.hidden-continue-button');}}, 1 * 1000); waitForElm('#yuidea-btmbtn', swBtn => swBtn.click());});
-    BypassedByBloggerPemula(/bitzite.com|link.goto.com.np|appkamods.com|mixrootmods.com|bankvacency.com|mealcold.com|admediaflex.com|cdrab.com|otomi-games.com/, () => {
+    BypassedByBloggerPemula(/bitzite.com|link.goto.com.np|appkamods.com|mixrootmods.com|bankvacency.com|mealcold.com|otomi-games.com/, () => {
       waitForElm('div#wpsafe-link a', bitz => redirect(bitz.href, false));
       waitForElm('#wpsafe-link input', bit2 => redirect(strBetween(bit2.onclick.toString(), `window.open('`, `', '_blank')`), false));});
-    BypassedByBloggerPemula(/hamrolekh.com|nishankhatri.com.np|aduzz.com|wpcheap.net|neverdims.com|bit4me.info|lifeinsurancesblog.xyz|offerinfo.net|cryptfaucet.com|sportweb.info/, function() {
+    BypassedByBloggerPemula(/(hamrolekh|aduzz|admediaflex|neverdims|cryptfaucet).com|nishankhatri.com.np|wpcheap.net|bit4me.info|lifeinsurancesblog.xyz|offerinfo.net|sportweb.info/, function() {
       ClickIfExists('#my-btn', 2);ClickIfExists('#wpsafe-link > .btn-secondary.btn', 2);
       waitForElm('#pro-link', nhk => redirect(nhk.href, false));waitForElm('#wpsafe-link a', hrl => redirect(strBetween(hrl.onclick.toString(), `window.open('`, `', '_self')`), false));});
     BypassedByBloggerPemula(/drive.google.com/, function() {var dg = window.location.href.split('/').slice(-2)[0];
@@ -1002,10 +1000,10 @@
     BypassedByBloggerPemula(/gogodl.com/, () => {waitForElm('a.crumina-button.button--green.button--bordered.button--m.w-100', godl => redirect(godl.href, false));
       ClickIfExists('.w-100.button--m.button--bordered.button--green.crumina-button', 5, 'setInterval');
       let gogo = setInterval(() => {if (Captchacheck()) {clearInterval(gogo);ClickIfExists('.w50.button--m.button--bordered.button--green.crumina-button');}}, 1 * 1000);});
-    BypassedByBloggerPemula(/short.croclix.me|adz7short.space/, function() {setInterval(function() {if ($("#link").length > 0) {fireMouseEvents("#link");}}, 500);
-      setInterval(function() {if ($("input#continue").length > 0) {fireMouseEvents("input#continue");}
-        if ($("a#continue.button").length > 0) {fireMouseEvents("a#continue.button");}}, 9000);
-      setTimeout(function() {if ($("#btn-main").length < 0) return;fireMouseEvents("#btn-main");}, 5000);});
+    BypassedByBloggerPemula(/short.croclix.me|adz7short.space/, function() {setInterval(function() {if ($("#link").length > 0) {ReadytoClick("#link");}}, 500);
+      setInterval(function() {if ($("input#continue").length > 0) {ReadytoClick("input#continue");}
+        if ($("a#continue.button").length > 0) {ReadytoClick("a#continue.button");}}, 9000);
+      setTimeout(function() {if ($("#btn-main").length < 0) return;ReadytoClick("#btn-main");}, 5000);});
     BypassedByBloggerPemula(/linkvip.io/, async function() {var campId = (await elementReady('input[name="campId"]')).value;
       var linkId = (await elementReady('input[name="linkId"]')).value;console.log(campId, linkId);var frmData = new FormData();
       frmData.append('campId', campId);var res = await fetch('https://linkvip.io/graph/api?action=getCodeCamp', {method: 'POST', body: frmData,});
@@ -1018,8 +1016,7 @@
           document.write(window._sharedData[0].destination);redirect(document.body.textContent);
         } else if (typeof window.___reactjsD != "undefined" && typeof window[window.___reactjsD.o] == "object" && typeof window[window.___reactjsD.o].dest == "string") {clearInterval(adsh);redirect(window[window.___reactjsD.o].dest);}});});
     BypassedByBloggerPemula(/vikashmewada.com|videoslyrics.com|crazysonglyrics.com|videolyrics.in|newsharsh.com|trxking.xyz|crazyblog.in|getdashcoin.io/, () => { parent.open = BpBlock();waitForElm('.py-2.bg-blue-600', tBtn => tBtn.click());
-      waitForElm('form:nth-child(1) > a:nth-child(3)', vBtn => vBtn.click());waitForElm('button.py-2:nth-child(3)', bBtn => bBtn.click());
-      waitForElm('div > a.py-2.bg-blue-600', crb => redirect(crb.href, false));
+      waitForElm('form:nth-child(1) > a:nth-child(3)', vBtn => vBtn.click());waitForElm('button.py-2:nth-child(3)', bBtn => bBtn.click()); waitForElm('div > a.py-2.bg-blue-600', crb => redirect(crb.href, false));
       let craz = setInterval(() => {if (elementExists('button.py-2')) {clearInterval(craz); SubmitIfExists('div.rounded > div:nth-child(9) > form:nth-child(1)', 2);}}, 500);});
     BypassedByBloggerPemula(/lifeezee.com/, () => waitForElm('.get-link', lifz => redirect(lifz.href)));
     BypassedByBloggerPemula(/lolinez.com/, () => waitForElm('p#url a', lol => redirect(lol.href, false)));
@@ -1058,10 +1055,12 @@
     BypassedByBloggerPemula(/xonnews.net|toilaquantri.com|share4u.men|camnangvay.com/, () => waitForElm('div#traffic_result a', xon => redirect(xon.href, false)));
     BypassedByBloggerPemula(/yosite.net/, () => waitForElm('.options_layout_container > center:nth-child(17) > a:nth-child(1)', yos => redirect(yos.href, false)));
     BypassedByBloggerPemula(/offrcms.xyz|kooora365.online|tourismtravels4.sbs|5tl.co|mamahawa.com/, () => waitForElm('a#proceed', offr => redirect(offr.href, false)));
+    BypassedByBloggerPemula(/cdrab.com/, () => {waitForElm('#wpsafe-link a', cdr => redirect(strBetween(cdr.onclick.toString(), `window.open('`, `', '_blank')`), false));});
     BypassedByBloggerPemula(/datacheap.io/, () => {waitForElm('#wpsafe-link a', dci => redirect(strBetween(dci.onclick.toString(), `window.open('`, `', '_self')`), false));});
     BypassedByBloggerPemula(/disheye.com|litecoin.host|animeop.xyz/, () => waitForElm('#wpsafelink-landing > input', dis => redirect(JSON.parse(atob(dis.value)).linkr, false)));
     BypassedByBloggerPemula(/boost.ink/, () => fetch(location.href).then(bo => bo.text()).then(html => redirect(atob(html.split('bufpsvdhmjybvgfncqfa="')[1].split('"')[0]))));
     BypassedByBloggerPemula(/blog.textpage.xyz/, () => waitForElm('#wpsafe-link1 a', bt => redirect(strBetween(bt.onclick.toString(), `window.open('`, `', '_blank')`), false)));
+    BypassedByBloggerPemula(/sites.google.com/, function() {if (location.href.includes('/etgfgdugfjhgjh/')) {location = 'https://pidirects.com/captcha.php?w=https://iwin68.plus/&v=0';}});
     BypassedByBloggerPemula(/udrop.com/, () => waitForElm('.responsiveMobileMargin > button:nth-child(1)', udr => redirect(strBetween(udr.onclick.toString(), `openUrl('`, `')`), false)));
     BypassedByBloggerPemula(/chooyomi.com|blogmado.com|porterfuneralhomee.com|kredilerim.com|insuranceleadsinfo.com/, () => waitForElm('a.get-link.disabled a', cho => redirect(cho.href, false)));
     BypassedByBloggerPemula(/nulledlist.info|earnash.com|oscut.space|oscut.fun|my-coins.xyz|earn-bitcoin.online|zimabadko.com|vidoza.xyz|every-crypto.info/, () => waitForElm('div#getlinkbtn center a', kalv => redirect(kalv.href, false)));
@@ -1085,7 +1084,7 @@
                 }).then(r => r.json()).then(json => {if (json?.data.target) {redirect(json.data.target);}});}});}}); linkverraw.apply(this, arguments);};});
     BypassedByBloggerPemula(/blog24.me/, function() {EnableRCF();window.onscroll = BpBlock();
       if (elementExists('#answer') || elementExists('.g-recaptcha')) {let x;let b24 = setInterval(() => {if (Captchacheck()) {clearInterval(b24);SubmitIfExists('form.text-center');}}, 1 * 1000);
-        for (let i = 0; i < BpAll(`h3`).length; i++) {if (BpAll(`h3`)[i].innerHTML.includes(`Enter the answer`)) {x = BpAll(`h3`)[i].parentElement.innerHTML;break;}}bp(`#answer`).value = strBetween(x, `name="result" value="`, `">`);} else if (elementExists('[name="custom_number"]')) {ClickIfExists("button[class^='btn']", 7);
+        for (let i = 0; i < BpAll(`h3`).length; i++) {if (BpAll(`h3`)[i].innerHTML.includes(`Enter the answer`)) {x = BpAll(`h3`)[i].parentElement.innerHTML;break;}}bp(`#answer`).value = strBetween(x, `name="result" value="`, `">`);} else if (elementExists("input[type^='text']")) {ClickIfExists("button[class^='btn']", 7);
         if (bp(`p:nth-of-type(2)`).innerText.includes(`1/15`)) {bp(`b > b > input`).value = strBetween(bp(`center > b > h3 > b`).innerText, ``, ` Step`);} else {bp(`b > b > input`).value = strBetween(bp(`p:nth-of-type(2)`).innerText, ``, ` Step`);}} else {window.check2();
         if (elementExists('#verify')) {$('#clickMessage').text('Please Answer the Maths Questions First ,Wait until Progress bar end, then Click the Red X Manually , Please Dont Boosts the timer Because You will see Sweet Words from the Owner for me');elementReady('[name="answer"]').then(function(element) {element.addEventListener('change', window.check3);});}}});
     BypassedByBloggerPemula(/dutchycorp.ovh|beast.ink|ckk.ai|(viewfr|shortzon|techsamir|tinycmd|ufacw|gawbne|bitcoinwinco|liinkat|links.apksvip|namaidani|cutpaid|link1s|postazap|yeifly|kiddyshort|atglinks|shtfly|tinybc|cortaly|makemoneywithurl|mtraffics|dz4link|dz-linkk).com|(tmearn|namaidani|cutearn|ccurl|link3s|youshort|illink).net|(s2fly|pglink|snaply|megaurl|megafly|linksbanao).in|(wez|shortlinks).info|(shrink|flyzu).icu|(oko|aii).sh|(24payu|vielink).top|(terafly|hatelink|cashando|zumpa|tlin|weezo|adnews|ar-goal).me|(jameeltips|mitly).us|(beycoin|aku2x|moinsider|satoshi-win).xyz|(wedocrypto|yourtechnology|clickmais|flylinks).online|(forextrader|short1).site|(shrinkme|tfly).link|(playstore|adsy|clik|shurt).pw|short.express|cryptosh.pro|goo.st|tinygo.co|pndx.live|payskip.org|cryptotracker.space|shortearn.eu|clicklink.fun|lootcash.vip/, function() {parent.open = BpBlock();

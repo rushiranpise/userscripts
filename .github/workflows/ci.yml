@@ -25,8 +25,8 @@ jobs:
           rm -rf trackers.txt
           mkdir og
 
-          curl https://greasyfork.org/scripts/431691-bypass-all-shortlinks/code/Bypass%20All%20Shortlinks.user.js -o "Bypass All Shortlinks.user.js"
-          curl https://greasyfork.org/scripts/443888-additional-bypass/code/Additional%20Bypass.user.js -o "Additional Bypass.user.js"
+          wget -O "Bypass All Shortlinks.user.js"https://greasyfork.org/scripts/431691-bypass-all-shortlinks/code/Bypass%20All%20Shortlinks.user.js
+          wget -O "Additional Bypass.user.js"https://greasyfork.org/scripts/443888-additional-bypass/code/Additional%20Bypass.user.js 
 
            cp -r *.js og
           

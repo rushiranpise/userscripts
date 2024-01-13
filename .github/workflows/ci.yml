@@ -18,12 +18,6 @@ jobs:
       - name: Update Scripts
         id: update
         run: |
-          # Define variables for file names and URLs
-          files=("Bypass All Shortlinks.user.js" "Additional Bypass.user.js")
-          urls=(
-            "https://greasyfork.org/scripts/431691-bypass-all-shortlinks/code/Bypass%20All%20Shortlinks.user.js"
-            "https://greasyfork.org/scripts/443888-additional-bypass/code/Additional%20Bypass.user.js"
-          )
 
           # Download scripts and trackers
           rm -rf og
@@ -31,10 +25,9 @@ jobs:
           rm -rf trackers.txt
           mkdir og
 
-          for ((i=0; i<${#files[@]}; i++)); do
-            curl "${urls[$i]}" -o "${files[$i]}"
-          done
-          
+          curl https://greasyfork.org/scripts/431691-bypass-all-shortlinks/code/Bypass%20All%20Shortlinks.user.js -o "Bypass All Shortlinks.user.js"
+          curl https://greasyfork.org/scripts/443888-additional-bypass/code/Additional%20Bypass.user.js -o "Additional Bypass.user.js"
+
            cp -r *.js og
           
           curl -sS "https://raw.githubusercontent.com/ngosang/trackerslist/master/trackers_all.txt" >> trackers.txt

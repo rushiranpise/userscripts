@@ -23,7 +23,7 @@
 // @match      *://*.blog24.me/*
 // @match      *://*.ewall.biz/*
 // @grant      none
-// @version    6.4
+// @version    6.5
 // @author     Bloggerpemula
 // @run-at     document-start
 // @description Bypass Addition for Bypass All Shortlinks
@@ -104,6 +104,6 @@
     RemoveBp('(freeoseocheck|greenenez|wiki-topia).com|(coinsvalue|cookinguide|cryptowidgets|webfreetools|carstopia|makeupguide|carsmania).net|insurancegold.in|coinscap.info', "div.row");
     BloggerPemulaHD(/(bitcotasks|adwallgate|dripoffers|offerwallmedia).com|offers4crypto.xyz|ewall.biz/, function() {if (location.href.includes('lead/')) {IconCaptcha();} else {}});
     BloggerPemulaHD(/blog24.me/, function() {$('h2:nth-of-type(2)').text('In order for the link to function smoothly You Must TURN ON the Bypass Script, otherwise you will be Bored!'); let Blog24Hoax = ['news', 'game', 'go', 'blogs']; $('h2:nth-of-type(1)').text('On this page,BYPASS Script Allowed 100%');
-      window.onload = setInterval(() => {if (Captchacheck()) {BypassHD('#overlay', 1);} if (elementExists('#count') && bp('#count').innerHTML == 0) {ReadytoClick('button[type=submit]', 1);}}, 1 * 1000); if (elementExists('input.form-control')) {window.onscroll = BpBlock(); window.check2();
+      window.onload = setInterval(() => {if (elementExists('.h-captcha') && Checkvisibility(bp('.h-captcha'))) {BypassHD('#overlay', 1);} if (elementExists('#count') && bp('#count').innerHTML == 0) {ReadytoClick('button[type=submit]', 1);}}, 1 * 1000); if (elementExists('input.form-control')) {window.onscroll = BpBlock(); window.check2();
       $('#clickMessage').text('Please Answer the Maths Questions First ,Wait until Progress bar end, then Click the Red X Manually , Please Dont Boosts the timer Because You will see Sweet Words from the Owner for me'); elementReady('[name="answer"]').then(function(element) {element.addEventListener('change', window.check3);});}});
   }})();

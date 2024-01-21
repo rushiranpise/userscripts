@@ -18,7 +18,7 @@ jobs:
       - name: Update Scripts
         id: update
         run: |
-          wget -O "1_download_untouched" https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/raw/branch/main/1_download_untouched.py
+          wget -O "1_download_untouched.py" https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/raw/branch/main/1_download_untouched.py
           wget -O "2_generate_includes.py" https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/raw/branch/main/2_generate_includes.py
           wget -O "3_patch.py" https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/raw/branch/main/3_patch.py
 

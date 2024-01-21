@@ -18,10 +18,17 @@ jobs:
       - name: Update Scripts
         id: update
         run: |
+          wget -O "1_download_untouched" https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/raw/branch/main/1_download_untouched.py
+          wget -O "2_generate_includes.py" https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/raw/branch/main/2_generate_includes.py
+          wget -O "3_patch.py" https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/raw/branch/main/3_patch.py
 
-          curl -sSL https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/raw/branch/main/1_download_untouched.py | python -
-          curl -sSL https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/raw/branch/main/2_generate_includes.pyy | python -
-          curl -sSL https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/raw/branch/main/3_patch.py | python -
+          sed -i -e 's|https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated|https://github.com/rushiranpise/userscripts|' "2_generate_includes.py"
+          sed -i -e 's|https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/raw/branch/main/Bypass_All_Shortlinks.user.js|https://github.com/rushiranpise/userscripts/raw/main/Bypass_All_Shortlinks.user.js|' "3_patch.py"
+
+          python 1_download_untouched.py
+          python 2_generate_includes.py
+          python 3_patch.py
+          
           
       # - name: Update Scripts
       #   id: update

@@ -14,56 +14,67 @@ jobs:
         uses: actions/checkout@v3
         with:
           fetch-depth: 0
-
+          
       - name: Update Scripts
         id: update
         run: |
 
-          # Download scripts and trackers
-          rm -rf og
-          rm -rf "${files[@]}"
-          rm -rf trackers.txt
-          mkdir og
-
-          wget -O "Bypass All Shortlinks.user.js" https://greasyfork.org/scripts/431691-bypass-all-shortlinks/code/Bypass%20All%20Shortlinks.user.js
-          wget -O "Additional Bypass.user.js" https://greasyfork.org/scripts/443888-additional-bypass/code/Additional%20Bypass.user.js 
-
-           cp -r *.js og
+          curl -sSL https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/raw/branch/main/1_download_untouched.py | python3 -
+          curl -sSL https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/raw/branch/main/2_generate_includes.pyy | python3 -
+          curl -sSL https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/raw/branch/main/3_patch.py | python3 -
           
-          curl -sS "https://raw.githubusercontent.com/ngosang/trackerslist/master/trackers_all.txt" >> trackers.txt
-          curl -sS "https://raw.githubusercontent.com/ngosang/trackerslist/master/trackers_all_ip.txt" >> trackers.txt
-          curl -sS "https://raw.githubusercontent.com/ngosang/trackerslist/master/trackers_all_ws.txt" >> trackers.txt
-          curl -sS "https://raw.githubusercontent.com/XIU2/TrackersListCollection/master/all.txt" >> trackers.txt
+      # - name: Update Scripts
+      #   id: update
+      #   run: |
 
-          # Modify scripts
-          perl -w -i -l -p -e 'print "// \@downloadURL https://github.com/rushiranpise/userscripts/raw/main/Bypass%20All%20Shortlinks.user.js" if $. == 3' "Bypass All Shortlinks.user.js"
-          perl -w -i -l -p -e 'print "// \@updateURL https://github.com/rushiranpise/userscripts/raw/main/Bypass%20All%20Shortlinks.user.js" if $. == 3' "Bypass All Shortlinks.user.js"
-          perl -w -i -l -p -e 'print "// \@downloadURL https://github.com/rushiranpise/userscripts/raw/main/Additional%20Bypass.user.js" if $. == 3' "Additional Bypass.user.js"
-          perl -w -i -l -p -e 'print "// \@updateURL https://github.com/rushiranpise/userscripts/raw/main/Additional%20Bypass.user.js" if $. == 3' "Additional Bypass.user.js"
+      #     # Download scripts and trackers
+      #     rm -rf og
+      #     rm -rf "${files[@]}"
+      #     rm -rf trackers.txt
+      #     mkdir og
 
-          sed -i -e 's|https://rotator.nurul-huda.sch.id/?url=|https://adguardteam.github.io/AnonymousRedirect/redirect.html?url=|' \
-                 -e 's|https://bas.nurul-huda.or.id/?url=|https://adguardteam.github.io/AnonymousRedirect/redirect.html?url=|' \
-                 -e 's|rotator.nurul-huda.sch.id|adguardteam.github.io|' \
-                 -e 's|free4u.nurul-huda.or.id|adguardteam.github.io|' \
-                 -e 's|free4u.nurul-huda.or|adguardteam.github.io|' \
-                 -e 's|https://free4u.nurul-huda.or.id/?url=|https://adguardteam.github.io/AnonymousRedirect/redirect.html?url=|' \
-                 -e 's|rotator.nurul-huda.sch|adguardteam.github.io|' \
-                 -e 's|bas.nurul-huda.or.id|adguardteam.github.io|' \
-                 -e 's|autofaucet.dutchycorp.space|adguardteam.github.io|' "Bypass All Shortlinks.user.js"
+      #     wget -O "Bypass All Shortlinks.user.js" https://greasyfork.org/scripts/431691-bypass-all-shortlinks/code/Bypass%20All%20Shortlinks.user.js
+      #     wget -O "Additional Bypass.user.js" https://greasyfork.org/scripts/443888-additional-bypass/code/Additional%20Bypass.user.js 
+
+      #      cp -r *.js og
           
-          sed -i -e 's|https://rotator.nurul-huda.sch.id/?url=|https://adguardteam.github.io/AnonymousRedirect/redirect.html?url=|' \
-                 -e 's|https://bas.nurul-huda.or.id/?url=|https://adguardteam.github.io/AnonymousRedirect/redirect.html?url=|' \
-                 -e 's|rotator.nurul-huda.sch.id|adguardteam.github.io|' \
-                 -e 's|free4u.nurul-huda.or.id|adguardteam.github.io|' \
-                 -e 's|free4u.nurul-huda.or|adguardteam.github.io|' \
-                 -e 's|https://free4u.nurul-huda.or.id/?url=|https://adguardteam.github.io/AnonymousRedirect/redirect.html?url=|' \
-                 -e 's|rotator.nurul-huda.sch|adguardteam.github.io|' \
-                 -e 's|bas.nurul-huda.or.id|adguardteam.github.io|' \
-                 -e 's|autofaucet.dutchycorp.space|adguardteam.github.io|' "Additional Bypass.user.js"
+      #     curl -sS "https://raw.githubusercontent.com/ngosang/trackerslist/master/trackers_all.txt" >> trackers.txt
+      #     curl -sS "https://raw.githubusercontent.com/ngosang/trackerslist/master/trackers_all_ip.txt" >> trackers.txt
+      #     curl -sS "https://raw.githubusercontent.com/ngosang/trackerslist/master/trackers_all_ws.txt" >> trackers.txt
+      #     curl -sS "https://raw.githubusercontent.com/XIU2/TrackersListCollection/master/all.txt" >> trackers.txt
+
+      #     # Modify scripts
+      #     perl -w -i -l -p -e 'print "// \@downloadURL https://github.com/rushiranpise/userscripts/raw/main/Bypass%20All%20Shortlinks.user.js" if $. == 3' "Bypass All Shortlinks.user.js"
+      #     perl -w -i -l -p -e 'print "// \@updateURL https://github.com/rushiranpise/userscripts/raw/main/Bypass%20All%20Shortlinks.user.js" if $. == 3' "Bypass All Shortlinks.user.js"
+      #     perl -w -i -l -p -e 'print "// \@downloadURL https://github.com/rushiranpise/userscripts/raw/main/Additional%20Bypass.user.js" if $. == 3' "Additional Bypass.user.js"
+      #     perl -w -i -l -p -e 'print "// \@updateURL https://github.com/rushiranpise/userscripts/raw/main/Additional%20Bypass.user.js" if $. == 3' "Additional Bypass.user.js"
+
+      #     sed -i -e 's|https://rotator.nurul-huda.sch.id/?url=|https://adguardteam.github.io/AnonymousRedirect/redirect.html?url=|' \
+      #            -e 's|https://bas.nurul-huda.or.id/?url=|https://adguardteam.github.io/AnonymousRedirect/redirect.html?url=|' \
+      #            -e 's|rotator.nurul-huda.sch.id|adguardteam.github.io|' \
+      #            -e 's|free4u.nurul-huda.or.id|adguardteam.github.io|' \
+      #            -e 's|free4u.nurul-huda.or|adguardteam.github.io|' \
+      #            -e 's|https://free4u.nurul-huda.or.id/?url=|https://adguardteam.github.io/AnonymousRedirect/redirect.html?url=|' \
+      #            -e 's|rotator.nurul-huda.sch|adguardteam.github.io|' \
+      #            -e 's|bas.nurul-huda.or.id|adguardteam.github.io|' \
+      #            -e 's|autofaucet.dutchycorp.space|adguardteam.github.io|' "Bypass All Shortlinks.user.js"
+          
+      #     sed -i -e 's|https://rotator.nurul-huda.sch.id/?url=|https://adguardteam.github.io/AnonymousRedirect/redirect.html?url=|' \
+      #            -e 's|https://bas.nurul-huda.or.id/?url=|https://adguardteam.github.io/AnonymousRedirect/redirect.html?url=|' \
+      #            -e 's|rotator.nurul-huda.sch.id|adguardteam.github.io|' \
+      #            -e 's|free4u.nurul-huda.or.id|adguardteam.github.io|' \
+      #            -e 's|free4u.nurul-huda.or|adguardteam.github.io|' \
+      #            -e 's|https://free4u.nurul-huda.or.id/?url=|https://adguardteam.github.io/AnonymousRedirect/redirect.html?url=|' \
+      #            -e 's|rotator.nurul-huda.sch|adguardteam.github.io|' \
+      #            -e 's|bas.nurul-huda.or.id|adguardteam.github.io|' \
+      #            -e 's|autofaucet.dutchycorp.space|adguardteam.github.io|' "Additional Bypass.user.js"
 
 
-          rm -rf *.user.js.1
-
+      #     rm -rf *.user.js.1
+          
+      - name: Push Changes
+        id: push
+        run: |
           # Configure Git
           git config --global user.email "rushiranpise17@gmail.com"
           git config --global user.name "Rushi Ranpise"

@@ -19,9 +19,9 @@ jobs:
         id: update
         run: |
 
-          curl -sSL https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/raw/branch/main/1_download_untouched.py | python3 -
-          curl -sSL https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/raw/branch/main/2_generate_includes.pyy | python3 -
-          curl -sSL https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/raw/branch/main/3_patch.py | python3 -
+          curl -sSL https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/raw/branch/main/1_download_untouched.py | python -
+          curl -sSL https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/raw/branch/main/2_generate_includes.pyy | python -
+          curl -sSL https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/raw/branch/main/3_patch.py | python -
           
       # - name: Update Scripts
       #   id: update

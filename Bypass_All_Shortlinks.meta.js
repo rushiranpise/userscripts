@@ -1,3 +1,18 @@
+// ==UserScript==
+// @name       Bypass All Shortlinks Debloated
+// @namespace  Violentmonkey Scripts
+// @run-at     document-start
+// @author     Bloggerpemula
+// @version        90.9
+// @grant          GM_setValue
+// @grant          GM_getValue
+// @grant          GM_addStyle
+// @grant          GM_xmlhttpRequest
+// @grant          window.onurlchange
+// @grant          GM_registerMenuCommand
+// @icon           https://i.ibb.co/qgr0H1n/BASS-Blogger-Pemula.png
+// @require        https://update.greasyfork.org/scripts/439099/1203718/MonkeyConfig%20Modern%20Reloaded.js
+// @description    Bypass All Shortlinks Sites Automatically Skips Annoying Link Shorteners , Skip AdFly , Linkvertise and No Annoying Ads, Directly to Your Destination, and now Support Auto Downloading Your Files
 // @match *://*.earnify.pro/*
 // @match *://*.aprovax.com/*
 // @match *://*.lootcash.vip/*
@@ -642,3 +657,7 @@
 // @match *://*.gos2.urlcash.click/*
 // @match *://*.goes3.urlcash.click/*
 // @match *://*.r1.foxylinks.site/*
+// @exclude /^(https?:\/\/)(.+)?((advertisingexcel|talkforfitness|rsadnetworkinfo|rsinsuranceinfo|rsfinanceinfo|rssoftwareinfo|rshostinginfo|rseducationinfo|gametechreviewer|vegan4k|phineypet|batmanfactor|techedifier|urlhives|linkhives|github|freeoseocheck|greenenez|aliyun|reddit|bing|live|yahoo|wiki-topia|edonmanor|vrtier|whatsapp|gearsadviser|edonmanor|tunebug|menrealitycalc|(cloud|mail|translate).google).com|(thumb8|thumb9|crewbase|crewus|shinchu|shinbhu|ultraten|uniqueten|topcryptoz|allcryptoz|coinsvalue|cookinguide|cryptowidgets|webfreetools|carstopia|makeupguide|carsmania).net|(linksfly|shortsfly|urlsfly|wefly|blog24).me|(greasyfork|openuserjs|adarima|telegram).org|mcrypto.club|misterio.ro|insurancegold.in|coinscap.info)(\/.*)/
+// @downloadURL https://github.com/rushiranpise/userscripts/raw/main/Bypass_All_Shortlinks.user.js
+// @updateURL https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/raw/branch/main/Bypass_All_Shortlinks.meta.js
+// ==/UserScript==

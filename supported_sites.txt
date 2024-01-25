@@ -30,7 +30,6 @@ ouo.io
 linkbox.to
 (desbloquea|drivelinks).me|(acortame-esto|recorta-enlace|enlace-protegido|super-enlace).com|short-info.link
 adbtc.top
-youtube.com
 upload.ee
 appdrive\.*
 dddrive.me
@@ -282,7 +281,6 @@ bastinews.xyz
 autodime.com
 lootlinks.co|(loot-links|links-loot|loot-link).com|(lootdest|lootlink).org|lootdest.info|linksloot.net
 amritadrino.com
-youtube.com
 hunterkiller.me|surflink.tech
 coinhub.wiki
 lyricsbaazaar.com|ezeviral.com

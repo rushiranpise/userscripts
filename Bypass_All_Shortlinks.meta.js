@@ -38,7 +38,6 @@
 // @match *://*.olhonagrana.com/*
 // @match *://*.dutchycorp.space/*
 // @include /^(https?:\/\/)(.+)?(link.birdurls.com|link.owllink.net|link.illink.net)(\/.*)/
-// @include /^(https?:\/\/)(.+)?(revcut.net|urlcut.pro|faho.us|bitad.org|cutlink.xyz|c2g.at)(\/.*)/
 // @include /^(https?:\/\/)(.+)?((teachsansar|technicalatg|foodxor|cdrab|admediaflex).com|ecq.info|datacheap.io)(\/.*)/
 // @match *://*.facebook.com/*
 // @match *://*.ouo.io/*

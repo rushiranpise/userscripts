@@ -20,7 +20,6 @@
 *://*.studyuo.com/*
 *://*.olhonagrana.com/*
 *://*.dutchycorp.space/*
-*://*.facebook.com/*
 *://*.ouo.io/*
 *://*.linkbox.to/*
 *://*.adbtc.top/*

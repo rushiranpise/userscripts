@@ -152,7 +152,6 @@ btcsatoshi.net
 (cutado|cutyurls).com|(cutt|cutsy|cutlink).net|(cutty|exego).app
 comohoy.com
 ctr.sh
-linkvertise.com
 easycut.io
 programasvirtualespc.net
 hiharshit.in

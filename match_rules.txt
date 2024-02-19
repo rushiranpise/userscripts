@@ -123,7 +123,6 @@
 *://*.btcsatoshi.net/*
 *://*.comohoy.com/*
 *://*.ctr.sh/*
-*://*.linkvertise.com/*
 *://*.easycut.io/*
 *://*.programasvirtualespc.net/*
 *://*.hiharshit.in/*

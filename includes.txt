@@ -152,6 +152,7 @@
 // @include /^(https?:\/\/)(.+)?((cutado|cutyurls).com|(cutt|cutsy|cutlink).net|(cutty|exego).app)(\/.*)/
 // @match *://*.comohoy.com/*
 // @match *://*.ctr.sh/*
+// @match *://*.linkvertise.com/*
 // @match *://*.easycut.io/*
 // @match *://*.programasvirtualespc.net/*
 // @match *://*.hiharshit.in/*

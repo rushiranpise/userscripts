@@ -109,12 +109,10 @@
 *://*.enlacito.com/*
 *://*.webhostingtips.club/*
 *://*.render-state.to/*
-*://*.itscybertech.com/*
 *://*.shareus.io/*
 *://*.adtival.network/*
 *://*.dilink.net/*
 *://*.shortener.goldcontent.site/*
-*://*.admediaflex.com/*
 *://*.newsbawa.com/*
 *://*.ontechhindi.com/*
 *://*.sfl.gl/*
@@ -122,11 +120,11 @@
 *://*.sharetext.me/*
 *://*.btcsatoshi.net/*
 *://*.comohoy.com/*
+*://*.apkw.ru/*
 *://*.ctr.sh/*
-*://*.linkvertise.com/*
-*://*.easycut.io/*
 *://*.programasvirtualespc.net/*
 *://*.hiharshit.in/*
+*://*.easycut.io/*
 *://*.bitcotasks.com/*
 *://*.fansonlinehub.com/*
 *://*.terabox.fun/*
@@ -144,14 +142,12 @@
 *://*.1link.club/*
 *://*.1mlink.vip/*
 *://*.zegtrends.com/*
-*://*.techmny.com/*
 *://*.proviralhost.com/*
 *://*.bestadvise4u.com/*
 *://*.altblogger.net/*
 *://*.linkspy.cc/*
 *://*.kiktu.com/*
 *://*.fexkomin.xyz/*
-*://*.freebitco.in/*
 *://*.100puan.com/*
 *://*.sub2get.com/*
 *://*.forexrw7.com/*
@@ -198,7 +194,6 @@
 *://*.coinhub.wiki/*
 *://*.coinsrev.com/*
 *://*.zubatecno.com/*
-*://*.wooseotools.com/*
 *://*.adwerty.com/*
 *://*.modebaca.com/*
 *://*.shopforex.online/*
@@ -227,7 +222,6 @@
 *://*.techleets.xyz/*
 *://*.newsturbovid.com/*
 *://*.amanguides.com/*
-*://*.mirrored.to/*
 *://*.viralxns.com/*
 *://*.flybid.net/*
 *://*.8tm.net/*
@@ -322,7 +316,6 @@
 *://*.techyinfo.in/*
 *://*.gyanitheme.com/*
 *://*.ww1.linktrims.com/*
-*://*.djqunjab.in/*
 *://*.healthynepal.in/*
 *://*.missionhight.in/*
 *://*.tech.techwhom.com/*
@@ -359,7 +352,6 @@
 *://*.blogsward.com/*
 *://*.truevpnlover.com/*
 *://*.battleroyal.online/*
-*://*.highkeyfinance.com/*
 *://*.financeyogi.net/*
 *://*.iphoto.site/*
 *://*.copy-paste-fonts.com/*
@@ -476,7 +468,6 @@
 *://*.techmody.io/*
 *://*.slink.bid/*
 *://*.www.pythondunyasi.com/*
-*://*.gadgets.techymedies.com/*
 *://*.free4u.nurul-huda.or.id/*
 *://*.rotator.nurul-huda.sch.id/*
 *://*.jrlinks.in/*

@@ -98,7 +98,7 @@
 /^(https?:\/\/)(.+)?(anhdep24.com|nguyenvanbao.com|xemsport.com|byboe.com)(\/.*)/
 /^(https?:\/\/)(.+)?(web1s.co|web1s.info|app.covemarkets.com)(\/.*)/
 /^(https?:\/\/)(.+)?((hookeaudio|pennbookcenter|publicananker|fun88bk).com|fun88.info.vn)(\/.*)/
-/^(https?:\/\/)(.+)?(stfly.cc|stfly.xyz|techtrendmakers.com|(blogbux|blogesque|exploreera).net)(\/.*)/
+/^(https?:\/\/)(.+)?(stfly.cc|stfly.xyz|(techtrendmakers|gadnest).com|(blogbux|blogesque|exploreera).net)(\/.*)/
 /^(https?:\/\/)(.+)?(slinkware.com|aghtas.com|mazen-ve3.com|youssefsayed.com|alghtas.xyz|newworldnew.com|tackaway.com)(\/.*)/
 /^(https?:\/\/)(.+)?(link.goto.com.np|(appkamods|bankvacency|mealcold|otomi-games).com)(\/.*)/
 /^(https?:\/\/)(.+)?(hamrolekh.com|(mgame|oncoin).info|lifeinsurancesblog.xyz|nishankhatri.com.np|quanngon.org)(\/.*)/

@@ -2,7 +2,7 @@
 // @name       Bypass All Shortlinks Debloated
 // @namespace  Violentmonkey Scripts
 // @run-at     document-start
-// @author     Bloggerpemula
+// @author     Amm0ni4
 // @version        91.3
 // @grant          GM_setValue
 // @grant          GM_getValue
@@ -10,9 +10,9 @@
 // @grant          GM_xmlhttpRequest
 // @grant          window.onurlchange
 // @grant          GM_registerMenuCommand
-// @icon           https://i.ibb.co/qgr0H1n/BASS-Blogger-Pemula.png
+// @icon           https://cdn-icons-png.flaticon.com/512/14025/14025295.png
 // @require        https://update.greasyfork.org/scripts/439099/1203718/MonkeyConfig%20Modern%20Reloaded.js
-// @description    Bypass All Shortlinks Sites Automatically Skips Annoying Link Shorteners , Skip AdFly , Linkvertise and No Annoying Ads, Directly to Your Destination, and now Support Auto Downloading Your Files
+// @description    Automatically bypass many link shorteners. Originally by BloggerPemula.
 // @match *://*.earnify.pro/*
 // @match *://*.aprovax.com/*
 // @match *://*.lootcash.vip/*
@@ -318,7 +318,7 @@
 // @match *://*.letsboost.net/*
 // @match *://*.web1s.asia/*
 // @include /^(https?:\/\/)(.+)?((hookeaudio|pennbookcenter|publicananker|fun88bk).com|fun88.info.vn)(\/.*)/
-// @include /^(https?:\/\/)(.+)?(stfly.cc|stfly.xyz|techtrendmakers.com|(blogbux|blogesque|exploreera).net)(\/.*)/
+// @include /^(https?:\/\/)(.+)?(stfly.cc|stfly.xyz|(techtrendmakers|gadnest).com|(blogbux|blogesque|exploreera).net)(\/.*)/
 // @match *://*.coins-town.com/*
 // @include /^(https?:\/\/)(.+)?(slinkware.com|aghtas.com|mazen-ve3.com|youssefsayed.com|alghtas.xyz|newworldnew.com|tackaway.com)(\/.*)/
 // @include /^(https?:\/\/)(.+)?(link.goto.com.np|(appkamods|bankvacency|mealcold|otomi-games).com)(\/.*)/
@@ -344,6 +344,7 @@
 // @match *://*.techleets.xyz/*
 // @match *://*.newsturbovid.com/*
 // @match *://*.amanguides.com/*
+// @match *://*.mirrored.to/*
 // @match *://*.viralxns.com/*
 // @match *://*.flybid.net/*
 // @match *://*.8tm.net/*
@@ -914,7 +915,7 @@
       case 'pixeldrain.com': if (h.href.includes('/u/')) return h.href.replace('u/', '/api/file/') + '?download'; break;
       case 'www.google.com': if (h.pathname === '/url' && h.searchParams.has('q')) {return h.searchParams.get('q');} break;
       case 'social-unlock.com': if (/^\/([^\/]+)/.test(h.pathname)) {return 'https://social-unlock.com/redirect/' + RegExp.$1;} break;
-      case 'work.ink': if (/^\/([^\/]+)/.test(h.pathname)) {return 'https://adbypass.org/bypass?bypass=' + encodeURIComponent(location.href);} break;
+      case 'work.ink': if (/^\/([^\/]+)/.test(h.pathname) && /^https?:\/\/work\.ink\/(?!token).*/.test(location.href)) {return 'https://adbypass.org/bypass?bypass=' + encodeURIComponent(location.href);} break;
       case 'nft.blogyindia.com':
         if (h.pathname === '/safe.php' && h.searchParams.has('link')) {return 'https://go.urlpay.in/' + h.searchParams.get('link');} break;
       case 'my.dropz.xyz':
@@ -1557,7 +1558,7 @@
             bp(pLink).click();clearInterval(pClick);}}, 2000);
       let gCode = setInterval(() => {if (bp(gDiv) && !bp(gDiv).innerText.includes('ontinue after')) {tCode = strBetween(bp(gDiv).parentElement.innerHTML, `!important;">`, `<svg`, true);
       window.location.assign(`${decodeURIComponent(BpParamd.get('wsa'))}?code=${tCode}`); clearInterval(gCode);}}, 2000);}});
-    BypassedByBloggerPemula(/stfly.cc|stfly.xyz|techtrendmakers.com|(blogbux|blogesque|exploreera).net/, function() {if (elementExists('.g-recaptcha') || elementExists('.h-captcha')) {
+    BypassedByBloggerPemula(/stfly.cc|stfly.xyz|(techtrendmakers|gadnest).com|(blogbux|blogesque|exploreera).net/, function() {if (elementExists('.g-recaptcha') || elementExists('.h-captcha')) {
         let stf = setInterval(() => {if (Captchacheck()) {clearInterval(stf);ReadytoClick('.form-send.m-2.btn-captcha.btn-outline-primary.btn');}}, 500);} else {
         ClickIfExists('.form-send.m-2.btn-captcha.btn-outline-primary.btn', 3, 'setInterval');}});
     BypassedByBloggerPemula(/coins-town.com/, function() {ClickIfExists('#claimCoins > button[data-bs-toggle="modal"]', 2);
@@ -1607,7 +1608,7 @@
     BypassedByBloggerPemula(/techleets.xyz/, () => waitForElm('#tp-snp2 > center > a', tle => redirect(tle.href, false)));
     BypassedByBloggerPemula(/newsturbovid.com/, () => waitForElm('#start-download > a', ntv => redirect(ntv.href, false)));
     BypassedByBloggerPemula(/amanguides.com/, () => waitForElm('#wpsafe-link > .bt-success', ag => redirect(ag.href, false)));
-    //BypassedByBloggerPemula(/mirrored.to/, () => waitForElm('div.col-sm.centered.extra-top a', mir => redirect(mir.href, false)));
+    BypassedByBloggerPemula(/mirrored.to/, () => waitForElm('div.col-sm.centered.extra-top a', mir => redirect(mir.href, false)));
     BypassedByBloggerPemula(/viralxns.com/, () => waitForElm('div.paras-dev-top.text-center a', vir => redirect(vir.href, false)));
     BypassedByBloggerPemula(/flybid.net/, () => waitForElm('a#continue-button.continue-button', flb => redirect(flb.href, false)));
     BypassedByBloggerPemula(/8tm.net/, () => waitForElm('a.btn.btn-secondary.btn-block.redirect', tm => redirect(tm.href, false)));

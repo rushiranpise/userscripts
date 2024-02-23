@@ -2,7 +2,7 @@
 // @name       Bypass All Shortlinks Debloated
 // @namespace  Violentmonkey Scripts
 // @run-at     document-start
-// @author     Bloggerpemula
+// @author     Amm0ni4
 // @version        91.3
 // @grant          GM_setValue
 // @grant          GM_getValue
@@ -10,9 +10,9 @@
 // @grant          GM_xmlhttpRequest
 // @grant          window.onurlchange
 // @grant          GM_registerMenuCommand
-// @icon           https://i.ibb.co/qgr0H1n/BASS-Blogger-Pemula.png
+// @icon           https://cdn-icons-png.flaticon.com/512/14025/14025295.png
 // @require        https://update.greasyfork.org/scripts/439099/1203718/MonkeyConfig%20Modern%20Reloaded.js
-// @description    Bypass All Shortlinks Sites Automatically Skips Annoying Link Shorteners , Skip AdFly , Linkvertise and No Annoying Ads, Directly to Your Destination, and now Support Auto Downloading Your Files
+// @description    Automatically bypass many link shorteners. Originally by BloggerPemula.
 // @match *://*.earnify.pro/*
 // @match *://*.aprovax.com/*
 // @match *://*.lootcash.vip/*
@@ -318,7 +318,7 @@
 // @match *://*.letsboost.net/*
 // @match *://*.web1s.asia/*
 // @include /^(https?:\/\/)(.+)?((hookeaudio|pennbookcenter|publicananker|fun88bk).com|fun88.info.vn)(\/.*)/
-// @include /^(https?:\/\/)(.+)?(stfly.cc|stfly.xyz|techtrendmakers.com|(blogbux|blogesque|exploreera).net)(\/.*)/
+// @include /^(https?:\/\/)(.+)?(stfly.cc|stfly.xyz|(techtrendmakers|gadnest).com|(blogbux|blogesque|exploreera).net)(\/.*)/
 // @match *://*.coins-town.com/*
 // @include /^(https?:\/\/)(.+)?(slinkware.com|aghtas.com|mazen-ve3.com|youssefsayed.com|alghtas.xyz|newworldnew.com|tackaway.com)(\/.*)/
 // @include /^(https?:\/\/)(.+)?(link.goto.com.np|(appkamods|bankvacency|mealcold|otomi-games).com)(\/.*)/
@@ -344,6 +344,7 @@
 // @match *://*.techleets.xyz/*
 // @match *://*.newsturbovid.com/*
 // @match *://*.amanguides.com/*
+// @match *://*.mirrored.to/*
 // @match *://*.viralxns.com/*
 // @match *://*.flybid.net/*
 // @match *://*.8tm.net/*

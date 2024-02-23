@@ -222,6 +222,7 @@
 *://*.techleets.xyz/*
 *://*.newsturbovid.com/*
 *://*.amanguides.com/*
+*://*.mirrored.to/*
 *://*.viralxns.com/*
 *://*.flybid.net/*
 *://*.8tm.net/*

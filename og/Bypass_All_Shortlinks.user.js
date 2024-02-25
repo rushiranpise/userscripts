@@ -3,7 +3,7 @@
 // @namespace  Violentmonkey Scripts
 // @run-at     document-start
 // @author     Amm0ni4
-// @version        91.3
+// @version        91.4
 // @grant          GM_setValue
 // @grant          GM_getValue
 // @grant          GM_addStyle
@@ -13,6 +13,8 @@
 // @icon           https://cdn-icons-png.flaticon.com/512/14025/14025295.png
 // @require        https://update.greasyfork.org/scripts/439099/1203718/MonkeyConfig%20Modern%20Reloaded.js
 // @description    Automatically bypass many link shorteners. Originally by BloggerPemula.
+// @homepageURL    https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated
+// @supportURL     https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/issues
 // @match *://*.earnify.pro/*
 // @match *://*.aprovax.com/*
 // @match *://*.lootcash.vip/*
@@ -659,7 +661,7 @@
 // There will be a Special Tricks and Bypass Adblock Codes only for Good Users (Anyone who have good attitude , Good Feedback, will be invited to my group)
 // Change Your Delay in the settings options from 5 to 10 or 20 if you have issues like Your action marked Suspicious,Don't try to bypass ,Don't use Speedster, etc
    const window = unsafeWindow; // Some of My Codes Not Running Well Without this , Please Let Me Know if You Find any Bugs
-   const cfg = new MonkeyConfig({title: 'Bypass Version 91.3 Settings :', menuCommand: true,
+   const cfg = new MonkeyConfig({title: 'Bypass Version 91.4 Settings :', menuCommand: true,
    params: {Announcements : {type: 'text', default: 'Enable Always Ready If You Open Multiple Tabs For Shortlink', long: 3},
     SetDelay: {label: "Redirect Delay ", type: "number", default: 5,},
     BlogDelay: {label: "Use My Blogs For Delays", type: "checkbox", default: true,},
@@ -915,7 +917,7 @@
       case 'pixeldrain.com': if (h.href.includes('/u/')) return h.href.replace('u/', '/api/file/') + '?download'; break;
       case 'www.google.com': if (h.pathname === '/url' && h.searchParams.has('q')) {return h.searchParams.get('q');} break;
       case 'social-unlock.com': if (/^\/([^\/]+)/.test(h.pathname)) {return 'https://social-unlock.com/redirect/' + RegExp.$1;} break;
-      case 'work.ink': if (/^\/([^\/]+)/.test(h.pathname) && /^https?:\/\/work\.ink\/(?!token).*/.test(location.href)) {return 'https://adbypass.org/bypass?bypass=' + encodeURIComponent(location.href);} break;
+      case 'work.ink': if (/^\/([^\/]+)/.test(h.pathname) && !location.href.includes('/token/') && !location.href.includes('?r=') && !location.href.includes('?ref=')) {return 'https://adbypass.org/bypass?bypass=' + encodeURIComponent(location.href);} break;
       case 'nft.blogyindia.com':
         if (h.pathname === '/safe.php' && h.searchParams.has('link')) {return 'https://go.urlpay.in/' + h.searchParams.get('link');} break;
       case 'my.dropz.xyz':
@@ -1217,8 +1219,6 @@
     BypassedByBloggerPemula(/btcsatoshi.net/, async function() {EnableRCF();window.check2();window.check3();ClickIfExists('button.btn.btn-primary.btn-lg');});
     BypassedByBloggerPemula(/comohoy.com/, function() {if (location.href.includes('/grab/out.html') && BpParams.has('url')) {meta(atob(BpParams.get('url')));}});
     BypassedByBloggerPemula(/apkw.ru/, function() {if (location.href.includes('/away')) {let apkw = location.href.split('/').slice(-1);redirect(atob(apkw),false);}});
-    // if you have issues with Linkvertise or work.ink Bypass , Please Join Discord Group owned by @varram https://discord.com/invite/uMEtrpRvAf
-    //BypassedByBloggerPemula(/linkvertise.com/, function() {if (elementExists('lv-action-box')) {location = 'https://adbypass.org/bypass?bypass=' + encodeURIComponent(location.href);}});
     BypassedByBloggerPemula(/ctr.sh/, function() {if (/^\/(.+)/.test(location.pathname) && !BpParams.has('token')) {location = 'https://quesignifi.ca/?url8j=' + location.href;}});
     BypassedByBloggerPemula(/(blackleadr|shortcuthigh|newztalkies|cybertyrant).com|hubdrive.me|fileroot.net/, function() {if (BpParams.has('r')) {meta(atob(BpParams.get('r')));}});
     BypassedByBloggerPemula(/programasvirtualespc.net/, function() {if (location.href.includes('out/')) {const pvc = location.href.split('?')[1]; redirect(atob(pvc),false);} else {}});
@@ -1663,4 +1663,5 @@
       if (location.href.includes('autofaucet.dutchycorp.space/ptc/')) {console.log('Viewing Available Ads');
         if (elementExists('.fa-check-double')) {console.log('All Available Ads Watched'); setTimeout(() => {window.location.replace('https://autofaucet.dutchycorp.space/dashboard.php');}, 3 * 1000);}
         setInterval(() => {if (Checkvisibility(bp('#submit_captcha'))) {bp("button[type='submit'].g-recaptcha").click();}}, 5 * 1000);}});
+
 }})();

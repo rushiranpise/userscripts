@@ -915,8 +915,8 @@
     BypassedByBloggerPemula(/autodime.com/, function() {
       let atd = setInterval(function() {if (Captchacheck()) {clearInterval(atd);ClickIfExists('#button1');}}, 500);
       waitForElm('a.btn-hover.color-1.btn-captcha', odim => redirect(odim.href, false));});
-    BypassedByBloggerPemula(/lootlinks.co|(loot-links|links-loot|loot-link).com|(lootdest|lootlink).org|lootdest.info|linksloot.net/, function() {
-      let lln = bp('body > script');let lls = strBetween(lln.text, `= '`, `,'`).split("'").slice(50, -5);setTimeout(() => {redirect(Decrypter2(lls), false);}, 2 * 1000);});
+    //BypassedByBloggerPemula(/lootlinks.co|(loot-links|links-loot|loot-link).com|(lootdest|lootlink).org|lootdest.info|linksloot.net/, function() {
+      //let lln = bp('body > script');let lls = strBetween(lln.text, `= '`, `,'`).split("'").slice(50, -5);setTimeout(() => {redirect(Decrypter2(lls), false);}, 2 * 1000);});
     BypassedByBloggerPemula(/amritadrino.com/, function() {
       if (elementExists('.g-recaptcha')) {waitForElm('body > b:nth-child(10) > center:nth-child(4) > a:nth-child(64)', amd => redirect(amd.href, false));} else {waitForElm('#tp-snp2', amBtn => amBtn.click());}});
     BypassedByBloggerPemula(/youtube.com/, function() {if (elementExists('#redirect-main-text')) {waitForElm('a#invalid-token-redirect-goto-site-button', yt => redirect(yt.href, false));} else {}});

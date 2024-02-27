@@ -353,13 +353,11 @@
 *://*.blogsward.com/*
 *://*.truevpnlover.com/*
 *://*.battleroyal.online/*
-*://*.financeyogi.net/*
 *://*.iphoto.site/*
 *://*.copy-paste-fonts.com/*
 *://*.mohtawaa.com/*
 *://*.multiup.org/*
 *://*.modsfire.com/*
-*://*.pixeldrain.com/*
 *://*.social-unlock.com/*
 *://*.work.ink/*
 *://*.nft.blogyindia.com/*

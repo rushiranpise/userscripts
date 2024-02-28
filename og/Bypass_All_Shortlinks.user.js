@@ -496,7 +496,6 @@
 // @match *://*.battleroyal.online/*
 // @include /^(https?:\/\/)(.+)?(techyblogs.in|techyinfo.in)(\/.*)/
 // @include /^(https?:\/\/)(.+)?(apasih.my.id|healthydad.my.id)(\/.*)/
-// @match *://*.financeyogi.net/*
 // @match *://*.iphoto.site/*
 // @match *://*.copy-paste-fonts.com/*
 // @include /^(https?:\/\/)(.+)?(techloadz.com|sportsmediaz.com)(\/.*)/
@@ -511,7 +510,6 @@
 // @include /^(https?:\/\/)(.+)?((aduzz|admediaflex|cryptfaucet|phimne|cdrab|tinybc|tinycmd).com|(bit4me|ecq|sportweb|mgame).info|(wpcheap|offerinfo).net|quanngon.org|datacheap.io)(\/.*)/
 // @match *://*.multiup.org/*
 // @match *://*.modsfire.com/*
-// @match *://*.pixeldrain.com/*
 // @match *://*.social-unlock.com/*
 // @match *://*.work.ink/*
 // @match *://*.nft.blogyindia.com/*
@@ -864,7 +862,7 @@
   BloggerPemula('techyblogs.in|techyinfo.in', 'go', 'https://insurance.techyinfo.in/');
   //BloggerPemula('highkeyfinance.com', 'landhere', 'https://insurance.techymedies.com/');
   BloggerPemula('apasih.my.id|healthydad.my.id', 'link', 'https://link.get4llink.com/');
-  BloggerPemula('financeyogi.net', 'link', 'https://market.finclub.in/safe2.php?link=');
+  //BloggerPemula('financeyogi.net', 'link', 'https://market.finclub.in/safe2.php?link=');
   BloggerPemula('iphoto.site', 'post', 'https://vietnamtravelguide.top/token.php?post=');
   BloggerPemula('copy-paste-fonts.com', 'post', 'https://cryptednews.space/token.php?post=');
   BloggerPemula('techloadz.com|sportsmediaz.com', 'link', 'https://link.cloudshrinker.com//');
@@ -914,7 +912,7 @@
   const sl = (h => {
     switch (h.host) {case 'multiup.org': if (h.href.includes('/download/')) return h.href.replace('download/', 'en/mirror/'); break;
       case 'modsfire.com': if (/^\/([^\/]+)/.test(h.pathname)) {return 'https://modsfire.com/d/' + RegExp.$1;} break;
-      case 'pixeldrain.com': if (h.href.includes('/u/')) return h.href.replace('u/', '/api/file/') + '?download'; break;
+      //case 'pixeldrain.com': if (h.href.includes('/u/')) return h.href.replace('u/', '/api/file/') + '?download'; break;
       case 'www.google.com': if (h.pathname === '/url' && h.searchParams.has('q')) {return h.searchParams.get('q');} break;
       case 'social-unlock.com': if (/^\/([^\/]+)/.test(h.pathname)) {return 'https://social-unlock.com/redirect/' + RegExp.$1;} break;
       case 'work.ink': if (/^\/([^\/]+)/.test(h.pathname) && !location.href.includes('/token/') && !location.href.includes('?r=') && !location.href.includes('?ref=')) {return 'https://adbypass.org/bypass?bypass=' + encodeURIComponent(location.href);} break;

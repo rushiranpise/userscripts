@@ -496,7 +496,6 @@
 // @match *://*.battleroyal.online/*
 // @include /^(https?:\/\/)(.+)?(techyblogs.in|techyinfo.in)(\/.*)/
 // @include /^(https?:\/\/)(.+)?(apasih.my.id|healthydad.my.id)(\/.*)/
-// @match *://*.financeyogi.net/*
 // @match *://*.iphoto.site/*
 // @match *://*.copy-paste-fonts.com/*
 // @include /^(https?:\/\/)(.+)?(techloadz.com|sportsmediaz.com)(\/.*)/
@@ -511,7 +510,6 @@
 // @include /^(https?:\/\/)(.+)?((aduzz|admediaflex|cryptfaucet|phimne|cdrab|tinybc|tinycmd).com|(bit4me|ecq|sportweb|mgame).info|(wpcheap|offerinfo).net|quanngon.org|datacheap.io)(\/.*)/
 // @match *://*.multiup.org/*
 // @match *://*.modsfire.com/*
-// @match *://*.pixeldrain.com/*
 // @match *://*.social-unlock.com/*
 // @match *://*.work.ink/*
 // @match *://*.nft.blogyindia.com/*

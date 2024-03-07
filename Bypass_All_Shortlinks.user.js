@@ -3,10 +3,11 @@
 // @namespace  Violentmonkey Scripts
 // @run-at     document-start
 // @author     Amm0ni4
-// @version        91.4
+// @version        91.5
 // @grant          GM_setValue
 // @grant          GM_getValue
 // @grant          GM_addStyle
+// @connect        nocaptchaai.com
 // @grant          GM_xmlhttpRequest
 // @grant          window.onurlchange
 // @grant          GM_registerMenuCommand
@@ -103,6 +104,7 @@
 // @match *://*.dailyuploads.net/*
 // @match *://*.9xupload.asia/*
 // @match *://*.mediafire.com/*
+// @match *://*.qiwi.gg/*
 // @include /^(https?:\/\/)(.+)?(usersdrive.com|ddownload.com)(\/.*)/
 // @match *://*.sharemods.com/*
 // @match *://*.mexa.sh/*
@@ -172,12 +174,13 @@
 // @match *://*.easycut.io/*
 // @include /^(https?:\/\/)(.+)?(trangchu.news|downfile.site|techacode.com|azmath.info|aztravels.net)(\/.*)/
 // @include /^(https?:\/\/)(.+)?(techanalyzer.eu|askpaccosi.com|cryptomonitor.in|2the.space|imbb.online)(\/.*)/
+// @include /^(https?:\/\/)(.+)?((tinycmd|tinybc).com)(\/.*)/
 // @include /^(https?:\/\/)(.+)?((bitzite|neverdims).com)(\/.*)/
 // @include /^(https?:\/\/)(.+)?(hostratgeber.de|(miner-sim|networkhint).com)(\/.*)/
 // @include /^(https?:\/\/)(.+)?(coingraph.us|trendzilla.it|horoscop.info|(infonerd|writeprofit).org)(\/.*)/
+// @include /^(https?:\/\/)(.+)?((aduzz|cryptfaucet).com|(bitcrypto|bit4me).info|offerinfo.net|deltabtc.xyz)(\/.*)/
 // @include /^(https?:\/\/)(.+)?(nullscript.info|freebinance.top)(\/.*)/
 // @include /^(https?:\/\/)(.+)?((10short|lollty).pro|mamahawa.com|10short.vip)(\/.*)/
-// @include /^(https?:\/\/)(.+)?((tinycmd|tinybc|aduzz|cryptfaucet).com|(bitcrypto|bit4me).info|offerinfo.net|deltabtc.xyz)(\/.*)/
 // @include /^(https?:\/\/)(.+)?((cryptosparatodos|placementsmela).com|(insurancepost|financeandinsurance|tecnotech|healthmedic).xyz|paidinsurance.in)(\/.*)/
 // @match *://*.bitcotasks.com/*
 // @include /^(https?:\/\/)(.+)?(mynewsmedia.co|(netflixrelease|mangareleasedate|kojnews|freemodapp|cryptoprolife|revadvert|diethim|techsotta|zutiza|lndianews|newsjov|instantloan5|hitjankari|phixshop|mp4news).com|(rontymobile|myfirstname|snapseedmod|djrajurjm|disking|ignoupur).in)(\/.*)/
@@ -372,13 +375,13 @@
 // @match *://*.foodupe.com/*
 // @match *://*.freethailottery.live/*
 // @match *://*.udrop.com/*
-// @include /^(https?:\/\/)(.+)?((financenube|mixrootmods).com)(\/.*)/
 // @include /^(https?:\/\/)(.+)?(nulledlist.info|earnash.com|my-coins.xyz|earn-bitcoin.online|zimabadko.com|vidoza.xyz|every-crypto.info)(\/.*)/
 // @match *://*.sub2unlock.net/*
 // @include /^(https?:\/\/)(.+)?((starxinvestor|hit-films|sevenjournals).com|(iisfvirtual|bookszone|learnmany).in)(\/.*)/
+// @include /^(https?:\/\/)(.+)?((financenube|mixrootmods|pastescript|trimorspacks|apklox).com|updrop.link)(\/.*)/
 // @match *://*.ronakfitness.com/*
 // @match *://*.mboost.me/*
-// @include /^(https?:\/\/)(.+)?((disheye|kreatifparenting|phimne|admediaflex|cdrab).com|(gurumu|wpcheap|izseo).net|(sportweb|ecq).info|savego.org|hbz.us|djqunjab.in|datacheap.io)(\/.*)/
+// @include /^(https?:\/\/)(.+)?((disheye|kreatifparenting|phimne|admediaflex|cdrab).com|(gurumu|wpcheap|izseo|adcrypto|daycash).net|(sportweb|ecq|mgame|oncoin).info|savego.org|hbz.us|djqunjab.in|datacheap.io)(\/.*)/
 // @include /^(https?:\/\/)(.+)?((awgrow|fadedfeet|kenzo-flowertag|homeculina|ineedskin|alightmotionlatest).com|worldtanr.xyz|lawyex.co|yexolo.net|mdn.lol)(\/.*)/
 // @include /^(https?:\/\/)(.+)?(readi.online|mbantul.my.id|blog.qnix.me|videoclip.info|moddingzone.in|crypto-fi.net|claimcrypto.cc|xtrabits.click|(cempakajaya|web9academy|onlineincoms|allsoftdrivers|tribuncrypto|poketoonworld|bioinflu|pubgquotes|bico8).com|(techleets|ourcoincash|studyis|healthysamy).xyz)(\/.*)/
 // @match *://*.aiimgvlog.fun/*
@@ -644,7 +647,7 @@
 // @match *://*.playstore.pw/*
 // @match *://*.sigmalinks.in/*
 // @match *://*.r1.foxylinks.site/*
-// @exclude /^(https?:\/\/)(.+)?((advertisingexcel|talkforfitness|rsadnetworkinfo|rsinsuranceinfo|rsfinanceinfo|rssoftwareinfo|rshostinginfo|rseducationinfo|gametechreviewer|vegan4k|phineypet|batmanfactor|techedifier|urlhives|linkhives|github|freeoseocheck|greenenez|aliyun|reddit|bing|live|yahoo|wiki-topia|edonmanor|vrtier|whatsapp|gearsadviser|edonmanor|tunebug|menrealitycalc|amazon|ebay|payoneer|paypal|skrill|stripe|tipalti|wise|discord|tokopedia|taobao|taboola|aliexpress|netflix|citigroup|spotify|bankofamerica|hsbc|(cloud|mail|translate|analytics|accounts|myaccount|contacts|clients6|developers|payments|pay|ogs|safety|wallet).google).com|(thumb8|thumb9|crewbase|crewus|shinchu|shinbhu|ultraten|uniqueten|topcryptoz|allcryptoz|coinsvalue|cookinguide|cryptowidgets|webfreetools|carstopia|makeupguide|carsmania|nflximg|doubleclick).net|(linksfly|shortsfly|urlsfly|wefly|blog24).me|(greasyfork|openuserjs|adarima|telegram|wikipedia).org|mcrypto.club|misterio.ro|insurancegold.in|coinscap.info|(shopee|lazada|rakuten|maybank).*|(dana|ovo|bca.co|bri.co|bni.co|bankmandiri.co|desa|(.*).go).id|(.*).edu|(.*).gov)(\/.*)/
+// @exclude /^(https?:\/\/)(.+)?((advertisingexcel|talkforfitness|rsadnetworkinfo|rsinsuranceinfo|rsfinanceinfo|rssoftwareinfo|rshostinginfo|rseducationinfo|gametechreviewer|vegan4k|phineypet|batmanfactor|techedifier|urlhives|linkhives|github|freeoseocheck|greenenez|aliyun|reddit|bing|yahoo|wiki-topia|edonmanor|vrtier|whatsapp|gearsadviser|edonmanor|tunebug|menrealitycalc|amazon|ebay|payoneer|paypal|skrill|stripe|tipalti|wise|discord|tokopedia|taobao|taboola|aliexpress|netflix|citigroup|spotify|bankofamerica|hsbc|(cloud|mail|translate|analytics|accounts|myaccount|contacts|clients6|developers|payments|pay|ogs|safety|wallet).google|(login|signup|account|officeapps|api|mail|hotmail).live).com|(thumb8|thumb9|crewbase|crewus|shinchu|shinbhu|ultraten|uniqueten|topcryptoz|allcryptoz|coinsvalue|cookinguide|cryptowidgets|webfreetools|carstopia|makeupguide|carsmania|nflximg|doubleclick).net|(linksfly|shortsfly|urlsfly|wefly|blog24).me|(greasyfork|openuserjs|adarima|telegram|wikipedia).org|mcrypto.club|misterio.ro|insurancegold.in|coinscap.info|(shopee|lazada|rakuten|maybank).*|(dana|ovo|bca.co|bri.co|bni.co|bankmandiri.co|desa|(.*).go).id|(.*).edu|(.*).gov)(\/.*)/
 // @downloadURL https://github.com/rushiranpise/userscripts/raw/main/Bypass_All_Shortlinks.user.js
 // @updateURL https://codeberg.org/Amm0ni4/bypass-all-shortlinks-debloated/raw/branch/main/Bypass_All_Shortlinks.meta.js
 // ==/UserScript==
@@ -659,8 +662,9 @@
 // There will be a Special Tricks and Bypass Adblock Codes only for Good Users (Anyone who have good attitude , Good Feedback, will be invited to my group)
 // Change Your Delay in the settings options from 5 to 10 or 20 if you have issues like Your action marked Suspicious,Don't try to bypass ,Don't use Speedster, etc
    const window = unsafeWindow; // Some of My Codes Not Running Well Without this , Please Let Me Know if You Find any Bugs
-   const cfg = new MonkeyConfig({title: 'Bypass Version 91.4 Settings :', menuCommand: true,
+   const cfg = new MonkeyConfig({title: 'Bypass Version 91.5 Settings :', menuCommand: true,
    params: {Announcements : {type: 'text', default: 'Enable Always Ready If You Open Multiple Tabs For Shortlink', long: 3},
+    ApiKey: {label: "Key From Nocaptchaai", type: "text", default: "",}, // Not Yet Ready
     SetDelay: {label: "Redirect Delay ", type: "number", default: 5,},
     BlogDelay: {label: "Use My Blogs For Delays", type: "checkbox", default: true,},
     reCAPTCHA: {label: "Auto Open Recaptcha", type: "checkbox", default: false,},
@@ -1127,6 +1131,9 @@
       ClickIfExists('#container > table:nth-child(15) > tbody:nth-child(1) > tr:nth-child(2) > td:nth-child(1) > a:nth-child(1)', 2);});
     BypassedByBloggerPemula(/mediafire.com/, function() {var bass;var md = function closeWindows() {window.close();clearInterval(bass);};
       var mf = bp('.download_link .input').getAttribute('href');console.log(mf);location.replace(mf);bass = setInterval(md, 1000 * 5);});
+    BypassedByBloggerPemula(/qiwi.gg/, function() {if (elementExists("div [class^='page_DownloadPage']")) {
+      ClickIfExists("button[class^='DownloadButton_ButtonSoScraperCanTakeThisName']", 2);
+        let qiwi = bp("a[class^='DownloadButton_DownloadButton']"); setTimeout(() => {redirect(qiwi.href, false);}, 3 * 1000);} else {}});
     BypassedByBloggerPemula(/usersdrive.com|ddownload.com/, function() {
       let ud = setInterval(function() {if (Captchacheck()) {ClickIfExists('#downloadbtn');}}, 500);ClickIfExists('.btn-download.btn', 1);});
     BypassedByBloggerPemula(/sharemods.com/, function() {SubmitIfExists('#dForm', 2);
@@ -1224,12 +1231,13 @@
     BypassedByBloggerPemula(/easycut.io/, function() {if (/^\/(.+)/.test(location.pathname) && !BpParams.has('token')) {location = 'https://tiktokcounter.net/finance/?url8j=' + location.href;}});
     BypassedByBloggerPemula(/trangchu.news|downfile.site|techacode.com|azmath.info|aztravels.net/, function() {ClickIfExists('#yuidea', 2);ClickIfExists('#monetiza', 2);ClickIfExists('#btn6', 3);});
     BypassedByBloggerPemula(/techanalyzer.eu|askpaccosi.com|cryptomonitor.in|2the.space|imbb.online/, function() {EnableRCF();SubmitIfExists("form[name='dsb']", 3);ClickIfExists('#wpsafe-link > a', 4);});
+    BypassedByBloggerPemula(/(tinycmd|tinybc).com/, () => {waitForElm("div[id^=wpsafe] > a[rel=nofollow]", tiny => redirect(strBetween(tiny.onclick.toString(), `handleClick('`, `', '_self')`), false));});
     BypassedByBloggerPemula(/(bitzite|neverdims).com/, function() {EnableRCF();let bitzite = bp("input[name=newwpsafelink]");setTimeout(() => {redirect(JSON.parse(atob(bitzite.value)).linkr,false);}, 3 * 1000);});
     BypassedByBloggerPemula(/hostratgeber.de|(miner-sim|networkhint).com/, function() {let hostrat = bp("input[name=newwpsafelink]");setTimeout(() => {redirect(JSON.parse(atob(hostrat.value)).linkr,false);}, 120 * 1000);});
     BypassedByBloggerPemula(/coingraph.us|trendzilla.it|horoscop.info|(infonerd|writeprofit).org/, function() {let Alcatraz = bp("input[name=newwpsafelink]");setTimeout(() => {redirect(JSON.parse(atob(Alcatraz.value)).linkk,false);}, 120 * 1000);});
+    BypassedByBloggerPemula(/(aduzz|cryptfaucet).com|(bitcrypto|bit4me).info|offerinfo.net|deltabtc.xyz/, () => {waitForElm("div[id^=wpsafe] > a[rel=nofollow]", tiny => redirect(strBetween(tiny.onclick.toString(), `window.open('`, `', '_self')`), false));});
     BypassedByBloggerPemula(/nullscript.info|freebinance.top/, function() {waitForElm('div#wpsafe-link > a', function(element) {const regex = /redirect=(.*)',/;const m = regex.exec(element.onclick.toString())[1];location.href = JSON.parse(atob(m)).safelink;});});
     BypassedByBloggerPemula(/(10short|lollty).pro|mamahawa.com|10short.vip/, function() {ReadytoClick('center > .btn-success.btn', 3);waitForElm('a#makingdifferenttimer', st1 => redirect(st1.href, false));waitForElm('a#proceed', st2 => redirect(st2.href, false));});
-    BypassedByBloggerPemula(/(tinycmd|tinybc|aduzz|cryptfaucet).com|(bitcrypto|bit4me).info|offerinfo.net|deltabtc.xyz/, () => {waitForElm("div[id^=wpsafe] > a[rel=nofollow]", tiny => redirect(strBetween(tiny.onclick.toString(), `window.open('`, `', '_self')`), false));});
     BypassedByBloggerPemula(/(cryptosparatodos|placementsmela).com|(insurancepost|financeandinsurance|tecnotech|healthmedic).xyz|paidinsurance.in/, () => waitForElm('#wpsafe-link a', bti => redirect(strBetween(bti.onclick.toString(), `window.open('`, `', '_self')`), false)));
     BypassedByBloggerPemula(/bitcotasks.com/, function() {if (location.href.includes('/shortlink/')) {window.urlPattern = false;let bct = setInterval(() => {if (Checkvisibility(bp('.captcha-success.captcha-theme-light.captcha-holder'))) {clearInterval(bct); window.continueClicked();}}, 1 * 1000);} else {}});
     BypassedByBloggerPemula(/mynewsmedia.co|(netflixrelease|mangareleasedate|kojnews|freemodapp|cryptoprolife|revadvert|diethim|techsotta|zutiza|lndianews|newsjov|instantloan5|hitjankari|phixshop|mp4news).com|(rontymobile|myfirstname|snapseedmod|djrajurjm|disking|ignoupur).in/, function() {ClickIfExists('#VerifyBtn', 3);ClickIfExists('#NextBtn', 5, 'setInterval');});
@@ -1432,7 +1440,7 @@
       if (elementExists('#captchaShortlink')) {ClickIfExists('button.btn:nth-child(4)', 2);let sch = setInterval(() => {if (Captchacheck()) {clearInterval(sch);
             ClickIfExists('#invisibleCaptchaShortlink');}}, 1 * 1000);} else {SubmitIfExists('.box-body > form:nth-child(2)', 1);}});
     BypassedByBloggerPemula(/(remixsounds|helpowi|helpdeep|thinksrace|tipsloanusa).com|(remixone|webseriesreel).in|uprwssp.org|securitywaittimes.us/, function() {EnableRCF();
-      ClickIfExists('.m-2.btn-captcha.btn-outline-primary.btn', 2);ClickIfExists("#tp98 button[class^='bt']", 3); SubmitIfExists("form[name='tp']", 3); ClickIfExists('#btn6', 4);});
+      ClickIfExists('.m-2.btn-captcha.btn-outline-primary.btn', 2);ClickIfExists('.tpdev-btn', 3);ClickIfExists("#tp98 button[class^='bt']", 3); SubmitIfExists("form[name='tp']", 3); ClickIfExists('#btn6', 4);});
     BypassedByBloggerPemula(/shrinke.me|shrinke.us|shrinkme.info|pwrpa.cc|shrinkme.org|paylinks.cloud|(linkvhoriz|paid4link).com|bicolink.net|wordcounter.icu/, function() {let shk = setInterval(() => {
         if (Captchacheck()) {clearInterval(shk);ReadytoClick('#invisibleCaptchaShortlink');}}, 1 * 1000);});
     BypassedByBloggerPemula(/revly.click/, function() {
@@ -1632,13 +1640,13 @@
     BypassedByBloggerPemula(/foodupe.com/, function() {if (elementExists('.containerpanel')){let fdp = bp('#donead').href;setTimeout(() => {redirect(fdp,false);}, 2 * 1000);}});
     BypassedByBloggerPemula(/freethailottery.live/, function() {if (elementExists('.g-recaptcha')){let ftl = ReadCV('JSON_fetch');setTimeout(() => {redirect(ftl,false);}, 2 * 1000);}});
     BypassedByBloggerPemula(/udrop.com/, () => waitForElm('.responsiveMobileMargin > button:nth-child(1)', udr => redirect(strBetween(udr.onclick.toString(), `openUrl('`, `')`), false)));
-    BypassedByBloggerPemula(/(financenube|mixrootmods).com/, () => {waitForElm('#wpsafe-link a', cdr => redirect(strBetween(cdr.onclick.toString(), `window.open('`, `', '_self')`), false));});
     BypassedByBloggerPemula(/nulledlist.info|earnash.com|my-coins.xyz|earn-bitcoin.online|zimabadko.com|vidoza.xyz|every-crypto.info/, () => waitForElm('div#getlinkbtn center a', kalv => redirect(kalv.href, false)));
     BypassedByBloggerPemula(/sub2unlock.net/, function() {if (elementExists('.linkDiv_btns.col-xs-12.col-sm-12.col-md-12')){let stu = bp('#theLinkID').textContent;setTimeout(() => {redirect(stu,false);}, 2 * 1000);}});
     BypassedByBloggerPemula(/(starxinvestor|hit-films|sevenjournals).com|(iisfvirtual|bookszone|learnmany).in/, function() {SubmitIfExists("form[name='tp']", 3); waitForElm('a#btn6', bkz => redirect(bkz.href, false));});
+    BypassedByBloggerPemula(/(financenube|mixrootmods|pastescript|trimorspacks|apklox).com|updrop.link/, () => {waitForElm('#wpsafe-link a', cdr => redirect(strBetween(cdr.onclick.toString(), `window.open('`, `', '_self')`), false));});
     BypassedByBloggerPemula(/ronakfitness.com/, function() {if (elementExists('.containerpanel')){let rft = bp('a.linky.buttonpanel.buttonpanel-block.btn-lg.get-link.disabled').href;setTimeout(() => {redirect(rft,false);}, 2 * 1000);}});
     BypassedByBloggerPemula(/mboost.me/, function() {if (elementExists('#firstsection')){let mbo = bp('#__NEXT_DATA__');let mbm = JSON.parse(mbo.textContent).props.pageProps.data.targeturl;setTimeout(() => {redirect(mbm,false);}, 2 * 1000);}});
-    BypassedByBloggerPemula(/(disheye|kreatifparenting|phimne|admediaflex|cdrab).com|(gurumu|wpcheap|izseo).net|(sportweb|ecq).info|savego.org|hbz.us|djqunjab.in|datacheap.io/, () => waitForElm('#wpsafelink-landing > input', dis => redirect(JSON.parse(atob(dis.value)).linkr, false)));
+    BypassedByBloggerPemula(/(disheye|kreatifparenting|phimne|admediaflex|cdrab).com|(gurumu|wpcheap|izseo|adcrypto|daycash).net|(sportweb|ecq|mgame|oncoin).info|savego.org|hbz.us|djqunjab.in|datacheap.io/, () => waitForElm('#wpsafelink-landing > input', dis => redirect(JSON.parse(atob(dis.value)).linkr, false)));
     BypassedByBloggerPemula(/(awgrow|fadedfeet|kenzo-flowertag|homeculina|ineedskin|alightmotionlatest).com|worldtanr.xyz|lawyex.co|yexolo.net|mdn.lol/, () => {EnableRCF();window.urlPattern = false;window.addEventListener('DOMContentLoaded', () => {BypassHD("form:not([style*='display: none'])", 19);});});
     BypassedByBloggerPemula(/readi.online|mbantul.my.id|blog.qnix.me|videoclip.info|moddingzone.in|crypto-fi.net|claimcrypto.cc|xtrabits.click|(cempakajaya|web9academy|onlineincoms|allsoftdrivers|tribuncrypto|poketoonworld|bioinflu|pubgquotes|bico8).com|(techleets|ourcoincash|studyis|healthysamy).xyz/, function() {
       var bypasslink = atob(`aH${bp("#landing [name='go']").value.split("aH").slice(1).join("aH")}`); redirect(bypasslink, false);});

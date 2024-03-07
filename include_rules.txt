@@ -28,12 +28,13 @@
 /^(https?:\/\/)(.+)?((blackleadr|shortcuthigh|newztalkies|cybertyrant).com|hubdrive.me|fileroot.net)(\/.*)/
 /^(https?:\/\/)(.+)?(trangchu.news|downfile.site|techacode.com|azmath.info|aztravels.net)(\/.*)/
 /^(https?:\/\/)(.+)?(techanalyzer.eu|askpaccosi.com|cryptomonitor.in|2the.space|imbb.online)(\/.*)/
+/^(https?:\/\/)(.+)?((tinycmd|tinybc).com)(\/.*)/
 /^(https?:\/\/)(.+)?((bitzite|neverdims).com)(\/.*)/
 /^(https?:\/\/)(.+)?(hostratgeber.de|(miner-sim|networkhint).com)(\/.*)/
 /^(https?:\/\/)(.+)?(coingraph.us|trendzilla.it|horoscop.info|(infonerd|writeprofit).org)(\/.*)/
+/^(https?:\/\/)(.+)?((aduzz|cryptfaucet).com|(bitcrypto|bit4me).info|offerinfo.net|deltabtc.xyz)(\/.*)/
 /^(https?:\/\/)(.+)?(nullscript.info|freebinance.top)(\/.*)/
 /^(https?:\/\/)(.+)?((10short|lollty).pro|mamahawa.com|10short.vip)(\/.*)/
-/^(https?:\/\/)(.+)?((tinycmd|tinybc|aduzz|cryptfaucet).com|(bitcrypto|bit4me).info|offerinfo.net|deltabtc.xyz)(\/.*)/
 /^(https?:\/\/)(.+)?((cryptosparatodos|placementsmela).com|(insurancepost|financeandinsurance|tecnotech|healthmedic).xyz|paidinsurance.in)(\/.*)/
 /^(https?:\/\/)(.+)?(mynewsmedia.co|(netflixrelease|mangareleasedate|kojnews|freemodapp|cryptoprolife|revadvert|diethim|techsotta|zutiza|lndianews|newsjov|instantloan5|hitjankari|phixshop|mp4news).com|(rontymobile|myfirstname|snapseedmod|djrajurjm|disking|ignoupur).in)(\/.*)/
 /^(https?:\/\/)(.+)?((crypto2u|bestcoinsites).xyz)(\/.*)/
@@ -112,10 +113,10 @@
 /^(https?:\/\/)(.+)?(offrcms.xyz|kooora365.online|tourismtravels4.sbs|5tl.co|mamahawa.com)(\/.*)/
 /^(https?:\/\/)(.+)?(geniussolutions.co|pokemonroms.cc|alightmotionlatest.com)(\/.*)/
 /^(https?:\/\/)(.+)?(bluemedialink.online|bluemediafile\.*)/
-/^(https?:\/\/)(.+)?((financenube|mixrootmods).com)(\/.*)/
 /^(https?:\/\/)(.+)?(nulledlist.info|earnash.com|my-coins.xyz|earn-bitcoin.online|zimabadko.com|vidoza.xyz|every-crypto.info)(\/.*)/
 /^(https?:\/\/)(.+)?((starxinvestor|hit-films|sevenjournals).com|(iisfvirtual|bookszone|learnmany).in)(\/.*)/
-/^(https?:\/\/)(.+)?((disheye|kreatifparenting|phimne|admediaflex|cdrab).com|(gurumu|wpcheap|izseo).net|(sportweb|ecq).info|savego.org|hbz.us|djqunjab.in|datacheap.io)(\/.*)/
+/^(https?:\/\/)(.+)?((financenube|mixrootmods|pastescript|trimorspacks|apklox).com|updrop.link)(\/.*)/
+/^(https?:\/\/)(.+)?((disheye|kreatifparenting|phimne|admediaflex|cdrab).com|(gurumu|wpcheap|izseo|adcrypto|daycash).net|(sportweb|ecq|mgame|oncoin).info|savego.org|hbz.us|djqunjab.in|datacheap.io)(\/.*)/
 /^(https?:\/\/)(.+)?((awgrow|fadedfeet|kenzo-flowertag|homeculina|ineedskin|alightmotionlatest).com|worldtanr.xyz|lawyex.co|yexolo.net|mdn.lol)(\/.*)/
 /^(https?:\/\/)(.+)?(readi.online|mbantul.my.id|blog.qnix.me|videoclip.info|moddingzone.in|crypto-fi.net|claimcrypto.cc|xtrabits.click|(cempakajaya|web9academy|onlineincoms|allsoftdrivers|tribuncrypto|poketoonworld|bioinflu|pubgquotes|bico8).com|(techleets|ourcoincash|studyis|healthysamy).xyz)(\/.*)/
 /^(https?:\/\/)(.+)?(dutchycorp.space|dutchycorp.ovh|gtlink.co|seulink.digital|oii.io|hamody.pro|fileku.net|metasafelink.site|(beingtek|fc-lc|atglinks|10short).com|(zagl|shrinkforearn).in|(kiiw|wordcounter).icu|pwrpa.cc|shurt.pw|(flyad|tapnip).vip|antonimos.de|seulink.online)(\/.*)/

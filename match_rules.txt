@@ -74,6 +74,7 @@
 *://*.dailyuploads.net/*
 *://*.9xupload.asia/*
 *://*.mediafire.com/*
+*://*.qiwi.gg/*
 *://*.sharemods.com/*
 *://*.mexa.sh/*
 *://*.pdfcoffee.com/*

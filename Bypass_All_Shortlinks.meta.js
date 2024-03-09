@@ -7,7 +7,6 @@
 // @grant          GM_setValue
 // @grant          GM_getValue
 // @grant          GM_addStyle
-// @connect        nocaptchaai.com
 // @grant          GM_xmlhttpRequest
 // @grant          window.onurlchange
 // @grant          GM_registerMenuCommand

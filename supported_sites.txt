@@ -168,7 +168,7 @@ bitcotasks.com
 mynewsmedia.co|(netflixrelease|mangareleasedate|kojnews|freemodapp|cryptoprolife|revadvert|diethim|techsotta|zutiza|lndianews|newsjov|instantloan5|hitjankari|phixshop|mp4news).com|(rontymobile|myfirstname|snapseedmod|djrajurjm|disking|ignoupur).in
 (crypto2u|bestcoinsites).xyz
 fansonlinehub.com
-(howifx|vocalley|financerites|yogablogfit|healthfirstweb|junkyponk).com
+(howifx|vocalley|financerites|yogablogfit|healthfirstweb|junkyponk|mythvista).com
 ouo.io|ouo.press
 largestpanel.in|earnme.club|usanewstoday.club
 paste1s.com|note1s.com
@@ -203,7 +203,6 @@ techmny.com|unblockedgames.world
 (chooyomi|blogmado|kredilerim|insuranceleadsinfo).com
 kiktu.com
 fexkomin.xyz
-quesignifi.ca|tiktokcounter.net
 100puan.com
 sub2get.com
 forexrw7.com
@@ -254,7 +253,6 @@ nishankhatri.xyz
 writedroid.eu.org|modmania.eu.org|writedroid.in|mytop5.club
 computerpedia.in
 finance.uploadsoon.com
-adclicker\.*
 offers4crypto.xyz|ewall.biz
 dl.lk21static.xyz
 easylink.gamingwithtr.com
@@ -303,7 +301,6 @@ traffic1s.com
 web1s.co|web1s.info|app.covemarkets.com
 suaurl.com
 letsboost.net
-web1s.asia
 (hookeaudio|pennbookcenter|publicananker|fun88bk).com|fun88.info.vn
 stfly.cc|stfly.xyz|(techtrendmakers|gadnest).com|(blogbux|blogesque|exploreera).net
 coins-town.com

@@ -203,7 +203,6 @@
 *://*.traffic1s.com/*
 *://*.suaurl.com/*
 *://*.letsboost.net/*
-*://*.web1s.asia/*
 *://*.coins-town.com/*
 *://*.shortit.pw/*
 *://*.linkvip.io/*

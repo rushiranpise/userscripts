@@ -234,7 +234,6 @@
 // @include /^(https?:\/\/)(.+)?(examkhata.com|gamelopte.com)(\/.*)/
 // @include /^(https?:\/\/)(.+)?(rancah.com|menjelajahi.com|shortly.xyz|nyawang.com)(\/.*)/
 // @match *://*.cryptotracker.space/*
-// @match *://*.djxmaza.in/*
 // @match *://*.stfly.me/*
 // @include /^(https?:\/\/)(.+)?(khaddavi.net|contentmenarik.com)(\/.*)/
 // @match *://*.sapnogalpo.online/*

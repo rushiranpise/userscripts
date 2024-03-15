@@ -160,7 +160,6 @@
 *://*.playpaste.com/*
 *://*.suratresmi.id/*
 *://*.cryptotracker.space/*
-*://*.djxmaza.in/*
 *://*.stfly.me/*
 *://*.sapnogalpo.online/*
 *://*.leitup.com/*

@@ -118,7 +118,6 @@ jameeltips.us
 post.copydev.com
 linegee.net
 pro.sh
-exeo.app|exego.app
 proappapk.com|meclipstudy.in
 wrbloggers.com
 1bitspace.com
@@ -149,11 +148,9 @@ sharetext.me
 btcsatoshi.net
 comohoy.com
 apkw.ru
-ctr.sh
 (blackleadr|shortcuthigh|newztalkies|cybertyrant).com|hubdrive.me|fileroot.net
 programasvirtualespc.net
 hiharshit.in
-easycut.io
 trangchu.news|downfile.site|techacode.com|azmath.info|aztravels.net
 techanalyzer.eu|askpaccosi.com|cryptomonitor.in|2the.space|imbb.online
 (tinycmd|tinybc).com
@@ -192,7 +189,6 @@ forex-golds.com|forex-trnd.com
 zegtrends.com
 coincroco.com|surflink.tech
 bcvc.xyz|bcvc.ink
-forex-articles.com|fx-22.com
 proviralhost.com
 bitcoinfaucet.fun|freebitcoin.win
 bestadvise4u.com
@@ -201,11 +197,10 @@ linkspy.cc
 (webhostingpost|tophostingapp|digitalmarktrend).com
 techmny.com|unblockedgames.world
 (chooyomi|blogmado|kredilerim|insuranceleadsinfo).com
-kiktu.com
+(kiktu|techcyan).com
 fexkomin.xyz
 100puan.com
 sub2get.com
-forexrw7.com
 newassets.hcaptcha.com
 challenges.cloudflare.com
 (fc-lc|loaninsurehub).com|fc-lc.xyz
@@ -236,6 +231,10 @@ shortearn.net
 bigbtc.win
 firefaucet.win
 uptobhai\.*|uplinkto\.*|shortlinkto\.*
+tmail.io
+exeo.app|exego.app
+(on-scroll|diudemy|maqal360).com
+(forexrw7|forex-articles|3rabsports|fx-22).com|gold-24.net|bedrat.xyz
 (leaveadvice|mensventure).com
 jiotech.net|jameeltips.us|cryptonworld.space
 hynews.biz|chamcuuhoc.com
@@ -281,7 +280,6 @@ amritadrino.com
 hunterkiller.me|surflink.tech
 coinhub.wiki
 lyricsbaazaar.com|ezeviral.com
-(on-scroll|diudemy|maqal360).com
 (sekilastekno|miuiku|vebma|majalahhewan).com
 coinsrev.com
 zubatecno.com
@@ -295,7 +293,7 @@ freetrx.fun
 socialwolvez.com
 (mobi2c|healthy4pepole|healdad|world2our|mobitaak|te-it|businessnews-nigeria|govaf|fahmysport).com|(hightrip|fx-gd|world-trips|otechno|bluetechno|to-travel).net|(newforex|forexit).online
 (blogginglass|arahtekno|mopahealth).com|faucet.work|wildblog.me|jiotech.net|apkupload.in
-anhdep24.com|nguyenvanbao.com|xemsport.com|byboe.com
+(anhdep24|nguyenvanbao|xemsport|byboe|asideway).com
 traffic1s.com
 web1s.co|web1s.info|app.covemarkets.com
 suaurl.com
@@ -334,7 +332,6 @@ flybid.net
 cpmlink.net
 noodlemagazine.com
 huongdanvuotlink123.blogspot.com
-forexrw7.com|3rabsports.com|gold-24.net
 maxurlz.com
 sama-pro.com|mikl4forex.com|dr-forex.com
 mohtawaa.com
@@ -418,7 +415,6 @@ ignitesmm.com
 fileku.net
 nisnisin.com
 sapnogalpo.online
-coinsward.com
 povathemes.com|escobarvip.cf|golinki.com
 upload.veganab.co
 anonbar.com
@@ -472,7 +468,6 @@ viralsinfo.com
 insuranceinfos.in
 www.filmypoints.in
 cafe.warrenrahul.in
-blogsward.com
 truevpnlover.com
 battleroyal.online
 techyblogs.in|techyinfo.in

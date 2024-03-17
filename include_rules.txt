@@ -14,7 +14,6 @@
 /^(https?:\/\/)(.+)?((kusonime|oploverz).org|(opinimedia|beritaotaku|caramasak).com|otakudesu.cc|resepkoki.net|neonime\.*)/
 /^(https?:\/\/)(.+)?(clickndownload.org|clicknupload\.*)/
 /^(https?:\/\/)(.+)?(file-upload.com|file-upload.org)(\/.*)/
-/^(https?:\/\/)(.+)?(exeo.app|exego.app)(\/.*)/
 /^(https?:\/\/)(.+)?(proappapk.com|meclipstudy.in)(\/.*)/
 /^(https?:\/\/)(.+)?((blogscare|blogtechh).com|oko.sh)(\/.*)/
 /^(https?:\/\/)(.+)?(cooklike.info|model-tas-terbaru.com)(\/.*)/
@@ -47,11 +46,11 @@
 /^(https?:\/\/)(.+)?(forex-golds.com|forex-trnd.com)(\/.*)/
 /^(https?:\/\/)(.+)?(coincroco.com|surflink.tech)(\/.*)/
 /^(https?:\/\/)(.+)?(bcvc.xyz|bcvc.ink)(\/.*)/
-/^(https?:\/\/)(.+)?(forex-articles.com|fx-22.com)(\/.*)/
 /^(https?:\/\/)(.+)?(bitcoinfaucet.fun|freebitcoin.win)(\/.*)/
 /^(https?:\/\/)(.+)?((webhostingpost|tophostingapp|digitalmarktrend).com)(\/.*)/
 /^(https?:\/\/)(.+)?(techmny.com|unblockedgames.world)(\/.*)/
 /^(https?:\/\/)(.+)?((chooyomi|blogmado|kredilerim|insuranceleadsinfo).com)(\/.*)/
+/^(https?:\/\/)(.+)?((kiktu|techcyan).com)(\/.*)/
 /^(https?:\/\/)(.+)?((fc-lc|loaninsurehub).com|fc-lc.xyz)(\/.*)/
 /^(https?:\/\/)(.+)?(examkhata.com|gamelopte.com)(\/.*)/
 /^(https?:\/\/)(.+)?(rancah.com|menjelajahi.com|shortly.xyz|nyawang.com)(\/.*)/
@@ -64,6 +63,9 @@
 /^(https?:\/\/)(.+)?((coinsward|blogsward).com|imbb.online)(\/.*)/
 /^(https?:\/\/)(.+)?(1bit.space|mgnet.xyz)(\/.*)/
 /^(https?:\/\/)(.+)?(uptobhai\.*|uplinkto\.*|shortlinkto\.*)/
+/^(https?:\/\/)(.+)?(exeo.app|exego.app)(\/.*)/
+/^(https?:\/\/)(.+)?((on-scroll|diudemy|maqal360).com)(\/.*)/
+/^(https?:\/\/)(.+)?((forexrw7|forex-articles|3rabsports|fx-22).com|gold-24.net|bedrat.xyz)(\/.*)/
 /^(https?:\/\/)(.+)?((leaveadvice|mensventure).com)(\/.*)/
 /^(https?:\/\/)(.+)?(jiotech.net|jameeltips.us|cryptonworld.space)(\/.*)/
 /^(https?:\/\/)(.+)?(hynews.biz|chamcuuhoc.com)(\/.*)/
@@ -87,14 +89,13 @@
 /^(https?:\/\/)(.+)?(teknosimple.com|besargaji.com)(\/.*)/
 /^(https?:\/\/)(.+)?(hunterkiller.me|surflink.tech)(\/.*)/
 /^(https?:\/\/)(.+)?(lyricsbaazaar.com|ezeviral.com)(\/.*)/
-/^(https?:\/\/)(.+)?((on-scroll|diudemy|maqal360).com)(\/.*)/
 /^(https?:\/\/)(.+)?((sekilastekno|miuiku|vebma|majalahhewan).com)(\/.*)/
 /^(https?:\/\/)(.+)?((wooseotools|woowebtools).com)(\/.*)/
 /^(https?:\/\/)(.+)?((pernahsukses|alpinecorporate).com|aoutoqw.xyz)(\/.*)/
 /^(https?:\/\/)(.+)?(altechen.com|entutes.com)(\/.*)/
 /^(https?:\/\/)(.+)?((mobi2c|healthy4pepole|healdad|world2our|mobitaak|te-it|businessnews-nigeria|govaf|fahmysport).com|(hightrip|fx-gd|world-trips|otechno|bluetechno|to-travel).net|(newforex|forexit).online)(\/.*)/
 /^(https?:\/\/)(.+)?((blogginglass|arahtekno|mopahealth).com|faucet.work|wildblog.me|jiotech.net|apkupload.in)(\/.*)/
-/^(https?:\/\/)(.+)?(anhdep24.com|nguyenvanbao.com|xemsport.com|byboe.com)(\/.*)/
+/^(https?:\/\/)(.+)?((anhdep24|nguyenvanbao|xemsport|byboe|asideway).com)(\/.*)/
 /^(https?:\/\/)(.+)?(web1s.co|web1s.info|app.covemarkets.com)(\/.*)/
 /^(https?:\/\/)(.+)?((hookeaudio|pennbookcenter|publicananker|fun88bk).com|fun88.info.vn)(\/.*)/
 /^(https?:\/\/)(.+)?(stfly.cc|stfly.xyz|(techtrendmakers|gadnest).com|(blogbux|blogesque|exploreera).net)(\/.*)/
@@ -104,7 +105,6 @@
 /^(https?:\/\/)(.+)?(short.croclix.me|adz7short.space)(\/.*)/
 /^(https?:\/\/)(.+)?(adshnk.com|adshrink.it)(\/.*)/
 /^(https?:\/\/)(.+)?(vikashmewada.com|videoslyrics.com|crazysonglyrics.com|videolyrics.in|newsharsh.com|trxking.xyz|crazyblog.in|getdashcoin.io)(\/.*)/
-/^(https?:\/\/)(.+)?(forexrw7.com|3rabsports.com|gold-24.net)(\/.*)/
 /^(https?:\/\/)(.+)?(sama-pro.com|mikl4forex.com|dr-forex.com)(\/.*)/
 /^(https?:\/\/)(.+)?(thebloggerspoint.in|ezeviral.com|fixno.in|technocubes.in)(\/.*)/
 /^(https?:\/\/)(.+)?(xonnews.net|toilaquantri.com|share4u.men|camnangvay.com)(\/.*)/

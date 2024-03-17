@@ -122,10 +122,8 @@
 *://*.btcsatoshi.net/*
 *://*.comohoy.com/*
 *://*.apkw.ru/*
-*://*.ctr.sh/*
 *://*.programasvirtualespc.net/*
 *://*.hiharshit.in/*
-*://*.easycut.io/*
 *://*.bitcotasks.com/*
 *://*.fansonlinehub.com/*
 *://*.terabox.fun/*
@@ -147,11 +145,9 @@
 *://*.bestadvise4u.com/*
 *://*.altblogger.net/*
 *://*.linkspy.cc/*
-*://*.kiktu.com/*
 *://*.fexkomin.xyz/*
 *://*.100puan.com/*
 *://*.sub2get.com/*
-*://*.forexrw7.com/*
 *://*.newassets.hcaptcha.com/*
 *://*.challenges.cloudflare.com/*
 *://*.mneyvip.com/*
@@ -170,6 +166,7 @@
 *://*.shortearn.net/*
 *://*.bigbtc.win/*
 *://*.firefaucet.win/*
+*://*.tmail.io/*
 *://*.tii.la/*
 *://*.skiplink.me/*
 *://*.apanmusic.in/*
@@ -296,7 +293,6 @@
 *://*.fileku.net/*
 *://*.nisnisin.com/*
 *://*.sapnogalpo.online/*
-*://*.coinsward.com/*
 *://*.upload.veganab.co/*
 *://*.anonbar.com/*
 *://*.tamilhit.tech/*
@@ -349,7 +345,6 @@
 *://*.insuranceinfos.in/*
 *://*.www.filmypoints.in/*
 *://*.cafe.warrenrahul.in/*
-*://*.blogsward.com/*
 *://*.truevpnlover.com/*
 *://*.battleroyal.online/*
 *://*.iphoto.site/*

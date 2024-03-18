@@ -268,7 +268,6 @@
 *://*.airlike.me/*
 *://*.techhadi.com/*
 *://*.zubatecno.com/*
-*://*.veganab.co/*
 *://*.yosite.net/*
 *://*.battlechamp.in/*
 *://*.adiskblog.in/*

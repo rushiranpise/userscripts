@@ -352,7 +352,6 @@
 *://*.multiup.org/*
 *://*.modsfire.com/*
 *://*.social-unlock.com/*
-*://*.work.ink/*
 *://*.nft.blogyindia.com/*
 *://*.my.dropz.xyz/*
 *://*.go.blogyindia.com/*

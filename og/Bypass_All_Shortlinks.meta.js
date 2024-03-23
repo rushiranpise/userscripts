@@ -504,7 +504,6 @@
 // @match *://*.multiup.org/*
 // @match *://*.modsfire.com/*
 // @match *://*.social-unlock.com/*
-// @match *://*.work.ink/*
 // @match *://*.nft.blogyindia.com/*
 // @match *://*.my.dropz.xyz/*
 // @match *://*.go.blogyindia.com/*

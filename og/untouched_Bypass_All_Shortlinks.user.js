@@ -37,7 +37,7 @@
 // @namespace  Violentmonkey Scripts
 // @run-at     document-start
 // @author     Bloggerpemula
-// @version        91.6
+// @version        91.7
 // @match          *://*/*
 // @antifeature    tracking
 // @grant          GM_setValue
@@ -84,7 +84,7 @@
 // @description:vi Bỏ qua tất cả các trang web liên kết ngắn tự động bỏ qua các trang web liên kết gây phiền nhiễu, trực tiếp đến đích của bạn
 // @description:pt-br Ignora automaticamente encurtadores de links irritantes, diretamente para o link final
 // @description:fr-ca Contourner tous les sites de liens courts saute automatiquement les raccourcisseurs de liens gênants, directement vers votre destination
-// @exclude /^(https?:\/\/)(.+)?((advertisingexcel|talkforfitness|rsadnetworkinfo|rsinsuranceinfo|rsfinanceinfo|rssoftwareinfo|rshostinginfo|rseducationinfo|gametechreviewer|vegan4k|phineypet|batmanfactor|techedifier|urlhives|linkhives|github|freeoseocheck|greenenez|aliyun|reddit|bing|yahoo|wiki-topia|edonmanor|vrtier|whatsapp|gearsadviser|edonmanor|tunebug|menrealitycalc|amazon|ebay|payoneer|paypal|skrill|stripe|tipalti|wise|discord|tokopedia|taobao|taboola|aliexpress|netflix|citigroup|spotify|bankofamerica|hsbc|(cloud|mail|translate|analytics|accounts|myaccount|contacts|clients6|developers|payments|pay|ogs|safety|wallet).google|(login|signup|account|officeapps|api|mail|hotmail).live).com|(thumb8|thumb9|crewbase|crewus|shinchu|shinbhu|ultraten|uniqueten|topcryptoz|allcryptoz|coinsvalue|cookinguide|cryptowidgets|webfreetools|carstopia|makeupguide|carsmania|nflximg|doubleclick).net|(linksfly|shortsfly|urlsfly|wefly|blog24).me|(greasyfork|openuserjs|adarima|telegram|wikipedia).org|mcrypto.club|misterio.ro|insurancegold.in|coinscap.info|chefknives.expert|(shopee|lazada|rakuten|maybank).*|(dana|ovo|bca.co|bri.co|bni.co|bankmandiri.co|desa|(.*).go).id|(.*).edu|(.*).gov)(\/.*)/
+// @exclude /^(https?:\/\/)(.+)?((advertisingexcel|talkforfitness|rsadnetworkinfo|rsinsuranceinfo|rsfinanceinfo|rssoftwareinfo|rshostinginfo|rseducationinfo|gametechreviewer|vegan4k|phineypet|batmanfactor|techedifier|urlhives|linkhives|github|freeoseocheck|greenenez|aliyun|reddit|bing|yahoo|wiki-topia|edonmanor|vrtier|whatsapp|gearsadviser|edonmanor|tunebug|menrealitycalc|amazon|ebay|payoneer|paypal|skrill|stripe|tipalti|wise|discord|tokopedia|taobao|taboola|aliexpress|netflix|citigroup|spotify|bankofamerica|hsbc|accounts.youtube|(cloud|mail|translate|analytics|accounts|myaccount|contacts|clients6|developers|payments|pay|ogs|safety|wallet).google|(login|signup|account|officeapps|api|mail|hotmail).live|basketballsavvy|kalimbanote).com|(thumb8|thumb9|crewbase|crewus|shinchu|shinbhu|ultraten|uniqueten|topcryptoz|allcryptoz|coinsvalue|cookinguide|cryptowidgets|webfreetools|carstopia|makeupguide|carsmania|nflximg|doubleclick|luckydice).net|(linksfly|shortsfly|urlsfly|wefly|blog24).me|(greasyfork|openuserjs|adarima|telegram|wikipedia).org|mcrypto.club|misterio.ro|insurancegold.in|coinscap.info|chefknives.expert|(shopee|lazada|rakuten|maybank).*|(dana|ovo|bca.co|bri.co|bni.co|bankmandiri.co|desa|(.*).go).id|(.*).(edu|gov))(\/.*)/
 // @downloadURL https://update.greasyfork.org/scripts/431691/Bypass%20All%20Shortlinks.user.js
 // @updateURL https://update.greasyfork.org/scripts/431691/Bypass%20All%20Shortlinks.meta.js
 // ==/UserScript==
@@ -98,14 +98,13 @@
 // =================================================================================================================================================================
 // Change Your Delay in the settings options from 5 to 10 or 20 if you have issues like Your action marked Suspicious,Don't try to bypass ,Don't use Speedster, etc
    const window = unsafeWindow; // Some of My Codes Not Running Well Without this , Please Let Me Know if You Find any Bugs
-   const cfg = new MonkeyConfig({title: 'Bypass Version 91.6 Settings :', menuCommand: true,
-   params: {Announcements : {type: 'text', default: 'Enable Always Ready If You Open Multiple Tabs For Shortlink', long: 3},
-    ApiKey: {label: "Key From Nocaptchaai", type: "text", default: "",}, // Not Yet Ready
+   const cfg = new MonkeyConfig({title: 'Bypass Version 91.7 Settings :', menuCommand: true,
+   params: {Announcements : {type: 'text', default: 'Add Your ApiKey from nocaptchaai to use Auto Solve Hcaptcha', long: 3},
+    ApiKey: {label: "noCaptcha Ai KEY", type: "text", default: "",},
     SetDelay: {label: "Redirect Delay ", type: "number", default: 5,},
     BlogDelay: {label: "Use My Blogs For Delays", type: "checkbox", default: true,},
-    reCAPTCHA: {label: "Auto Open Recaptcha", type: "checkbox", default: false,},
-    hCaptcha: { label: "Auto Open Hcaptcha", type: "checkbox", default: false, },
-    Turnstile: {label: "Auto Open Turnstile", type: "checkbox", default: false,},
+    reCAPTCHA: {label: "Auto Open/Solve Recaptcha", type: "checkbox", default: false,}, // Auto Solve Recaptcha Not Yet Ready
+    hCaptcha: {label: "Auto Open/Solve Hcaptcha", type: "checkbox", default: false, },
     YTShort: {label: "Disable Youtube Short", type: "checkbox", default: false,},
     RightFC: {label: "Enable Context Menu ", type: "checkbox", default: false,},
     BlockFC: {label: "Enable Always Ready", type: "checkbox", default: false,},
@@ -117,7 +116,7 @@
   if (cfg.get('TimerFC') == true) {BoostTimers();} else {}})();
 (function() { // Please Remember , My Scripts Works Better Using Firefox Browser and Violentmonkey Extension
 'use strict';
-  const bp = query => document.querySelector(query);const BpAll = query => document.querySelectorAll(query);
+  const APIKEY = cfg.get('ApiKey'); const bp = query => document.querySelector(query);const BpAll = query => document.querySelectorAll(query);
   const BpParams = new URLSearchParams(location.search);const BpParamd = new URLSearchParams(document.location.search);const RexBp = new RegExp(/^\?([^&]+)/);
   const BpT = query => document.getElementsByTagName(query);const elementExists = query => bp(query) !== null;const domainCheck = domains => new RegExp(domains).test(location.host);
   function BpBlock() {return 1;}
@@ -178,14 +177,15 @@
     clearInterval(tc); SubmitBp('.cf-turnstile', 1);}}, 1000);} else if (elementExists('input[name=_iconcaptcha-token]')) {Captchacheck(selector);} else {SubmitBp(selector, time);}}
   function GetForm(FormName) {var forms = document.forms; for (var i = 0; i < forms.length; i++) {if (FormName === 'mdn') {var form = forms[i].innerHTML;
       if (form.includes('Step')) {return forms[i];}} else if (FormName === 'Allin1') {var bait = forms[i].action; if (/bypass.html|adblock.html/.test(bait)) continue; return forms[i];} else {return;}}}
-  function Captchacheck(selector) {if (elementExists('.h-captcha')) {return window.hcaptcha.getResponse().length !== 0;
+  function Captchacheck(selector) {if (elementExists('.h-captcha') || elementExists('#captcha-hcaptcha')) {return window.hcaptcha.getResponse().length !== 0;
     } else if (elementExists('.cf-turnstile') || elementExists('#captcha-turnstile')) {return window.turnstile.getResponse().length !== 0;
-    } else if (elementExists('.g-recaptcha') || elementExists('#captchaShortlink') || elementExists('#captcha_container') || elementExists('#captchaShortlinker')) {return window.grecaptcha.getResponse().length !== 0;
+    } else if (elementExists('.g-recaptcha') || elementExists('#captchaShortlink') || elementExists('#captcha_container') || elementExists('#captchaShortlinker') || elementExists('#captcha-recaptcha')) {return window.grecaptcha.getResponse().length !== 0;
     } else if (elementExists('#iconcaptcha')) {let b = setInterval(() => {let p = bp('.iconcaptcha-holder.iconcaptcha-theme-light.iconcaptcha-success'); if (p) {clearInterval(b); SubmitBp(selector, 1);}}, 1000);} else {return;}}
   function notify(txt, duration = cfg.get('SetDelay')) {const m = document.createElement('div'); m.style.padding = '1px'; m.style.zIndex = 99999999; m.style.position = 'fixed';
     m.style.width = `970px`; m.style.top = '275px'; m.style.left = `${innerWidth / 2 - 485}px`; m.style.font = 'normal bold 17px sans-serif'; m.style.backgroundColor = 'gold'; m.style.boxSizing = 'border-box';
     m.innerText = txt.replace('@', duration); document.documentElement.appendChild(m); const timerId = setInterval(() => {duration -= 1; if (duration <= 0) {clearInterval(timerId);} else {m.innerText = txt.replace('@', duration);}}, 1000);}
   function Listener(callback) {const originalOpen = XMLHttpRequest.prototype.open; XMLHttpRequest.prototype.open = function(method, url) {this.addEventListener("load", function() { this.method = method;this.url = url;callback(this);}); originalOpen.apply(this, arguments);};}
+  function Request(url, options = {}) {return new Promise(function(resolve, reject) {GM_xmlhttpRequest({ method: options.method ?? "GET", url, responseType: options.responseType ?? "json", headers: options.headers, data: options.data, onload: function(response) {resolve(response.response);}});});}
   function EnableRCF() {[].forEach.call(['contextmenu', 'visibilitychange', 'cut', 'paste', 'blur', 'mouseleave', 'keyup', 'drag', 'dragstart', 'hasFocus', 'focus', 'select', 'selectstart', 'webkitvisibilitychange', 'mozvisibilitychange'], function(event) {document.addEventListener(event, function(e) {e.stopPropagation();}, true);});}
 
   BloggerPemula('gocmod.com', 'urls', '');
@@ -202,6 +202,7 @@
   BloggerPemula('eda-ah.com', 'get1', 'https://liinkat.com/');
   BloggerPemula('m.newhit.me', 'link', 'https://link3s.net/');
   BloggerPemula('abhikr.in', 'post', 'https://linkvibe.xyz/');
+  BloggerPemula('zoztm.com', 'link', 'https://shorterx.com/');
   BloggerPemula('go.qora.in', 'link', 'https://link.qora.in/');
   BloggerPemula('10short.vip', 'Short', 'https://10short.com/');
   BloggerPemula('finoxpert.com', 'link', 'https://lksfy.site/');
@@ -221,6 +222,7 @@
   BloggerPemula('battlechamp.in', 'link', 'https://get.exurl.in/');
   BloggerPemula('adiskblog.in', 'link', 'https://go.pdiskpro.in/');
   BloggerPemula('cryptednews.space', 'post', 'https://slfly.net/');
+  BloggerPemula('hiharshit.in', 'post', 'https://easytoclick.in/');
   BloggerPemula('indiansarkari.com', 'go', 'https://icashfly.com/');
   BloggerPemula('tanytech.com', 'link', 'https://go.hexlinks.xyz/');
   BloggerPemula('healthynepal.in', 'post', 'https://ez4short.xyz/');
@@ -229,12 +231,15 @@
   BloggerPemula('factsdunya.com', 'go', 'https://driveupload.net/');
   BloggerPemula('1apple.xyz', 'link', 'https://link.turkdown.com/');
   BloggerPemula('missreview.info', 'link', 'https://g.linkvor.pw/');
+  BloggerPemula('recipejaano.com', 'link', 'https://ads.kbfly.in/');
+  BloggerPemula('dilmibriva.store', 'post', 'https://cutplus.xyz/');
   BloggerPemula('10short.pro', 'get', 'https://10short.vip/?Short=');
   BloggerPemula('videolyrics.in', 'p', 'https://ser3.crazyblog.in/');
   BloggerPemula('blog.topfaucet.us', 'token', 'https://sl1.x10.mx/');
   BloggerPemula('housezquick.com', 'link', 'https://ad.ushort.xyz/');
   BloggerPemula('flashlinks.online', 'dk', 'https://flashlinks.in/');
   BloggerPemula('siteblog.in', 'link', 'https://go.droplink.co.in/');
+  BloggerPemula('trendtrove.vip', 'post', 'https://tinylinker.pro/');
   BloggerPemula('shortsnob.in', 'token', 'https://short.earnmoj.in/');
   BloggerPemula('apna-blog.in', 'token', 'https://apnashortener.in/');
   BloggerPemula('ignitesmm.com', 'link', 'https://f.omnifly.in.net/');
@@ -250,7 +255,6 @@
   BloggerPemula('foxbugg.com', 'adlinkfly', 'https://ads.foxbugg.com/');
   BloggerPemula('tremamnon.com', 'adlinkfly', 'https://dash-free.com/');
   BloggerPemula('market.finclub.in', 'link', 'https://go.tnshort.net/');
-  BloggerPemula('hostadviser.net', 'token', 'https://go.hipsonyc.com/');
   BloggerPemula('bantenexis.com', 'link', 'https://link.youshort.net/');
   BloggerPemula('techkeshri.com', 'link', 'https://go.paisakamalo.in/');
   BloggerPemula('indirasari.com', 'link', 'https://link.paid4link.com/');
@@ -259,7 +263,6 @@
   BloggerPemula('pglink.online', 'adlinkfly', 'https://link.pglink.in/');
   BloggerPemula('mvplaylink.in.net', 'post', 'https://mplaylink.com/s/');
   BloggerPemula('techyinfo.in', 'post', 'https://loan.techyinfo.in/?go=');
-  BloggerPemula('gyanitheme.com', 'token', 'https://go.hostadviser.net/');
   BloggerPemula('ww1.linktrims.com', 'link', 'https://go.linktrims.com/');
   BloggerPemula('healthynepal.in', 'link', 'https://go.tgshortener.com/');
   BloggerPemula('missionhight.in', 'link', 'https://playdisk.url2go.in/');
@@ -273,7 +276,6 @@
   BloggerPemula('cinemapettai.in', 'post', 'https://getlink.sxslink.com/');
   BlockRead('(/adblock|/ad-now.php|/bypass|/detected.html)', 'setInterval');
   BloggerPemula('market.gorating.in', 'link', 'https://go.onepagelink.in/');
-  BloggerPemula('lrncook.xyz', 'a', 'https://yalifin.xyz/contact-us/?opp=');
   BloggerPemula('blog.anywho-com.com', 'go', 'https://blog.shrinkme.link/');
   BloggerPemula('videoslyrics.com', 'postid', 'https://ser3.crazyblog.in/');
   BloggerPemula('earn.tensailab.com', 'adlinkfly', 'https://go.snaply.in/');
@@ -291,6 +293,7 @@
   BloggerPemula('djnonstopmusic.in', 'link', 'https://gadgets.ishortify.com/');
   BloggerPemula('tech.filohappy.in', 'link', 'https://happyfiles.dtglinks.in/');
   BloggerPemula('vietnamtravelguide.top', 'post', 'https://bestshortlink.top/');
+  BloggerPemula('earn.hostadviser.net', 'token', 'https://go.hostadviser.net/');
   BloggerPemula('viralsinfo.com', 'token', 'https://getslinks.online/download/');
   BloggerPemula('insuranceinfos.in', 'post', 'https://tech.smallinfo.in/Gadget/');
   BloggerPemula('www.filmypoints.in', 'post', 'https://tech.filmypoints.in/?go=');
@@ -313,7 +316,6 @@
   BypassedByBloggerPemula(/duplichecke.com/, {'/verify/': [RexBp, 'http://blog.dclink.site/'],}, false);
   BypassedByBloggerPemula(/dreamistore.com/, {'/verify/': [RexBp, 'http://final.eductin.com/'],}, false);
   BypassedByBloggerPemula(/mcafee-com.com/, {'/verify/': [RexBp, 'http://blog.shrinkme.link/'],}, false);
-  BypassedByBloggerPemula(/uploadsoon.com/, {'/safe.php': ['link', 'https://shrinkforearn.in/'],}, false);
   BypassedByBloggerPemula(/techyadjectives.com/, {'/check/': [RexBp, 'https://demo.pvidly.in/'],}, false);
   BypassedByBloggerPemula(/cyberstockofficial.in/, {'/cook.php': [RexBp, 'http://cyberurl.in/'],}, false);
   BypassedByBloggerPemula(/mkvflix.org/, {'/verify/': [RexBp, 'http://go.superfastdownloads.net/'],}, false);
@@ -324,7 +326,6 @@
   BypassedByBloggerPemula(/link.linksfire.co/, function() {location = location.href.replace('link', 'blog');});
   BypassedByBloggerPemula(/short.dash-free.com/, function() {location = location.href.replace('short.', '');});
   BypassedByBloggerPemula(/speedynews.xyz/, {'/blog/verify/': [RexBp, 'https://links.speedynews.xyz/'],}, false);
-  BypassedByBloggerPemula(/viralxns.com/, {'/safe.php': ['link', 'https://uploadsoon.com/safe.php?link='],}, false);
   BypassedByBloggerPemula(/studyuo.com/, {'/pro2/verify/': [RexBp, 'https://speedynews.xyz/blog/verify/?'],}, false);
   BypassedByBloggerPemula(/go.link4rev.site|go.urlcash.site/, function() {location = location.href.replace('go.', '');});
   BypassedByBloggerPemula(/techyinfo.in|techyblogs.in/, {'/verify/': [RexBp, 'http://loans.techyinfo.in/?go='],}, false);
@@ -640,7 +641,6 @@
     BypassedByBloggerPemula(/enlacito.com/, function() {setTimeout(() => {redirect(window.DYykkzwP,false);}, 2 * 1000);});
     BypassedByBloggerPemula(/webhostingtips.club/, {'/safe.php': ['link', 'https://jrlinks.in/safe2.php?link='],}, false);
     BypassedByBloggerPemula(/render-state.to/, function() {if (BpParams.has('link')) {meta(atob(BpParams.get('link')));}});
-    //BypassedByBloggerPemula(/itscybertech.com/, function() {if (BpParams.has('data')) {meta(atob(BpParams.get('data')));}});
     BypassedByBloggerPemula(/michaelemad.com|7misr4day.com/, () => waitForElm('a.s-btn-f', mld => redirect(mld.href, false)));
     BypassedByBloggerPemula(/shareus.io/, function() {if (BpParams.has('sid')) {ReadytoClick('button.MuiButtonBase-root', 2);}});
     BypassedByBloggerPemula(/adtival.network/, function() {if (BpParams.has('shortid')) {meta(atob(BpParams.get('shortid')));}});
@@ -648,7 +648,6 @@
     BypassedByBloggerPemula(/shortener.goldcontent.site/, function() {if (BpParams.has('dest')) {meta(atob(BpParams.get('dest')));}});
     BypassedByBloggerPemula(/(cutnet|cutsy|cutlink).net|(cutty|exego).app/, function(){ClickIfExists('#submit-button', 5, 'setInterval');});
     BypassedByBloggerPemula(/newsbawa.com/, function() {ClickIfExists('#Verify-click-btn', 0.3);ClickIfExists('a#footer-btn.verify-btn', 1);});
-    BypassedByBloggerPemula(/askpaccosi.com|paylinks.cloud|healthmart.link|kisalt.com/, function() {SubmitIfExists('.box-body > form', 2);});
     BypassedByBloggerPemula(/ontechhindi.com/, function() {EnableRCF();waitForElm('#rtg-generate21 > a', oth => redirect(oth.href, false));});
     BypassedByBloggerPemula(/mhma12.tech|hasri.xyz|soft3arbi.com/, function() {ClickIfExists('#btn6', 2);ClickIfExists('#yuidea-btmbtn', 3);});
     BypassedByBloggerPemula(/sfl.gl/, function() {if (location.href.includes('/ready') && BpParams.has('u')) {meta(atob(BpParams.get('u')));}});
@@ -658,25 +657,26 @@
     BypassedByBloggerPemula(/btcsatoshi.net/, async function() {EnableRCF();window.check2();window.check3();ClickIfExists('button.btn.btn-primary.btn-lg');});
     BypassedByBloggerPemula(/comohoy.com/, function() {if (location.href.includes('/grab/out.html') && BpParams.has('url')) {meta(atob(BpParams.get('url')));}});
     BypassedByBloggerPemula(/apkw.ru/, function() {if (location.href.includes('/away')) {let apkw = location.href.split('/').slice(-1);redirect(atob(apkw),false);}});
-    BypassedByBloggerPemula(/(blackleadr|shortcuthigh|newztalkies|cybertyrant).com|hubdrive.me|fileroot.net/, function() {if (BpParams.has('r')) {meta(atob(BpParams.get('r')));}});
+    BypassedByBloggerPemula(/(blackleadr|shortcuthigh|newztalkies|cybertyrant).com|hubdrive.me|fileroot.net|nzarticles.pro/, function() {if (BpParams.has('r')) {meta(atob(BpParams.get('r')));}});
     BypassedByBloggerPemula(/programasvirtualespc.net/, function() {if (location.href.includes('out/')) {const pvc = location.href.split('?')[1]; redirect(atob(pvc),false);} else {}});
-    BypassedByBloggerPemula(/hiharshit.in/, function() {waitForElm('#rtg-snp21', hsBtn => hsBtn.click());waitForElm('div.rtg-text-center > center > a', hhs => redirect(hhs.href, false));});
     BypassedByBloggerPemula(/trangchu.news|downfile.site|techacode.com|azmath.info|aztravels.net/, function() {ClickIfExists('#yuidea', 2);ClickIfExists('#monetiza', 2);ClickIfExists('#btn6', 3);});
-    BypassedByBloggerPemula(/techanalyzer.eu|askpaccosi.com|cryptomonitor.in|2the.space|imbb.online/, function() {EnableRCF();SubmitIfExists("form[name='dsb']", 3);ClickIfExists('#wpsafe-link > a', 4);});
+    BypassedByBloggerPemula(/cryptomonitor.in|2the.space|imbb.online/, function() {EnableRCF();SubmitIfExists("form[name='dsb']", 3);ClickIfExists('#wpsafe-link > a', 4);});
     BypassedByBloggerPemula(/(tinycmd|tinybc).com/, () => {waitForElm("div[id^=wpsafe] > a[rel=nofollow]", tiny => redirect(strBetween(tiny.onclick.toString(), `handleClick('`, `', '_self')`), false));});
     BypassedByBloggerPemula(/(bitzite|neverdims).com/, function() {EnableRCF();let bitzite = bp("input[name=newwpsafelink]");setTimeout(() => {redirect(JSON.parse(atob(bitzite.value)).linkr,false);}, 3 * 1000);});
-    BypassedByBloggerPemula(/hostratgeber.de|(miner-sim|networkhint).com/, function() {let hostrat = bp("input[name=newwpsafelink]");setTimeout(() => {redirect(JSON.parse(atob(hostrat.value)).linkr,false);}, 120 * 1000);});
-    BypassedByBloggerPemula(/coingraph.us|trendzilla.it|horoscop.info|(infonerd|writeprofit).org/, function() {let Alcatraz = bp("input[name=newwpsafelink]");setTimeout(() => {redirect(JSON.parse(atob(Alcatraz.value)).linkk,false);}, 120 * 1000);});
+    BypassedByBloggerPemula(/hostratgeber.de|techanalyzer.eu|(miner-sim|networkhint|askpaccosi).com/, function() {let hostrat = bp("input[name=newwpsafelink]");setTimeout(() => {redirect(JSON.parse(atob(hostrat.value)).linkr,false);}, 3 * 1000);});
+    BypassedByBloggerPemula(/coingraph.us|trendzilla.it|horoscop.info|(infonerd|writeprofit).org/, function() {let Alcatraz = bp("input[name=newwpsafelink]");setTimeout(() => {redirect(JSON.parse(atob(Alcatraz.value)).linkk,false);}, 3 * 1000);});
     BypassedByBloggerPemula(/(aduzz|cryptfaucet).com|(bitcrypto|bit4me).info|offerinfo.net|deltabtc.xyz/, () => {waitForElm("div[id^=wpsafe] > a[rel=nofollow]", tiny => redirect(strBetween(tiny.onclick.toString(), `window.open('`, `', '_self')`), false));});
     BypassedByBloggerPemula(/nullscript.info|freebinance.top/, function() {waitForElm('div#wpsafe-link > a', function(element) {const regex = /redirect=(.*)',/;const m = regex.exec(element.onclick.toString())[1];location.href = JSON.parse(atob(m)).safelink;});});
     BypassedByBloggerPemula(/(10short|lollty).pro|mamahawa.com|10short.vip/, function() {ReadytoClick('center > .btn-success.btn', 3);waitForElm('a#makingdifferenttimer', st1 => redirect(st1.href, false));waitForElm('a#proceed', st2 => redirect(st2.href, false));});
-    BypassedByBloggerPemula(/(cryptosparatodos|placementsmela).com|(insurancepost|financeandinsurance|tecnotech|healthmedic).xyz|paidinsurance.in/, () => waitForElm('#wpsafe-link a', bti => redirect(strBetween(bti.onclick.toString(), `window.open('`, `', '_self')`), false)));
+    BypassedByBloggerPemula(/(cryptosparatodos|placementsmela|nutrisavors|bgmtelugucreations|soundaudioguru|howtoconcepts).com|(insurancepost|financeandinsurance|tecnotech|healthmedic).xyz|paidinsurance.in/, () => waitForElm('#wpsafe-link a', bti => redirect(strBetween(bti.onclick.toString(), `window.open('`, `', '_self')`), false)));
     BypassedByBloggerPemula(/bitcotasks.com/, function() {if (location.href.includes('/shortlink/')) {window.urlPattern = false;let bct = setInterval(() => {if (Checkvisibility(bp('.captcha-success.captcha-theme-light.captcha-holder'))) {clearInterval(bct); window.continueClicked();}}, 1 * 1000);} else {}});
-    BypassedByBloggerPemula(/mynewsmedia.co|(netflixrelease|mangareleasedate|kojnews|freemodapp|cryptoprolife|revadvert|diethim|techsotta|zutiza|lndianews|newsjov|instantloan5|hitjankari|phixshop|mp4news).com|(rontymobile|myfirstname|snapseedmod|djrajurjm|disking|ignoupur).in/, function() {ClickIfExists('#VerifyBtn', 3);ClickIfExists('#NextBtn', 5, 'setInterval');});
+    BypassedByBloggerPemula(/(netflixrelease|mangareleasedate|freemodapp|cryptoprolife|diethim|zutiza|hitjankari|phixshop|mp4news|trancebazar|taazaalerts).com|(rontymobile|myfirstname|djrajurjm|ignoupur).in|mdsuuniversity.org|odishadjs.link/, function() {ClickIfExists('#VerifyBtn', 3);ClickIfExists('#NextBtn', 5, 'setInterval');});
     BypassedByBloggerPemula(/(crypto2u|bestcoinsites).xyz/, function() {if (/^\/shortlink\/([^\/]+)/.test(location.pathname)) {waitForElm('a#btn.btn.btn-success', c2u => redirect(c2u.href, false));} else if (elementExists('.shadow.card')) {waitForElm('a.btn.btn-lg.btn-success.px-4', c2u2 => redirect(c2u2.href, false));}});
     BypassedByBloggerPemula(/fansonlinehub.com/, async function() {setInterval(() => {window.scrollBy(0, 1);window.scrollTo(0,-1);ReadytoClick('.active.btn > span');}, 3 * 1000);});
     BypassedByBloggerPemula(/(howifx|vocalley|financerites|yogablogfit|healthfirstweb|junkyponk|mythvista).com/, () => {ClickIfExists('#getlink', 3);});
+    BypassedByBloggerPemula(/(viralxns|uploadsoon).com/, function(){ClickIfExists('#tp-snp2.tp-blue.tp-btn', 2);ClickIfExists('.tp-white.tp-btn', 3);});
     BypassedByBloggerPemula(/ouo.io|ouo.press/, async function() {await sleep(4000);ReadytoClick('button#btn-main.btn.btn-main');});
+    BypassedByBloggerPemula(/yalifin.xyz/, function() {SubmitIfExists('#molien', 2);ClickIfExists('.btn-success.btn', 3);});
     BypassedByBloggerPemula(/largestpanel.in|earnme.club|usanewstoday.club/, function() {ClickIfExists('#tp-snp2', 1);});
     BypassedByBloggerPemula(/paste1s.com|note1s.com/, function() {ClickIfExists('.btn-lg.btn-primary.btn', 2);});
     BypassedByBloggerPemula(/terabox.fun/, async function() {await sleep(3000);ReadytoClick('.active.btn');});
@@ -745,12 +745,6 @@
       ClickIfExists('.big-text', 3);waitForElm('div.bb-sticky-el a', pbz => redirect(pbz.href, false));});
     BypassedByBloggerPemula(/sub2get.com/, function() {
       if (elementExists('#butunlock')) {let subt = bp('#butunlock > a:nth-child(1)').href;redirect(subt);}});
-    BypassedByBloggerPemula(/newassets.hcaptcha.com/, async function() {await sleep(3000) && cfg.get('hCaptcha');
-      if (cfg.get('hCaptcha') == true) {ReadytoClick('#checkbox');} else {}});
-    BypassedByBloggerPemula(/challenges.cloudflare.com/, async function() {await sleep(3000) && cfg.get('Turnstile');
-      if (cfg.get('Turnstile') == true) {ReadytoClick("input[type ='checkbox']");} else {}});
-    BypassedByBloggerPemula(/www.google.com|recaptcha.net/, async function() {await sleep(3000) && cfg.get('reCAPTCHA');
-      if (cfg.get('reCAPTCHA') == true) {ReadytoClick('.recaptcha-checkbox-border');} else {}});
     BypassedByBloggerPemula(/(fc-lc|loaninsurehub).com|fc-lc.xyz/, function() {ClickIfExists('#invisibleCaptchaShortlink', 3);
       ClickIfExists('#getlink', 3);ClickIfExists('#glink', 4);ClickIfExists('#surl', 5);});
     BypassedByBloggerPemula(/mneyvip.com/, function() {
@@ -791,8 +785,11 @@
       waitForElm('a#go_d.submitBtn.btn.btn-primary', ez => redirect(ez.href, false));
       waitForElm('a#go_d2.submitBtn.btn.btn-primary', ez2 => redirect(ez2.href, false));});
     BypassedByBloggerPemula(/(creditsalah|dissenttimes).com/, function() {ClickIfExists('#notarobot', 2, 'setInterval');
-      let csh = setInterval(() => {if (Captchacheck()) {clearInterval(csh);ClickIfExists('#safesub');}}, 1 * 1000);
-      waitForElm('a.safeb', csBtn => csBtn.click());});
+      let csh = setInterval(() => {if (Captchacheck()) {clearInterval(csh);ClickIfExists('#safesub');}}, 1 * 1000);waitForElm('a.safeb', csBtn => csBtn.click());});
+    BypassedByBloggerPemula(/www.google.com|recaptcha.net/, async function() {await sleep(3000) && cfg.get('reCAPTCHA') && cfg.get('ApiKey');
+      if (!APIKEY && cfg.get('reCAPTCHA') == true) {ReadytoClick('.recaptcha-checkbox-border');} else {}});
+    BypassedByBloggerPemula(/newassets.hcaptcha.com/, async function() {await sleep(3000) && cfg.get('hCaptcha') && cfg.get('ApiKey');
+      if (!APIKEY && cfg.get('hCaptcha') == true) {ReadytoClick('#checkbox');} else {}});
     BypassedByBloggerPemula(/alivedesktop.com/, function() {
       if (elementExists('#captcha-form')) {let alv = bp("input[name^='als']").value;
         let ald = bp("input[name^='safe']").value;redirect('https://rshrt.com/' + alv + '?api=' + ald, false);} else {}});
@@ -808,18 +805,15 @@
       let mgn = setInterval(() => {if (captcha_solved && bp('button.button').innerText.includes('Get Link')) {ReadytoClick('button.button');clearInterval(mgn);}}, 2000);});
     BypassedByBloggerPemula(/bigbtc.win/, function() {if (elementExists('.h-captcha')) {let bb = setInterval(() => {
           if (Captchacheck()) {clearInterval(bb);ReadytoClick('#claimbutn');}}, 1 * 1000);} else {ClickIfExists('#clickhere', 2);}});
-    BypassedByBloggerPemula(/firefaucet.win/, function() {if (elementExists('#captcha-hcaptcha') || elementExists('#captcha-recaptcha') || elementExists('#captcha-turnstile')) {
-        let ff = setInterval(() => {if (Captchacheck()) {ClickIfExists('#get_reward_button');
-            ClickIfExists('button.btn.waves-effect.waves-light.earn-btns.gr');}}, 2 * 1000);} else {ClickIfExists('#get_reward_button', 1);}});
+    BypassedByBloggerPemula(/firefaucet.win/, function() {if (elementExists("form[method='post']")) {let firefaucet = setInterval(() => {
+      if (Captchacheck()) {ClickIfExists('button[type=submit]');}}, 2 * 1000);} else {ClickIfExists('#get_reward_button', 1);}});
     BypassedByBloggerPemula(/uptobhai\.*|uplinkto\.*|shortlinkto\.*/, function() { ClickIfExists('.btn-block.btn-primary.btn', 2);});
     BypassedByBloggerPemula(/tmail.io/, function() {
       if (elementExists('#next')) {SubmitIfExists('form.text-center', 3);} else {ClickIfExists('#surl', 5, 'setInterval');}});
     BypassedByBloggerPemula(/exeo.app|exego.app/, function() {ClickIfExists('#submit-button', 2);ClickIfExists('.link-button.button', 3);
       let exeo = setInterval(() => {if (bp('.timer').innerText == '0') {clearInterval(exeo);ReadytoClick('#submit-button');}}, 2 * 1000);});
-    BypassedByBloggerPemula(/quesignifi.ca|tiktokcounter.net/, function() {
-      if (elementExists('.h-captcha')) {let ctrsh = setInterval(() => {if (Captchacheck()) {clearInterval(ctrsh);
-      ReadytoClick('.btn-primary.btn-warningbtn.btn', 2);}}, 1 * 1000);} else {let profitsfly = setInterval(() => {
-        if (bp('#cbt').innerText == 'Continue') {clearInterval(profitsfly);ReadytoClick('.btn-primary.btn-warningbtn.btn', 3);}}, 2 * 1000);}});
+    BypassedByBloggerPemula(/quesignifi.ca|tiktokcounter.net/, function() {let profitsfly = setInterval(() => {if (elementExists('.h-captcha')) {} else
+      if (!elementExists('.h-captcha') && bp('.countdown').innerText == '0') {clearInterval(profitsfly);ReadytoClick('.btn-primary.btn-warningbtn.btn', 1);}}, 2 * 1000);});
     BypassedByBloggerPemula(/(on-scroll|diudemy|maqal360).com/, function() {EnableRCF();let adlink = setInterval(() => {
         if (bp('#countdown').innerText == '0') {clearInterval(adlink);ReadytoClick('#append > :nth-child(1)');}}, 2 * 1000);});
     BypassedByBloggerPemula(/(forexrw7|forex-articles|3rabsports|fx-22).com|gold-24.net|bedrat.xyz/, function() {
@@ -827,6 +821,8 @@
     BypassedByBloggerPemula(/(leaveadvice|mensventure).com/, function() {let lav = setInterval(() => {
         if (bp('#timer').innerText == '0') {ReadytoClick('#method_free.free-download-btn.download-btn');
           clearInterval(lav); if (!elementExists('.h-captcha')) window.openLink();}}, 2000);});
+    //BypassedByBloggerPemula(/itscybertech.com/, () => {let itscyber = setInterval(() => {if (Captchacheck()) {clearInterval(itscyber);
+      ClickIfExists('.visit.medium.button');} else if (Checkvisibility(bp('#gtbtn2'))) {clearInterval(itscyber); window.fngo();}}, 1 * 1000);});
     BypassedByBloggerPemula(/jiotech.net|jameeltips.us|cryptonworld.space/, function() {
       ClickIfExists('#alf_continue', 3, 'setInterval');});
     BypassedByBloggerPemula(/hynews.biz|chamcuuhoc.com/, function() {
@@ -856,8 +852,9 @@
       ClickIfExists('#shortPostLink', 3);waitForElm("#shortGoToLink", dro => redirect(dro.href, false));});
     BypassedByBloggerPemula(/computerpedia.in/, function() {ClickIfExists('.tp-blue.tp-btn-2', 3);
       let komp = setInterval(function() {if (Captchacheck()) {clearInterval(komp);ClickIfExists('#tp-snp2');}}, 500);});
-    BypassedByBloggerPemula(/finance.uploadsoon.com/, function() {ClickIfExists('#tp-snp2.tp-blue.tp-btn', 2);
-      ClickIfExists('#btn1.tp-blue.tp-btn', 3);ClickIfExists('#btn2.tp-blue.tp-btn', 4, 'setInterval');});
+    BypassedByBloggerPemula(/myprivatejobs.com/, function() {
+      if (elementExists('.g-recaptcha')) {ClickIfExists('#tp-snp2.tp-blue.tp-btn-2', 3);} else {SubmitIfExists("form[name='tp']", 3);}});
+    BypassedByBloggerPemula(/claimfreetrx.online/, function() {SubmitIfExists('#molien', 2);ClickIfExists('#verify > .mb-2.btn-primary.btn-lg.btn', 3);});
     //BypassedByBloggerPemula(/adclicker\.*|yourihollier.com/, function() {if (location.href.includes('url/')) {const adc = atob(atob(atob(location.hash.slice(1))));
       //redirect(new URLSearchParams(adc).get('url'));} else {}});
     BypassedByBloggerPemula(/offers4crypto.xyz|ewall.biz/, function() {
@@ -1012,6 +1009,8 @@
     BypassedByBloggerPemula(/hamrolekh.com|(mgame|oncoin).info|lifeinsurancesblog.xyz|nishankhatri.com.np|quanngon.org/, function() {
       ClickIfExists('#my-btn', 2);ClickIfExists('#wpsafe-link > .btn-secondary.btn', 2);
       waitForElm('#pro-link', nhk => redirect(nhk.href, false));waitForElm('#wpsafe-link a', hrl => redirect(strBetween(hrl.onclick.toString(), `window.open('`, `', '_self')`), false));});
+    BypassedByBloggerPemula(/(awgrow|fadedfeet|kenzo-flowertag|homeculina|ineedskin|alightmotionlatest).com|worldtanr.xyz|lawyex.co|yexolo.net|mdn.lol/, () => {EnableRCF();
+      if (elementExists('.g-recaptcha')) {let mdn = setInterval(() => {if (Captchacheck()) {clearInterval(mdn);BypassHD('form[action]', 1);}}, 1 * 1000);} else {setTimeout(() => {BypassHD(GetForm('mdn'));}, 17 * 1000);}});
     BypassedByBloggerPemula(/shortit.pw/, function() {if (elementExists('.bg-light.container')) {
         $('.text-center.text-muted').text('IMPORTANT Note By BloggerPemula : Please Solve the Hcaptcha for Automatically , Dont Solve the Solvemedia . Regards...');}
       ClickIfExists('.pulse.btn-primary.btn', 3);let sorti = setInterval(function() {if (Captchacheck()) {clearInterval(sorti);ClickIfExists('#btn2');}}, 500);});
@@ -1049,7 +1048,6 @@
     BypassedByBloggerPemula(/newsturbovid.com/, () => waitForElm('#start-download > a', ntv => redirect(ntv.href, false)));
     BypassedByBloggerPemula(/amanguides.com/, () => waitForElm('#wpsafe-link > .bt-success', ag => redirect(ag.href, false)));
     BypassedByBloggerPemula(/mirrored.to/, () => waitForElm('div.col-sm.centered.extra-top a', mir => redirect(mir.href, false)));
-    BypassedByBloggerPemula(/viralxns.com/, () => waitForElm('div.paras-dev-top.text-center a', vir => redirect(vir.href, false)));
     BypassedByBloggerPemula(/flybid.net/, () => waitForElm('a#continue-button.continue-button', flb => redirect(flb.href, false)));
     BypassedByBloggerPemula(/8tm.net/, () => waitForElm('a.btn.btn-secondary.btn-block.redirect', tm => redirect(tm.href, false)));
     BypassedByBloggerPemula(/cpmlink.net/, () => waitForElm('a#btn-main.btn.btn-warning.btn-lg', cpm => redirect(cpm.href, false)));
@@ -1080,7 +1078,6 @@
     BypassedByBloggerPemula(/ronakfitness.com/, function() {if (elementExists('.containerpanel')){let rft = bp('a.linky.buttonpanel.buttonpanel-block.btn-lg.get-link.disabled').href;setTimeout(() => {redirect(rft,false);}, 2 * 1000);}});
     BypassedByBloggerPemula(/mboost.me/, function() {if (elementExists('#firstsection')){let mbo = bp('#__NEXT_DATA__');let mbm = JSON.parse(mbo.textContent).props.pageProps.data.targeturl;setTimeout(() => {redirect(mbm,false);}, 2 * 1000);}});
     BypassedByBloggerPemula(/(disheye|kreatifparenting|phimne|admediaflex|cdrab).com|(gurumu|wpcheap|izseo|adcrypto|daycash).net|(sportweb|ecq|mgame|oncoin).info|savego.org|hbz.us|djqunjab.in|datacheap.io/, () => waitForElm('#wpsafelink-landing > input', dis => redirect(JSON.parse(atob(dis.value)).linkr, false)));
-    BypassedByBloggerPemula(/(awgrow|fadedfeet|kenzo-flowertag|homeculina|ineedskin|alightmotionlatest).com|worldtanr.xyz|lawyex.co|yexolo.net|mdn.lol/, () => {EnableRCF();window.urlPattern = false;window.addEventListener('DOMContentLoaded', () => {BypassHD("form:not([style*='display: none'])", 19);});});
     BypassedByBloggerPemula(/readi.online|mbantul.my.id|blog.qnix.me|videoclip.info|moddingzone.in|crypto-fi.net|claimcrypto.cc|xtrabits.click|(cempakajaya|web9academy|onlineincoms|allsoftdrivers|tribuncrypto|poketoonworld|bioinflu|pubgquotes|bico8).com|(techleets|ourcoincash|studyis|healthysamy).xyz/, function() {
       var bypasslink = atob(`aH${bp("#landing [name='go']").value.split("aH").slice(1).join("aH")}`); redirect(bypasslink, false);});
     BypassedByBloggerPemula(/aiimgvlog.fun/, function() {EnableRCF(); window.onload = setInterval(() => {if (elementExists('.h-captcha') && Checkvisibility(bp('.h-captcha'))) {BypassHD('#overlay', 1);} if (elementExists("div[id^='count']") && bp("div[id^='count']").innerHTML == 0) {ReadytoClick('input:nth-of-type(3)', 1);}}, 1 * 1000);
@@ -1088,20 +1085,20 @@
     BypassedByBloggerPemula(/dutchycorp.space|dutchycorp.ovh|gtlink.co|seulink.digital|oii.io|hamody.pro|fileku.net|metasafelink.site|(beingtek|fc-lc|10short).com|(zagl|shrinkforearn).in|(kiiw|wordcounter).icu|pwrpa.cc|shurt.pw|(flyad|tapnip).vip|antonimos.de|seulink.online/, function() {
       if (elementExists('.grecaptcha-badge') || elementExists('#captchaShortlink')) {var ticker = setInterval(function() {try {clearInterval(ticker); window.grecaptcha.execute();} catch (e) {}}, 3000);}});
     BypassedByBloggerPemula(/dutchycorp.ovh|beast.ink|ckk.ai|onelinks.nl|(viewfr|shortzon|techsamir|ufacw|gawbne|bitcoinwinco|liinkat|links.apksvip|namaidani|cutpaid|link1s|postazap|yeifly|kiddyshort|shtfly|cortaly|makemoneywithurl|mtraffics|dz4link|dz-linkk).com|(tmearn|namaidani|cutearn|ccurl|link3s|youshort|illink).net|(s2fly|pglink|snaply|megaurl|megafly|linksbanao).in|(wez|shortlinks).info|(shrink|flyzu).icu|(oko|aii).sh|(24payu|vielink).top|(terafly|hatelink|cashando|zumpa|tlin|weezo|adnews|botfly|linkdam|ar-goal).me|(jameeltips|mitly).us|(forexly|goldly|insurancly).cc|(beycoin|aku2x|moinsider|satoshi-win).xyz|(wedocrypto|yourtechnology|clickmais|flylinks).online|(short1|urlcash|dglinks).site|(shrinkme|tfly).link|(playstore|adsy|clik|shurt).pw|short.express|cryptosh.pro|goo.st|tinygo.co|pndx.live|(payskip|shrinkurl).org|cryptotracker.space|shortearn.eu|clicklink.fun|(lootcash|tapnip).vip|addurl.biz/, function() {parent.open = BpBlock();
-       if (elementExists('.g-recaptcha') || elementExists('#captchaShortlink')) {let frm = setInterval(() => {if (Captchacheck()) {clearInterval(frm);SubmitIfExists('#link-view');}}, 1 * 1000);} else {let FMode = ['#link-view', '#form-continue', '.col-md- > form', '#nextstepform', '#submit-form', '.text-center.row > form', 'div.col-md-6 form', 'div.col-md-12 form', 'div.text-center form', '#before-captcha', '#yuidea', '#exfoary-form', '#submit_first_page', '#hidden form', '#test', 'form.text-center'];for (let i = 0; i < FMode.length; i++) {SubmitIfExists(FMode[i],2);}}});
+      if (elementExists('.g-recaptcha') || elementExists('#captchaShortlink')) {let frm = setInterval(() => {if (Captchacheck()) {clearInterval(frm);SubmitIfExists('#link-view');}}, 1 * 1000);} else {let FMode = ['#link-view', '#form-continue', '.col-md- > form', '#nextstepform', '#submit-form', '.text-center.row > form', 'div.col-md-6 form', 'div.col-md-12 form', 'div.text-center form', '#before-captcha', '#yuidea', '#exfoary-form', '#submit_first_page', '#hidden form', '#test', 'form.text-center'];for (let i = 0; i < FMode.length; i++) {SubmitIfExists(FMode[i],2);}}});
     BypassedByBloggerPemula(/autofaucet.dutchycorp.space/, function() {let autoRoll = false; if (window.location.href.includes('/roll.php')) {window.scrollTo(0, 9999);
-        if (!bp('#timer')) {setInterval(() => {if (Captchacheck()) {if (bp('.boost-btn.unlockbutton') && autoRoll === false) {bp('.boost-btn.unlockbutton').click();autoRoll = true;}
-        if (Checkvisibility(bp('#claim_boosted'))) {bp('#claim_boosted').click();}}}, 3 * 1000);} else { setTimeout(() => {window.location.replace('https://autofaucet.dutchycorp.space/coin_roll.php');}, 3 * 1000);}}
-        if (window.location.href.includes('/coin_roll.php')) {window.scrollTo(0, 9999);if (!bp("#timer")) {setInterval(() => {if (Captchacheck()) {
-        if (bp('.boost-btn.unlockbutton') && autoRoll === false) {bp('.boost-btn.unlockbutton').click();autoRoll = true;}
-        if (Checkvisibility(bp('#claim_boosted'))) {bp('#claim_boosted').click();}}}, 3 * 1000);} else { setTimeout(() => {window.location.replace('https://autofaucet.dutchycorp.space/ptc/wall.php');}, 3 * 1000);}}
-        if (window.location.href.includes('/ptc/wall.php')) {var ptcwall = BpAll(".col.s10.m6.l4 a[name='claim']");
-        if (ptcwall.length >= 1) {ptcwall[0].style.backgroundColor = 'red'; let match = ptcwall[0].onmousedown.toString().match(/'href', '(.+)'/);let hrefValue = match[1];
-          setTimeout(() => {window.location.replace('https://autofaucet.dutchycorp.space' + hrefValue);}, 3 * 1000);} else {
-          if (Checkvisibility !== null) {setTimeout(() => {window.location.replace('https://autofaucet.dutchycorp.space/ptc/');}, 3 * 1000);}}}
-      if (location.href.includes('autofaucet.dutchycorp.space/ptc/')) {console.log('Viewing Available Ads');
-        if (elementExists('.fa-check-double')) {console.log('All Available Ads Watched'); setTimeout(() => {window.location.replace('https://autofaucet.dutchycorp.space/dashboard.php');}, 3 * 1000);}
-        setInterval(() => {if (Checkvisibility(bp('#submit_captcha'))) {bp("button[type='submit'].g-recaptcha").click();}}, 5 * 1000);}});
+      if (!bp('#timer')) {setInterval(() => {if (Captchacheck()) {if (bp('.boost-btn.unlockbutton') && autoRoll === false) {bp('.boost-btn.unlockbutton').click();autoRoll = true;}if (Checkvisibility(bp('#claim_boosted'))) {bp('#claim_boosted').click();}}}, 3 * 1000);} else { setTimeout(() => {window.location.replace('https://autofaucet.dutchycorp.space/coin_roll.php');}, 3 * 1000);}}
+      if (window.location.href.includes('/coin_roll.php')) {window.scrollTo(0, 9999);if (!bp("#timer")) {setInterval(() => {if (Captchacheck()) {if (bp('.boost-btn.unlockbutton') && autoRoll === false) {bp('.boost-btn.unlockbutton').click();autoRoll = true;}
+      if (Checkvisibility(bp('#claim_boosted'))) {bp('#claim_boosted').click();}}}, 3 * 1000);} else { setTimeout(() => {window.location.replace('https://autofaucet.dutchycorp.space/ptc/wall.php');}, 3 * 1000);}} if (window.location.href.includes('/ptc/wall.php')) {var ptcwall = BpAll(".col.s10.m6.l4 a[name='claim']");
+      if (ptcwall.length >= 1) {ptcwall[0].style.backgroundColor = 'red'; let match = ptcwall[0].onmousedown.toString().match(/'href', '(.+)'/);let hrefValue = match[1];
+      setTimeout(() => {window.location.replace('https://autofaucet.dutchycorp.space' + hrefValue);}, 3 * 1000);} else {if (Checkvisibility !== null) {setTimeout(() => {window.location.replace('https://autofaucet.dutchycorp.space/ptc/');}, 3 * 1000);}}}
+      if (location.href.includes('autofaucet.dutchycorp.space/ptc/')) {console.log('Viewing Available Ads'); if (elementExists('.fa-check-double')) {console.log('All Available Ads Watched'); setTimeout(() => {window.location.replace('https://autofaucet.dutchycorp.space/dashboard.php');}, 3 * 1000);}
+      setInterval(() => {if (Checkvisibility(bp('#submit_captcha'))) {bp("button[type='submit'].g-recaptcha").click();}}, 5 * 1000);}}); const headers = {"Content-Type": "application/json", "apikey": APIKEY};
+    elementReady('iframe[data-hcaptcha-response]').then(async function(element) {if (!APIKEY || !Checkvisibility(element) || !cfg.get('hCaptcha')) return;
+    const settings = Object.fromEntries(new URLSearchParams(element.src)); let data = await Request("https://token.nocaptchaai.com/token", { method: "POST", headers,
+    data: JSON.stringify({url: settings.host, type: "hcaptcha", sitekey: settings.sitekey, softid: "bloggerPemula-diego"})}); const url = data.url;
+    while (data.status != "processed") {await sleep(1); data = await Request(url, { headers, responseType: 'json'}); console.log(data);}
+    window.postMessage(JSON.stringify({ "source": "hcaptcha", "label": "challenge-closed", "id": settings.id, "contents": { "event": "challenge-passed", "response": data.token, "expiration": 120}}));});
     elementReady('[name=adcopy_response]').then(function (element) {
     const PHRASES = ['1.21 gigawatts', '4 8 15 16 23 42', '5 dollar shake', '6 feet of snow', '8th chevron', 'a wild captcha appears', 'abelian grape', 'abide with me', 'abracadabra', 'absent without leave', 'absolute zero', 'accidentally on purpose', 'ace of spades', 'across the board', 'adapt improve', 'adapt improve succeed', 'against the grain', 'agree to disagree', 'al capone', 'all dancing', 'all grown up', 'all of the above', 'all singing', 'all your base', 'allergic reaction', 'almost got it', 'always there', 'am i happy', 'anchors away', "and that's the way it is", 'angel food', 'another castle', 'anti dentite', 'apple juice', 'apple pie', 'apple sauce', 'april may', 'april showers', 'are we there yet', 'are you ready', 'are you the keymaster', 'army training', 'army training sir', 'around here', 'as i see it', 'as you wish', 'ask questions', 'attila the hun', 'auto driving', 'awesome dude', 'awesome sauce', 'azgoths of kria', 'babel fish', 'baby blues', 'baby boomer', 'baby steps', 'back to basics', 'back track', 'background noise', 'bacon and eggs', 'bad books', 'bad egg', 'bait the line', 'baked in a pie', 'bald eagle', 'ball of confusion', 'banana bread', 'banana split', 'banana stand', 'bangers and mash', 'barber chair', 'barking mad', 'basket case', 'bated breath', 'bath towel', 'bath water', 'battle royale', 'bazinga', 'be careful', 'be mine', 'be my friend', 'be nice', 'be nimble be quick', 'be serious now', 'beach ball', 'bean town', 'beans and rice', 'beautiful friendship', 'bee line', 'been there', 'beer in a bottle', 'beer in the bottle', 'bees knees', 'beg the question', 'believe me', 'belt up', 'berlin wall', 'best fit line', 'best seller', 'better call saul', 'better half', 'better next time', 'beyond me', 'big brother', 'big kahuna burger', 'big nose', 'big screen', 'bigger in texas', 'bike rider', 'bird cage', 'birthday boy', 'birthday girl', 'bizarro jerry', 'black and white', 'black coffee', 'black gold', 'black jack', 'black monday', 'blahblahblah', 'blaze a trail', 'bless you', 'blinded by science', 'blog this', 'blood type', 'blue cheese', 'blue ribbon', 'blue sky', 'bob loblaw', 'body surfing', 'boiled cabbage', 'bon voyage', 'bond james bond', 'bone dry', 'bonus points', 'bonus round', 'book reading', 'book worm', 'boomerang', 'born to run', "bots are bad m'kay", 'bottled water', 'bowties are cool', 'box jelly fish', 'box kitty', 'box of chocolates', 'braaains', 'brand spanking new', 'bread of life', 'break the ice', 'brick house', 'broken heart', 'broken record', 'bruce lee', 'brush your teeth', 'buckle your shoe', 'buffalo wing', 'bunny rabbit', 'burger with fries', 'burning oil', 'burnt sienna', 'butler did it', 'butter side down', 'button fly', 'buy some time', 'by and large', 'by the board', 'by the book', 'by the seashore', 'cabbage borsht', 'cabbage stew', 'caesar salad', 'call me', 'call me maybe', 'can i love', 'can you see', 'candy apple', 'candy cane', 'capital gain', 'captcha in the rye', 'car trouble', 'carbon copy', 'carbon footprint', 'card sharp', 'card-sharp', 'carpe diem', 'carry a towel', 'carry on', 'cary grant', 'case closed', 'cat got your tongue', 'catch the man', 'cats and dogs', 'cats pajamas', 'chaise lounge', 'challenge accepted', 'change the world', 'change yourself', 'channel surfing', 'charley horse', 'charlie bit me', 'charm offensive', 'charmed life', 'check your coat', 'check your work', 'cheese burger', 'cheese fries', 'cheese steak', 'cherry on top', 'chicken feed', 'chicken noodle', 'chicken salad', 'chicken soup', 'chin boy', 'chit chat', 'choco lazer boom', 'chocolate cookie', 'chocolate milk', 'chow down', 'chuck norris', 'circle of life', 'civil war', 'clean and shiny', 'clean hands', 'clear blue water', 'clear sailing', 'click, click, click', 'cliff hanger', 'clod hopper', 'close quarters', 'cloud nine', 'clown around', 'coffee can', 'cold comfort', 'cold feet', 'cold hat', 'cold shoulder', 'cold turkey', 'coleslaw', 'collaborate and listen', 'colored paper', 'come along', 'come along pond', 'come back', 'come clean', 'come on down', 'come what may', 'comfort zone', 'comma comma', 'common law', 'complex number', 'construction ahead', 'cookie cutter', 'cool heads prevail', 'cop an attitude', 'cor blimey', 'cordon bleu', 'corned beef', 'cotton on', 'count your change', 'counting sheep', 'covered bridge', 'crab cake', 'crayola', 'cream and sugar', 'create new things', 'creative process', 'creative vision', 'creepy crawler', 'crime of passion', 'crocodile tears', 'crop up', 'cross the road', 'cross the rubicon', 'cubic spline', 'cucumber sandwich', 'cup cake', "cupid's arrow", "curate's egg", 'curry favour', 'cut and run', 'cut the mustard', 'dalek asylum', 'dallas texas', 'dance all night', 'danish robot dancers', 'dark horse', 'das oontz', 'david after dentist', 'dead battery', 'dead ringer', 'deal me in', 'dear cookie', 'dear mr vernon', 'dear sir', 'deep thought', 'deep waters', 'dharma initiative', 'diced onion', 'diddly squat', 'digital clock', 'ding a ling', 'dinner bell', 'dinosaur spaceship', 'dish water', 'do a little dance', 'do be do be do', 'do it now', 'do more situps', 'do not touch', 'do or do not', 'do unto others', 'do wah ditty', 'do you believe in miracles', 'do you love me', 'doctor caligari', 'doctor who', 'doctor who?', 'doe a deer', 'dog days', "dog's breakfast", "dog's dinner", 'dogapus', 'dogs and cats living together', 'dollar bill', 'dollar signs', 'dollars to donuts', 'domestic spying', "don't be late", "don't count on it", "don't dawdle", "don't stop", "don't waste time", 'done that', "donkey's years", 'doodah man', 'double cross', 'double crossed', 'double dutch', 'double jump', 'double rainbow', 'double time', 'double whammy', 'down the hatch', 'down the rabbit hole', 'downward slope', 'drag race', 'dragon with matches', 'dragonfly', 'dramatic chipmunk', 'draw a blank', 'drawing board', 'dream big', 'drink milk', 'drive me to firenze', 'drop table users', 'drumhead', 'drummer boy', 'dry clean only', 'dueling banjos', 'dusk till dawn', 'dust bunny', 'dust up', 'duvet day', 'dynamo clock', 'ear candy', 'ear mark', 'ear muffs', 'easy as cake', 'easy as pie', 'easy peasy', 'easy street', 'eat cous cous', 'eat out', 'eat your dinner', 'eat your veggies', 'eat your vitamins', 'ecks why zee', 'edgar degas', 'egg on', 'eggs ter minate', 'eighty six', 'electro head', 'elevator going up', "emperor's clothes", 'empire state of mind', 'end of story', 'english muffin', 'enjoy life', 'ermahgerd capcher', 'evil eye', 'evil genius', 'exceedingly well read', 'exclamation', 'exercise more', 'extra cheese', 'face the music', 'face to face', 'fade away', 'fair and square', 'fair play', 'fairy godmother', 'fairy tale', 'fait accompli', 'fall guy', 'falling pianos', 'fancy free', 'fancy pants', 'far away', 'farsical aquatic ceremony', 'fashion victim', 'fast and loose', 'fast asleep', 'father time', 'father uncle', 'fathom out', 'fava beans', 'feeding frenzy', 'feeling blue', 'fellow traveller', 'fezes are cool', 'field day', 'fifth column', 'fill it up', 'filthy dirty mess', 'filthy rich', "finagle's law", 'final answer', 'finger lickin good', 'fire brim stone', 'firecracker', 'first contact', 'first post', 'first water', 'first world', 'fish and chips', 'fish on', 'fishy smell', 'flag day', 'flat foot', 'flat out', 'flat tire', 'flipadelphia', 'flipflops', 'flux capacitor', 'follow me', 'folsom prison', "fool's paradise", 'fools gold', 'for keeps', 'for sure', 'for the birds', 'for the gripper', 'forbidden fruit', 'foregone conclusion', 'forget this', 'forget you', 'fork knife spoon', 'forty two', 'foul play', 'four by two', 'frabjous day', 'france', 'frankly my dear', 'free hat', 'freezing temperatures', 'french fried', 'french fries', 'french phrases', 'fresh water', 'fried ices', 'fried rice', 'friend zone', 'frozen peas', 'fruit salad', 'fuddy duddy', 'full house', 'full monty', 'full of stars', 'full stop', 'full tilt', 'fun with flags', 'funny farm', 'fusilli jerry', 'fuzzy wuzzy', 'gadzooks', 'game is up', 'gangnam style', 'garden of eden', 'garlic yum', 'gathers moss', 'gee louise', 'gee whiz', 'geez louise', 'gene parmesan', 'general tso', 'generation x', 'genghis khan', 'george washington', 'get out', 'get over it', 'get well', 'get your goat', 'giant bunny rabbit', 'giant panda', 'giddy goat', 'gift horse', 'gimme pizza', 'ginger bread', 'give or take', 'glass ceiling', 'glazed donut', 'global warming', 'go berserk', 'go further', 'go gadget go', 'goes to eleven', 'gold medal', 'gold record', 'golly jeepers', 'gone dolally', 'gone fishing', 'good afternoon', 'good as gold', 'good buddy', 'good day', 'good evening', 'good for nothing', 'good grief', 'good job', 'good luck', 'good morning', 'good night', 'good night and good luck', 'good riddance', 'good samaritan', 'good work', 'goody goody gumdrops', 'goody gumdrop', 'goody two shoes', 'goosebumps', 'gordon bennett', 'got my mojo', 'gotham city', 'gothic arch', 'gothic church', 'grain of salt', 'grand slam', 'grape soda', 'grass up', 'graveyard shift', 'gravy train', 'grease the skids', 'greased lightning', 'great scott', 'great unwashed', 'gregory peck', 'gridlock', 'grilled cheese', 'groundhog day', 'grumpy cat', 'guinea pig', 'guitar player', 'gum shoe', 'gung ho', 'habsons choice', 'had a great fall', 'had me at hello', 'hairy eyeball', 'halcyon days', 'half done', 'half empty', 'half full', 'half inch', 'hallowed ground', 'halp meh', 'ham and cheese', 'hamburger bun', 'hammer time', 'hand over fist', 'hands down', 'hangers and mash', 'happy anniversary', 'happy blessings', 'happy clappy', 'happy retirement', 'happy trails', 'hard captcha is hard', 'hard cheese', 'hard lines', 'hard sharp', 'hardened prestoopnicks', 'harp on', 'haste makes waste', 'hat head', 'hat trick', 'have a purpose', 'have an inkling', 'have courage', 'have fun', 'he loves her', 'head case', 'head honcho', 'head over heels', 'heads up', 'health food', 'healthy food', 'hear hear', 'hear me roar',
                      'heart break', 'heart strings', "heart's content", 'heartache', 'heat up', 'heated debate', 'heavens to betsy', 'heavy metal', 'heebie jeebies', 'hello newman', 'hello sweetie', 'hello watson', 'hello world', 'here or there', "here's johnny", 'hey brother', 'higgledy piggledy', 'higgs boson', 'high def', 'high five', 'high flyer', 'high horse', 'high sleeper', 'high time', 'him with her', 'hissy fit', 'history repeats itself', 'hit the hay', 'hit the sack', 'hoagie roll', 'hobby horse', "hobson's choice", 'hocus pocus', 'hoi polloi', 'hoity-toity', 'hold your horses', 'hold your tongue', 'home james', 'honey mustard', 'hooray henry', 'hops a daisy', 'horse and cart', "horse's mouth", 'hot blooded', 'hot diggity dog', 'hot dog roll', 'hot pola', 'hot sauce', 'hover hand', 'how about lunch', 'how about that', 'how are you', 'how interesting', 'how now, brown cow', 'how quaint', 'how sweet', "how's it going", 'howdy partner', 'hug me', 'huggle muggle', 'hulk smash', 'hunky-dory', 'hush puppies', 'i am captcha', 'i am fine', 'i am here', 'i can do this', 'i can fix it', 'i have fallen', 'i know nothing', 'i like humans', 'i like people', 'i like turtles', 'i like you', 'i love deadlines', 'i love lamp', 'i love you', 'i made tea', 'i moustache you why', 'i saw that', 'i see', 'i think i am', 'i think i can', 'i think so', 'i want control', "i'll make tea", "i'm batman", "i'm blessed", "i'm blushing", "i'm cold brr", "i'm only human", "i'm so cold", "i'm sorry", "i'm sorry dave", "i'm yours", 'ice to meet you', 'idk my bff jill', 'if it fits', 'im cold. brr', 'imagine inspire create', 'in a box', 'in limbo', 'in over my head', 'in spades', 'in stitches', 'in the air', 'in the box', 'in the cart', 'in the club', 'in the doldrums', 'in the limelight', 'industrial revolution', 'infra dig', 'inside out', 'is it enough', 'is it hot', 'is it hot?', 'is it hot in here', 'is it plugged in', 'is low', "it doesn't count", 'it happens', 'it hurts', 'it is certain', 'it is enough', 'it will pass', "it's over", "it's super effective", 'ivory tower', 'jabber wocky', 'jack be nimble', 'jam tomorrow', 'jay gatsby', 'jerk store', 'jerry built', 'jimmy cricket', 'jimmy horner', 'john lennon', 'john steinbeck', 'jump higher', 'jump over', 'jump the candlestick', 'jump the gun', 'jumping jack', 'june july', 'just dance', 'just deserts', 'just drive', 'just friends', 'just in time', 'kangaroo count', 'karma points', 'keep calm', 'keyboard', 'keyboard cat', 'khyber pass', 'kick the can', 'kick your heels', 'kindness of strangers', 'king arthur', 'kiss me', 'kitten mittens', 'kitty kat', 'klatu berada nikto', 'knick knack', 'knock at the door', 'knock back', 'knock knock knock penny', 'knock off', 'knock on wood', 'know the ropes', 'know thy self', 'know your paradoxes', 'know your rights', 'knuckle down', 'kosher dill', 'kundalini express', 'labour of love', 'ladies first', 'lager frenzy', 'lame duck', 'lardy-dardy', 'lark about', 'laser beams', 'last straw', 'later gator', 'laugh at me', 'law of sines', 'lawn giland', 'lazy sunday', 'leap higher', 'leaps and bounds', 'learn challenge improve', 'learn from mistakes', 'learn succeed', 'learn the ropes', 'learn, advance', 'leave britney alone', 'leave me alone', 'left or right', 'left right', 'lefty loosey', 'less is more', 'let go', 'let it be', 'let me know', 'let me out', 'lets eat', 'level playing field', 'liberty bell', 'library book', 'lickety split', 'lie low', 'light sleeper', 'like a boss', 'like the dickens', 'linear algebra', 'little bird told me', 'little bobby tables', 'little did he know', 'little sister', 'live free', 'live in the moment', 'live in the now', 'live life', 'live long + prosper', 'live love internet', 'live love type', 'live transmission', 'live with purpose', 'live your dream', 'living daylights', 'living things', 'lizard poisons spock', 'lo and behold', 'loaf of bread', 'local derby', 'lol cat', 'lollerskates', 'lolly pop', 'london calling', 'long division', 'long in the tooth', 'look away', 'look before crossing', 'look both ways', 'looking glass', 'lose face', 'lost love', 'loud music', 'love is automatic', 'love is blind', 'love life', 'love me', 'love you', 'love-hate', 'lovey dovey', 'lucille 2', 'lucky you', 'ludwig van', 'lumpy gravy', 'lunatic fridge', 'lunch time', 'lunch tuesday', 'mad hatter', 'mad science', 'magic decoder ring', 'magic eight ball', 'magical realism', 'magnetic monopole', 'main chance', 'major intersection', 'make a bee line', 'make haste', 'make it so', 'make my day', 'many happy returns', 'many wishes', 'maple syrup', 'marble rye', 'marcia marcia marcia', "mare's nest", 'margin of error', 'mark it zero', 'market forces', 'marry me', 'mars rover', 'math test', 'mayan ruins', 'mea culpa', 'meat and drink', 'meat with gravy', 'meddling kids', 'media frenzy', 'melody pond', 'men in suits', 'mend fences', 'meow meow', 'metropolis', 'mexican wave', 'mickey finn', 'miles to go', 'milk was a bad choice', 'milkshake', 'million dollars', 'miloko plus', 'miloko plus vellocet', 'mimsy borogoves', 'minced oaths', 'mind the gap', 'minty fresh', 'mish-mash', 'miss you', 'mister wilson', 'modern love', "moe's tavern", 'mom and dad', 'money lender', 'moo shoo pork', 'moon cheese', 'moot point', 'more better', 'more chocolate', 'more coffee', 'more cow bell', 'more internets', 'morning person', 'most interesting man', 'most likely', 'mother country', 'mother earth', 'motley crew', 'mouth watering', 'move along', 'move mountains', 'move over', 'moveable feast', 'movers and shakers', 'movie star', 'mrs robinson', 'muffled rap music', 'multi pass', "mum's the word", 'mumbo jumbo', "murphy's law", 'mushy peas', 'music machine', 'mustachioed', 'my bad', 'my beating heart', 'my better half', 'my dear watson', "my friends can't dance", "my mind's eye", 'my sources say no', 'naise cain', 'namby-pamby', 'name drop', 'nanoo nanoo', 'nap time', 'narrow minded', 'nautical phrases', 'ne regrets', 'near tannhauser gate', 'neart strings', 'neckbeard', 'need a bigger boat', 'needs must', 'nercolas cerg', 'nest egg', 'never give up', 'never gonna give you up', 'never mind', 'never quit', 'new york city', 'nice job', 'nice marmot', 'nice to meet you', 'night owl', 'nip and tuck', 'nitty gritty', 'no brainer', 'no crying in baseball', 'no dice', 'no friend of mine', 'no holds barred', 'no means no', 'no regrets', 'no soup for you', 'no spoon', 'no stinking badges', 'no time to explain', 'no way', 'nobody home', 'none of the above', 'nope chuck testa', 'nose bleed', 'nosy parker', 'not a bot', 'not in kansas', 'not yet', 'now and forever', 'now look here', 'nth degree', 'nul points', 'numa numa', 'nut case', 'nutrition', 'nyan cat', 'nyquist rate', 'of course', 'off the record', 'oh brother', 'oh em gee', 'oh hai', 'oh sigh', 'oh so close', 'oh yes', 'oh you', 'oh,you', 'oh, wait', 'okey dokey', 'old hat', 'old man winter', 'old shoe', 'om nom nom', 'on a boat', 'on cloud nine', 'on the ball', 'on the qt', 'on-off', 'once again', 'once upon a time', 'one day more', 'one fell swoop', 'one hit wonder', 'one small step for man', 'one stop shop', 'one way', 'one way street', 'one, two, three', 'only way to be sure', 'oontz oontz', 'oops a daisy', 'open season', 'open sesame', 'orange juice', 'other worldly', 'out of sorts', 'out of toner', 'outlook good', 'over the hill', 'over the moon', 'over the top', 'over there', 'oxford university', 'oxo cube', 'paint it red', "pandora's box", 'pants on the ground', 'paper jam', 'paper plate', 'partial derivative', 'partly cloudy', 'party on garth', 'passing lane', 'patch of grass', 'path less taken', 'patience child', 'patty cake', 'pay the ferryman', 'pea brain', 'pearly whites', 'peg out', 'pell mell', 'penny loafer', 'people like me', 'pepe silvia', 'pepper pot', 'pepperoni pizza', 'peppers and onions', 'perfect world', 'pester power', 'peter out', 'philadelphia', 'phone home', 'pick me', 'pick up sticks', 'pickle juice', 'pickled peppers', 'picture perfect', 'pie are round', 'pie are squared', 'pie chart', 'piece of cake', "pig's ear", 'piggyback', 'pin money', 'pipe down', 'pipe dream', 'piping hot', 'pitter patter', 'pizza topping', 'plain sailing', 'play a game', 'play again', 'play ball', 'play hookey', 'play it again sam', 'pleased as punch', 'plenty of time', 'plugged nickel', 'plus or minus', 'pocket sized', 'pod bay doors', 'poetic justice', 'point blank', 'point to point', 'points dont matter', 'points font matter', 'poison apple', 'political party', 'politicaly correct', "poly's cracker", 'pond life', 'pool boy', 'pool hall', 'pool house', 'poor house', 'pork pies', 'pound cake', 'power dressing', 'power tool', 'practice makes perfect', 'press into service', 'prime time', 'primrose path', 'print out', 'print paper', 'printer paper', 'propane accessories', 'public good', 'pudding pops', 'puffy shirt', 'pumpkin pie', 'puppy dog', 'puppy love', 'push harder', 'push on', 'push the edge', 'push the envelope', 'pyrrhic victory', 'quality time', 'queen nefertiti', 'queen of hearts', "queen's yacht", 'question everything', 'question mark', 'quid pro quo', 'quotations', 'rack and ruin', 'rack your brains', 'rain go away', 'rain tonight', 'rainy days', 'raise cain', 'raspberry tart', 'reach higher', 'read all over', 'read me, write me', 'read my mail', 'ready set go', 'real hoopy frood', 'real mccoy', 'red herring', 'red tape', 'red white and blue', 'red-handed', 'reduplicated phrases', 'remain calm', 'rent-a-swag', 'respect me', 'return to sender', 'reverse the polarity', 'rhino beetle', 'rhodeisland', 'rhyme nor reason', 'rhyming slang', 'rice and beans', 'rice job', 'ride the subway', 'riff-raff', 'right hand turn', 'right left', 'righty tighty', 'ring fencing', 'ring fenring', 'rinky-dink', 'rise and shine', 'river song', 'river styx', 'road apples', 'road less travelled', 'roast beef', 'robe of saffron', 'rocket science', 'rodents of unusual size', 'roflcopter', 'roll again', 'roll over', 'roller skates',

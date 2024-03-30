@@ -1366,8 +1366,8 @@
     BypassedByBloggerPemula(/(leaveadvice|mensventure).com/, function() {let lav = setInterval(() => {
         if (bp('#timer').innerText == '0') {ReadytoClick('#method_free.free-download-btn.download-btn');
           clearInterval(lav); if (!elementExists('.h-captcha')) window.openLink();}}, 2000);});
-    //BypassedByBloggerPemula(/itscybertech.com/, () => {let itscyber = setInterval(() => {if (Captchacheck()) {clearInterval(itscyber);
-      ClickIfExists('.visit.medium.button');} else if (Checkvisibility(bp('#gtbtn2'))) {clearInterval(itscyber); window.fngo();}}, 1 * 1000);});
+    /*BypassedByBloggerPemula(/itscybertech.com/, () => {let itscyber = setInterval(() => {if (Captchacheck()) {clearInterval(itscyber);
+      ClickIfExists('.visit.medium.button');} else if (Checkvisibility(bp('#gtbtn2'))) {clearInterval(itscyber); window.fngo();}}, 1 * 1000);});*/
     BypassedByBloggerPemula(/jiotech.net|jameeltips.us|cryptonworld.space/, function() {
       ClickIfExists('#alf_continue', 3, 'setInterval');});
     BypassedByBloggerPemula(/hynews.biz|chamcuuhoc.com/, function() {

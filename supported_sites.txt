@@ -10,6 +10,7 @@ cyberstockofficial.in
 mkvflix.org
 link.bicolink.net
 link.vipurl.in
+techyinfo.in
 infinityskull.com
 sakarnewz.com
 link.linksfire.co
@@ -17,7 +18,6 @@ short.dash-free.com
 speedynews.xyz
 studyuo.com
 go.link4rev.site|go.urlcash.site
-techyinfo.in|techyblogs.in
 olhonagrana.com
 dutchycorp.space
 link.birdurls.com|link.owllink.net|link.illink.net
@@ -121,10 +121,10 @@ wrbloggers.com
 1bitspace.com
 lets.5get.net
 cshort.org
-(blogscare|blogtechh).com|oko.sh
 linkpay.cc
 cooklike.info|model-tas-terbaru.com
 delishwell.com|artiskini.com
+kisalt.digital
 bildirim.in|bildirim.eu|bildirim.link
 enlacito.com
 webhostingtips.club
@@ -151,14 +151,14 @@ trangchu.news|downfile.site|techacode.com|azmath.info|aztravels.net
 cryptomonitor.in|2the.space|imbb.online
 (tinycmd|tinybc).com
 (bitzite|neverdims).com
-hostratgeber.de|techanalyzer.eu|(miner-sim|networkhint|askpaccosi).com
+hostratgeber.de|techanalyzer.eu|(miner-sim|networkhint|askpaccosi).com|dailytech-news.eu|moonboom.net
 coingraph.us|trendzilla.it|horoscop.info|(infonerd|writeprofit).org
 (aduzz|cryptfaucet).com|(bitcrypto|bit4me).info|offerinfo.net|deltabtc.xyz
 nullscript.info|freebinance.top
 (10short|lollty).pro|mamahawa.com|10short.vip
 (cryptosparatodos|placementsmela|nutrisavors|bgmtelugucreations|soundaudioguru|howtoconcepts).com|(insurancepost|financeandinsurance|tecnotech|healthmedic).xyz|paidinsurance.in
 bitcotasks.com
-(netflixrelease|mangareleasedate|freemodapp|cryptoprolife|diethim|zutiza|hitjankari|phixshop|mp4news|trancebazar|taazaalerts).com|(rontymobile|myfirstname|djrajurjm|ignoupur).in|mdsuuniversity.org|odishadjs.link
+(netflixrelease|mangareleasedate|freemodapp|cryptoprolife|diethim|zutiza|hitjankari|phixshop|mp4news|trancebazar|taazaalerts|mazheshetkari|uskloans).com|(rontymobile|myfirstname|djrajurjm|ignoupur).in|mdsuuniversity.org|odishadjs.link
 (crypto2u|bestcoinsites).xyz
 fansonlinehub.com
 (howifx|vocalley|financerites|yogablogfit|healthfirstweb|junkyponk|mythvista).com
@@ -232,7 +232,7 @@ tmail.io
 exeo.app|exego.app
 quesignifi.ca|tiktokcounter.net
 (on-scroll|diudemy|maqal360).com
-(forexrw7|forex-articles|3rabsports|fx-22).com|gold-24.net|bedrat.xyz
+(forexrw7|forex-articles|3rabsports|fx-22).com|gold-24.net|bedrat.xyz|maos4alaw.online
 (leaveadvice|mensventure).com
 jiotech.net|jameeltips.us|cryptonworld.space
 hynews.biz|chamcuuhoc.com
@@ -257,10 +257,10 @@ copy-paste-fonts.com|cryptednews.space
 (theconomy|nightfaucet).me|(imagenesderopaparaperros|linclik|up4cash|smoner).com|happy-living.online|galaxy-link.space|oke.io|bitss.sbs|(forextrader|foxylinks).site
 solarchaine.com
 (remixsounds|helpowi|helpdeep|thinksrace|tipsloanusa).com|(remixone|webseriesreel).in|uprwssp.org|securitywaittimes.us
-shrinke.me|shrinke.us|shrinkme.info|pwrpa.cc|shrinkme.org|paylinks.cloud|(linkvhoriz|paid4link).com|bicolink.net|wordcounter.icu
+shrinke\.*|shrinkme\.*|(linkvhoriz|paid4link).com|bicolink.net|wordcounter.icu|pwrpa.cc|paylinks.cloud
 revly.click
 theconomy.me|(askpaccosi|halosenja|sainny|wellness4live).com|(2the|techbeast).space|(wikiversity|inicerita).online|cryptomonitor.in|break.id
-enit.in|clk.wiki
+(blogscare|blogtechh|host2loan).com|enit.in|clk.wiki|(oko|aii).sh|moonboom.net
 techyreviewx.com|desiupload.co
 (calmgram|adbitfly|blogsward).com|adbitfly.in
 shorterall.com
@@ -303,7 +303,7 @@ coins-town.com
 slinkware.com|aghtas.com|mazen-ve3.com|youssefsayed.com|alghtas.xyz|newworldnew.com|tackaway.com
 link.goto.com.np|(appkamods|bankvacency|mealcold|otomi-games).com
 hamrolekh.com|(mgame|oncoin).info|lifeinsurancesblog.xyz|nishankhatri.com.np|quanngon.org
-(awgrow|fadedfeet|kenzo-flowertag|homeculina|ineedskin|alightmotionlatest).com|worldtanr.xyz|lawyex.co|yexolo.net|mdn.lol
+(awgrow|fadedfeet|kenzo-flowertag|homeculina|ineedskin|alightmotionlatest|auntmanny).com|worldtanr.xyz|lawyex.co|yexolo.net|mdn.lol
 shortit.pw
 short.croclix.me|adz7short.space
 linkvip.io
@@ -359,7 +359,7 @@ mboost.me
 readi.online|mbantul.my.id|blog.qnix.me|videoclip.info|moddingzone.in|crypto-fi.net|claimcrypto.cc|xtrabits.click|(cempakajaya|web9academy|onlineincoms|allsoftdrivers|tribuncrypto|poketoonworld|bioinflu|pubgquotes|bico8).com|(techleets|ourcoincash|studyis|healthysamy).xyz
 aiimgvlog.fun
 dutchycorp.space|dutchycorp.ovh|gtlink.co|seulink.digital|oii.io|hamody.pro|fileku.net|metasafelink.site|(beingtek|fc-lc|10short).com|(zagl|shrinkforearn).in|(kiiw|wordcounter).icu|pwrpa.cc|shurt.pw|(flyad|tapnip).vip|antonimos.de|seulink.online
-dutchycorp.ovh|beast.ink|ckk.ai|onelinks.nl|(viewfr|shortzon|techsamir|ufacw|gawbne|bitcoinwinco|liinkat|links.apksvip|namaidani|cutpaid|link1s|postazap|yeifly|kiddyshort|shtfly|cortaly|makemoneywithurl|mtraffics|dz4link|dz-linkk).com|(tmearn|namaidani|cutearn|ccurl|link3s|youshort|illink).net|(s2fly|pglink|snaply|megaurl|megafly|linksbanao).in|(wez|shortlinks).info|(shrink|flyzu).icu|(oko|aii).sh|(24payu|vielink).top|(terafly|hatelink|cashando|zumpa|tlin|weezo|adnews|botfly|linkdam|ar-goal).me|(jameeltips|mitly).us|(forexly|goldly|insurancly).cc|(beycoin|aku2x|moinsider|satoshi-win).xyz|(wedocrypto|yourtechnology|clickmais|flylinks).online|(short1|urlcash|dglinks).site|(shrinkme|tfly).link|(playstore|adsy|clik|shurt).pw|short.express|cryptosh.pro|goo.st|tinygo.co|pndx.live|(payskip|shrinkurl).org|cryptotracker.space|shortearn.eu|clicklink.fun|(lootcash|tapnip).vip|addurl.biz
+dutchycorp.ovh|beast.ink|ckk.ai|onelinks.nl|(viewfr|shortzon|techsamir|ufacw|gawbne|bitcoinwinco|liinkat|links.apksvip|namaidani|cutpaid|link1s|postazap|yeifly|kiddyshort|shtfly|cortaly|makemoneywithurl|mtraffics|dz4link|dz-linkk).com|(tmearn|namaidani|cutearn|ccurl|link3s|youshort|illink).net|(s2fly|pglink|snaply|megaurl|megafly|linksbanao).in|(wez|shortlinks).info|(shrink|flyzu).icu|(24payu|vielink).top|(terafly|hatelink|cashando|zumpa|tlin|weezo|adnews|botfly|linkdam|ar-goal).me|(jameeltips|mitly).us|(forexly|goldly|insurancly).cc|(beycoin|aku2x|moinsider|satoshi-win).xyz|(wedocrypto|yourtechnology|clickmais|flylinks).online|(short1|urlcash|dglinks).site|(shrinkme|tfly).link|(playstore|adsy|clik|shurt).pw|short.express|cryptosh.pro|goo.st|tinygo.co|pndx.live|(payskip|shrinkurl).org|cryptotracker.space|shortearn.eu|clicklink.fun|(lootcash|tapnip).vip|addurl.biz
 autofaucet.dutchycorp.space
 gocmod.com
 clink1.com
@@ -417,11 +417,13 @@ ignitesmm.com
 fileku.net
 nisnisin.com
 sapnogalpo.online
+candleoflife.fun
 povathemes.com|escobarvip.cf|golinki.com
 upload.veganab.co
 anonbar.com
 tamilhit.tech
 suntechu.in
+loan.techyinfo.in
 cryptokaro.co.in
 foxbugg.com
 tremamnon.com
@@ -433,7 +435,6 @@ wikitraveltips.com
 smallinfo.in
 pglink.online
 mvplaylink.in.net
-techyinfo.in
 ww1.linktrims.com
 healthynepal.in
 missionhight.in
@@ -468,9 +469,9 @@ viralsinfo.com
 insuranceinfos.in
 www.filmypoints.in
 cafe.warrenrahul.in
+health.techyinfo.in
 truevpnlover.com
 battleroyal.online
-techyblogs.in|techyinfo.in
 apasih.my.id|healthydad.my.id
 iphoto.site
 copy-paste-fonts.com

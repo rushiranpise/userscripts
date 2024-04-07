@@ -10,6 +10,7 @@
 *://*.mkvflix.org/*
 *://*.link.bicolink.net/*
 *://*.link.vipurl.in/*
+*://*.techyinfo.in/*
 *://*.infinityskull.com/*
 *://*.sakarnewz.com/*
 *://*.link.linksfire.co/*
@@ -105,6 +106,7 @@
 *://*.lets.5get.net/*
 *://*.cshort.org/*
 *://*.linkpay.cc/*
+*://*.kisalt.digital/*
 *://*.enlacito.com/*
 *://*.webhostingtips.club/*
 *://*.render-state.to/*
@@ -294,10 +296,12 @@
 *://*.fileku.net/*
 *://*.nisnisin.com/*
 *://*.sapnogalpo.online/*
+*://*.candleoflife.fun/*
 *://*.upload.veganab.co/*
 *://*.anonbar.com/*
 *://*.tamilhit.tech/*
 *://*.suntechu.in/*
+*://*.loan.techyinfo.in/*
 *://*.cryptokaro.co.in/*
 *://*.foxbugg.com/*
 *://*.tremamnon.com/*
@@ -309,7 +313,6 @@
 *://*.smallinfo.in/*
 *://*.pglink.online/*
 *://*.mvplaylink.in.net/*
-*://*.techyinfo.in/*
 *://*.ww1.linktrims.com/*
 *://*.healthynepal.in/*
 *://*.missionhight.in/*
@@ -344,6 +347,7 @@
 *://*.insuranceinfos.in/*
 *://*.www.filmypoints.in/*
 *://*.cafe.warrenrahul.in/*
+*://*.health.techyinfo.in/*
 *://*.truevpnlover.com/*
 *://*.battleroyal.online/*
 *://*.iphoto.site/*

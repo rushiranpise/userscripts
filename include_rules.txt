@@ -112,7 +112,7 @@
 /^(https?:\/\/)(.+)?(geniussolutions.co|pokemonroms.cc|alightmotionlatest.com)(\/.*)/
 /^(https?:\/\/)(.+)?(bluemedialink.online|bluemediafile\.*)/
 /^(https?:\/\/)(.+)?(nulledlist.info|earnash.com|my-coins.xyz|earn-bitcoin.online|zimabadko.com|vidoza.xyz|every-crypto.info)(\/.*)/
-/^(https?:\/\/)(.+)?((starxinvestor|hit-films|sevenjournals).com|(iisfvirtual|bookszone|learnmany).in)(\/.*)/
+/^(https?:\/\/)(.+)?((starxinvestor|hit-films|sevenjournals|funkeypagali|viewmyknowledge|wikifilmia|nayisahara|careersides).com|(iisfvirtual|bookszone|learnmany).in)(\/.*)/
 /^(https?:\/\/)(.+)?((financenube|mixrootmods|pastescript|trimorspacks|apklox).com|updrop.link)(\/.*)/
 /^(https?:\/\/)(.+)?((disheye|kreatifparenting|phimne|admediaflex|cdrab).com|(gurumu|wpcheap|izseo|adcrypto|daycash).net|(sportweb|ecq|mgame|oncoin).info|savego.org|hbz.us|djqunjab.in|datacheap.io)(\/.*)/
 /^(https?:\/\/)(.+)?(readi.online|mbantul.my.id|blog.qnix.me|videoclip.info|moddingzone.in|crypto-fi.net|claimcrypto.cc|xtrabits.click|(cempakajaya|web9academy|onlineincoms|allsoftdrivers|tribuncrypto|poketoonworld|bioinflu|pubgquotes|bico8).com|(techleets|ourcoincash|studyis|healthysamy).xyz)(\/.*)/

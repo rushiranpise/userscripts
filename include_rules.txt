@@ -88,7 +88,7 @@
 /^(https?:\/\/)(.+)?(teknosimple.com|besargaji.com)(\/.*)/
 /^(https?:\/\/)(.+)?(hunterkiller.me|surflink.tech)(\/.*)/
 /^(https?:\/\/)(.+)?(lyricsbaazaar.com|ezeviral.com)(\/.*)/
-/^(https?:\/\/)(.+)?((sekilastekno|miuiku|vebma|majalahhewan).com|crm.cekresi.me)(\/.*)/
+/^(https?:\/\/)(.+)?((sekilastekno|miuiku|vebma|majalahhewan).com|crm.cekresi.me|ai.tempatwisata.pro)(\/.*)/
 /^(https?:\/\/)(.+)?((wooseotools|woowebtools).com)(\/.*)/
 /^(https?:\/\/)(.+)?((pernahsukses|alpinecorporate).com|aoutoqw.xyz)(\/.*)/
 /^(https?:\/\/)(.+)?(altechen.com|entutes.com)(\/.*)/

@@ -158,7 +158,6 @@
 *://*.sapnogalpo.online/*
 *://*.leitup.com/*
 *://*.offeroc.com/*
-*://*.azmath.info/*
 *://*.shortearn.net/*
 *://*.newassets.hcaptcha.com/*
 *://*.alivedesktop.com/*

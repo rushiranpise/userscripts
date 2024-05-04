@@ -114,7 +114,6 @@
 *://*.adtival.network/*
 *://*.dilink.net/*
 *://*.shortener.goldcontent.site/*
-*://*.newsbawa.com/*
 *://*.ontechhindi.com/*
 *://*.sfl.gl/*
 *://*.gameblog.in/*
@@ -161,6 +160,7 @@
 *://*.shortearn.net/*
 *://*.newassets.hcaptcha.com/*
 *://*.alivedesktop.com/*
+*://*.mazen-ve3.com/*
 *://*.shortearn.net/*
 *://*.bigbtc.win/*
 *://*.firefaucet.win/*
@@ -201,13 +201,13 @@
 *://*.coins-town.com/*
 *://*.shortit.pw/*
 *://*.linkvip.io/*
+*://*.ify.ac/*
 *://*.lanza.me/*
 *://*.lifeezee.com/*
 *://*.lolinez.com/*
 *://*.sahityt.com/*
 *://*.file-upload.in/*
 *://*.upmienphi.com/*
-*://*.ify.ac/*
 *://*.linksly.co/*
 *://*.cashando.me/*
 *://*.appsinsta.com/*
@@ -227,6 +227,7 @@
 *://*.mohtawaa.com/*
 *://*.linksae.com/*
 *://*.sub2unlock.com/*
+*://*.rockmods.net/*
 *://*.doodjob.com/*
 *://*.yosite.net/*
 *://*.cricketgurupro.com/*

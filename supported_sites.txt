@@ -68,7 +68,6 @@ anonym.ninja
 vosan.co
 apkmody.io
 mdfx9dc8n.net
-uploadrar.com|uptomega.me
 takefile.link
 chedrives.com
 appsblaze.com
@@ -81,6 +80,7 @@ fileresources.net
 freepreset.net
 doodrive.com
 gocmod.com
+(uploadrar|fingau|getpczone|wokaz).com|uptomega.me
 dailyuploads.net
 9xupload.asia
 mediafire.com
@@ -148,7 +148,7 @@ cryptomonitor.in|2the.space|imbb.online
 programasvirtualespc.net
 (blackleadr|shortcuthigh|newztalkies|cybertyrant).com|hubdrive.me|fileroot.net|nzarticles.pro
 (tinycmd|tinybc).com
-trangchu.news|downfile.site|(techacode|expertvn).com|azmath.info|expertvn.com|aztravels.net
+trangchu.news|downfile.site|(techacode|expertvn).com|azmath.info|expertvn.com|aztravels.net|top10cafe.se
 (bitzite|neverdims).com
 hostratgeber.de|techanalyzer.eu|(miner-sim|networkhint|askpaccosi).com|dailytech-news.eu|moonboom.net
 coingraph.us|trendzilla.it|horoscop.info|(infonerd|writeprofit).org
@@ -157,7 +157,7 @@ nullscript.info|freebinance.top
 (10short|lollty).pro|mamahawa.com|10short.vip
 (cryptosparatodos|placementsmela|nutrisavors|bgmtelugucreations|soundaudioguru|howtoconcepts).com|(insurancepost|financeandinsurance|tecnotech|healthmedic).xyz|paidinsurance.in
 bitcotasks.com
-(netflixrelease|mangareleasedate|freemodapp|cryptoprolife|diethim|zutiza|hitjankari|phixshop|mp4news|trancebazar|taazaalerts|mazheshetkari|uskloans).com|(rontymobile|myfirstname|djrajurjm|ignoupur).in|mdsuuniversity.org|odishadjs.link
+(netflixrelease|mangareleasedate|freemodapp|cryptoprolife|diethim|zutiza|hitjankari|phixshop|mp4news|trancebazar|taazaalerts|mazheshetkari|uskloans|ssbytes).com|(rontymobile|myfirstname|djrajurjm|ignoupur).in|mdsuuniversity.org|odishadjs.link
 (crypto2u|bestcoinsites).xyz
 fansonlinehub.com
 (howifx|vocalley|financerites|yogablogfit|healthfirstweb|junkyponk|mythvista).com
@@ -230,8 +230,7 @@ bigbtc.win
 firefaucet.win
 uptobhai\.*|uplinkto\.*|shortlinkto\.*
 tmail.io
-exeo.app|exego.app
-(ashrfd|tpayr|poqzn|rezsx).xyz|quesignifi.ca|tiktokcounter.net|lifgam.online
+(exeo|exego).app|(mrgec|emxaw).com
 (on-scroll|diudemy|maqal360).com
 (forexrw7|forex-articles|3rabsports|fx-22).com|gold-24.net|bedrat.xyz|maos4alaw.online
 (leaveadvice|mensventure).com
@@ -261,7 +260,7 @@ solarchaine.com
 shrinke\.*|shrinkme\.*|(linkvhoriz|paid4link).com|bicolink.net|wordcounter.icu|pwrpa.cc|paylinks.cloud
 revly.click
 theconomy.me|(askpaccosi|halosenja|sainny|wellness4live).com|(2the|techbeast).space|(wikiversity|inicerita).online|cryptomonitor.in|break.id
-(blogscare|blogtechh|host2loan).com|enit.in|clk.wiki|(oko|aii).sh|moonboom.net|lnbz.la
+(blogscare|blogtechh|host2loan|techbixby).com|enit.in|clk.wiki|(oko|aii).sh|moonboom.net|lnbz.la
 techyreviewx.com|desiupload.co
 (calmgram|adbitfly|blogsward).com|adbitfly.in
 shorterall.com
@@ -304,6 +303,7 @@ coins-town.com
 slinkware.com|aghtas.com|youssefsayed.com|alghtas.xyz|newworldnew.com|tackaway.com
 link.goto.com.np|(appkamods|bankvacency|mealcold|otomi-games).com
 hamrolekh.com|(mgame|oncoin).info|lifeinsurancesblog.xyz|nishankhatri.com.np|quanngon.org
+(ashrfd|tpayr|poqzn|ashrfd|rezsx|tryzt|rezst|erzar|waezm|waezg).xyz|(tiktokrealtime|dawenet).com|(sinonimos|antonimos).de|quesignifi.ca|tiktokcounter.net|lifgam.online|blackwoodacademy.org|cryptednews.space
 (awgrow|fadedfeet|kenzo-flowertag|homeculina|ineedskin|alightmotionlatest|auntmanny|mytechcontent|techymatic|gamedouc).com|worldtanr.xyz|lawyex.co|yexolo.net|mdn.lol|(aayurvedshastra|allnewspoint).in
 shortit.pw
 short.croclix.me|adz7short.space

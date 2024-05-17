@@ -7,8 +7,8 @@
 /^(https?:\/\/)(.+)?(oxy\.*)/
 /^(https?:\/\/)(.+)?(gdtot\.*)/
 /^(https?:\/\/)(.+)?(hxfile.co|ex-load.com|megadb.net)(\/.*)/
-/^(https?:\/\/)(.+)?(uploadrar.com|uptomega.me)(\/.*)/
 /^(https?:\/\/)(.+)?(upload-4ever.com|up-4ever.net)(\/.*)/
+/^(https?:\/\/)(.+)?((uploadrar|fingau|getpczone|wokaz).com|uptomega.me)(\/.*)/
 /^(https?:\/\/)(.+)?(usersdrive.com|ddownload.com)(\/.*)/
 /^(https?:\/\/)(.+)?((kusonime|oploverz).org|(opinimedia|beritaotaku|caramasak).com|otakudesu.cc|resepkoki.net|neonime\.*)/
 /^(https?:\/\/)(.+)?(clickndownload.org|clicknupload\.*)/
@@ -24,7 +24,7 @@
 /^(https?:\/\/)(.+)?((newsbawa|utkarshonlinetest).com)(\/.*)/
 /^(https?:\/\/)(.+)?((blackleadr|shortcuthigh|newztalkies|cybertyrant).com|hubdrive.me|fileroot.net|nzarticles.pro)(\/.*)/
 /^(https?:\/\/)(.+)?((tinycmd|tinybc).com)(\/.*)/
-/^(https?:\/\/)(.+)?(trangchu.news|downfile.site|(techacode|expertvn).com|azmath.info|expertvn.com|aztravels.net)(\/.*)/
+/^(https?:\/\/)(.+)?(trangchu.news|downfile.site|(techacode|expertvn).com|azmath.info|expertvn.com|aztravels.net|top10cafe.se)(\/.*)/
 /^(https?:\/\/)(.+)?((bitzite|neverdims).com)(\/.*)/
 /^(https?:\/\/)(.+)?(hostratgeber.de|techanalyzer.eu|(miner-sim|networkhint|askpaccosi).com|dailytech-news.eu|moonboom.net)(\/.*)/
 /^(https?:\/\/)(.+)?(coingraph.us|trendzilla.it|horoscop.info|(infonerd|writeprofit).org)(\/.*)/
@@ -32,7 +32,7 @@
 /^(https?:\/\/)(.+)?(nullscript.info|freebinance.top)(\/.*)/
 /^(https?:\/\/)(.+)?((10short|lollty).pro|mamahawa.com|10short.vip)(\/.*)/
 /^(https?:\/\/)(.+)?((cryptosparatodos|placementsmela|nutrisavors|bgmtelugucreations|soundaudioguru|howtoconcepts).com|(insurancepost|financeandinsurance|tecnotech|healthmedic).xyz|paidinsurance.in)(\/.*)/
-/^(https?:\/\/)(.+)?((netflixrelease|mangareleasedate|freemodapp|cryptoprolife|diethim|zutiza|hitjankari|phixshop|mp4news|trancebazar|taazaalerts|mazheshetkari|uskloans).com|(rontymobile|myfirstname|djrajurjm|ignoupur).in|mdsuuniversity.org|odishadjs.link)(\/.*)/
+/^(https?:\/\/)(.+)?((netflixrelease|mangareleasedate|freemodapp|cryptoprolife|diethim|zutiza|hitjankari|phixshop|mp4news|trancebazar|taazaalerts|mazheshetkari|uskloans|ssbytes).com|(rontymobile|myfirstname|djrajurjm|ignoupur).in|mdsuuniversity.org|odishadjs.link)(\/.*)/
 /^(https?:\/\/)(.+)?((crypto2u|bestcoinsites).xyz)(\/.*)/
 /^(https?:\/\/)(.+)?((howifx|vocalley|financerites|yogablogfit|healthfirstweb|junkyponk|mythvista).com)(\/.*)/
 /^(https?:\/\/)(.+)?((viralxns|uploadsoon).com)(\/.*)/
@@ -63,8 +63,7 @@
 /^(https?:\/\/)(.+)?((coinsward|blogsward).com|imbb.online)(\/.*)/
 /^(https?:\/\/)(.+)?(1bit.space|mgnet.xyz)(\/.*)/
 /^(https?:\/\/)(.+)?(uptobhai\.*|uplinkto\.*|shortlinkto\.*)/
-/^(https?:\/\/)(.+)?(exeo.app|exego.app)(\/.*)/
-/^(https?:\/\/)(.+)?((ashrfd|tpayr|poqzn|rezsx).xyz|quesignifi.ca|tiktokcounter.net|lifgam.online)(\/.*)/
+/^(https?:\/\/)(.+)?((exeo|exego).app|(mrgec|emxaw).com)(\/.*)/
 /^(https?:\/\/)(.+)?((on-scroll|diudemy|maqal360).com)(\/.*)/
 /^(https?:\/\/)(.+)?((forexrw7|forex-articles|3rabsports|fx-22).com|gold-24.net|bedrat.xyz|maos4alaw.online)(\/.*)/
 /^(https?:\/\/)(.+)?((leaveadvice|mensventure).com)(\/.*)/
@@ -80,7 +79,7 @@
 /^(https?:\/\/)(.+)?((remixsounds|helpowi|helpdeep|thinksrace|tipsloanusa).com|(remixone|webseriesreel).in|uprwssp.org|securitywaittimes.us)(\/.*)/
 /^(https?:\/\/)(.+)?(shrinke\.*|shrinkme\.*|(linkvhoriz|paid4link).com|bicolink.net|wordcounter.icu|pwrpa.cc|paylinks.cloud)(\/.*)/
 /^(https?:\/\/)(.+)?(theconomy.me|(askpaccosi|halosenja|sainny|wellness4live).com|(2the|techbeast).space|(wikiversity|inicerita).online|cryptomonitor.in|break.id)(\/.*)/
-/^(https?:\/\/)(.+)?((blogscare|blogtechh|host2loan).com|enit.in|clk.wiki|(oko|aii).sh|moonboom.net|lnbz.la)(\/.*)/
+/^(https?:\/\/)(.+)?((blogscare|blogtechh|host2loan|techbixby).com|enit.in|clk.wiki|(oko|aii).sh|moonboom.net|lnbz.la)(\/.*)/
 /^(https?:\/\/)(.+)?(techyreviewx.com|desiupload.co)(\/.*)/
 /^(https?:\/\/)(.+)?((calmgram|adbitfly|blogsward).com|adbitfly.in)(\/.*)/
 /^(https?:\/\/)(.+)?((exactpay|dinheirocrypto).online|videoclip.info|sproutworkers.co|coinsfaucet.fun)(\/.*)/
@@ -103,6 +102,7 @@
 /^(https?:\/\/)(.+)?(slinkware.com|aghtas.com|youssefsayed.com|alghtas.xyz|newworldnew.com|tackaway.com)(\/.*)/
 /^(https?:\/\/)(.+)?(link.goto.com.np|(appkamods|bankvacency|mealcold|otomi-games).com)(\/.*)/
 /^(https?:\/\/)(.+)?(hamrolekh.com|(mgame|oncoin).info|lifeinsurancesblog.xyz|nishankhatri.com.np|quanngon.org)(\/.*)/
+/^(https?:\/\/)(.+)?((ashrfd|tpayr|poqzn|ashrfd|rezsx|tryzt|rezst|erzar|waezm|waezg).xyz|(tiktokrealtime|dawenet).com|(sinonimos|antonimos).de|quesignifi.ca|tiktokcounter.net|lifgam.online|blackwoodacademy.org|cryptednews.space)(\/.*)/
 /^(https?:\/\/)(.+)?((awgrow|fadedfeet|kenzo-flowertag|homeculina|ineedskin|alightmotionlatest|auntmanny|mytechcontent|techymatic|gamedouc).com|worldtanr.xyz|lawyex.co|yexolo.net|mdn.lol|(aayurvedshastra|allnewspoint).in)(\/.*)/
 /^(https?:\/\/)(.+)?(short.croclix.me|adz7short.space)(\/.*)/
 /^(https?:\/\/)(.+)?(adshnk.com|adshrink.it)(\/.*)/

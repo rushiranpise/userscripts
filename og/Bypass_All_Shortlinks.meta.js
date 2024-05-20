@@ -162,7 +162,7 @@
 // @match *://*.comohoy.com/*
 // @match *://*.apkw.ru/*
 // @include /^(https?:\/\/)(.+)?(cryptomonitor.in|2the.space|imbb.online)(\/.*)/
-// @include /^(https?:\/\/)(.+)?((newsbawa|utkarshonlinetest).com)(\/.*)/
+// @include /^(https?:\/\/)(.+)?((newsbawa|utkarshonlinetest|techbezzie).com)(\/.*)/
 // @match *://*.programasvirtualespc.net/*
 // @include /^(https?:\/\/)(.+)?((blackleadr|shortcuthigh|newztalkies|cybertyrant).com|hubdrive.me|fileroot.net|nzarticles.pro)(\/.*)/
 // @include /^(https?:\/\/)(.+)?((tinycmd|tinybc).com)(\/.*)/

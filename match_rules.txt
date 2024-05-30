@@ -36,8 +36,10 @@
 *://*.dataupload.net/*
 *://*.douploads.net/*
 *://*.linkerload.com/*
+*://*.buzzheavier.com/*
 *://*.filemoon.sx/*
 *://*.bestfonts.pro/*
+*://*.oyroid.com/*
 *://*.files.fm/*
 *://*.megaup.net/*
 *://*.4fnet.org/*
@@ -84,7 +86,6 @@
 *://*.modsbase.com/*
 *://*.dropgalaxy.com/*
 *://*.hitfile.net/*
-*://*.oydisk.com/*
 *://*.filedm.com/*
 *://*.gogodl.com/*
 *://*.turbobit.net/*
@@ -96,12 +97,10 @@
 *://*.mkomsel.com/*
 *://*.onimports.com.br/*
 *://*.1shortlink.com/*
-*://*.rapidshort.lat/*
 *://*.jameeltips.us/*
 *://*.post.copydev.com/*
 *://*.linegee.net/*
 *://*.pro.sh/*
-*://*.wrbloggers.com/*
 *://*.1bitspace.com/*
 *://*.lets.5get.net/*
 *://*.cshort.org/*
@@ -122,6 +121,7 @@
 *://*.comohoy.com/*
 *://*.apkw.ru/*
 *://*.programasvirtualespc.net/*
+*://*.horoscop.info/*
 *://*.bitcotasks.com/*
 *://*.fansonlinehub.com/*
 *://*.yalifin.xyz/*
@@ -440,12 +440,6 @@
 *://*.urlstox.com/*
 *://*.lollty.com/*
 *://*.okrzone.com/*
-*://*.mytop5.club/*
-*://*.technicalatg.com/*
-*://*.sahlmarketing.net/*
-*://*.ledifha.com/*
-*://*.adybrands.in/*
-*://*.foodupe.com/*
 *://*.blog.coin2pay.xyz/*
 *://*.gamerfang.in/*
 *://*.videolyrics.in/*

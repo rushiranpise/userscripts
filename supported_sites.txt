@@ -133,11 +133,11 @@ shareus.io
 adtival.network
 dilink.net
 shortener.goldcontent.site
-(cutnet|cutsy|cutlink).net|(cutty|exego).app
 ontechhindi.com
 sfl.gl
 gobits.me|zcash.one|clickscoin.com|beycoin.xyz|bitsusdt.com|adsluffa.online
 gameblog.in
+(cutnet|cutsy|cutlink).net|(cutty|exego).app|gamco.online
 sharetext.me
 btcsatoshi.net
 comohoy.com
@@ -150,11 +150,10 @@ horoscop.info
 bitzite.com|cryptoad.org
 (tinycmd|tinybc).com
 coingraph.us|eblog.pro|writeprofit.org
-trangchu.news|downfile.site|(techacode|expertvn).com|azmath.info|expertvn.com|aztravels.net|top10cafe.se
 techanalyzer.eu|(miner-sim|networkhint|askpaccosi).com
 nullscript.info|freebinance.top
 (10short|lollty).pro|mamahawa.com|10short.vip
-(aduzz|cryptfaucet|neverdims).com|(bitcrypto|bit4me).info|offerinfo.net|deltabtc.xyz
+(aduzz|cryptfaucet|neverdims).com|(bitcrypto|bit4me).info|(deltabtc|re-linkzfly).xyz|offerinfo.net
 bitcotasks.com
 (cryptosparatodos|placementsmela|nutrisavors|bgmtelugucreations|soundaudioguru|howtoconcepts).com|(insurancepost|financeandinsurance|tecnotech|healthmedic).xyz|paidinsurance.in
 (netflixrelease|mangareleasedate|freemodapp|cryptoprolife|diethim|zutiza|hitjankari|phixshop|mp4news|trancebazar|taazaalerts|mazheshetkari|uskloans|ssbytes).com|(rontymobile|myfirstname|djrajurjm|ignoupur).in|mdsuuniversity.org|odishadjs.link
@@ -236,7 +235,7 @@ tmail.io
 (leaveadvice|mensventure).com
 jameeltips.us|cryptonworld.space
 hynews.biz|chamcuuhoc.com
-tii.la
+tii.la|oei.la
 skiplink.me
 apanmusic.in
 o-pro.online
@@ -248,6 +247,7 @@ deportealdia.live|noweconomy.live|techgeek.digital
 nishankhatri.xyz
 writedroid.eu.org|modmania.eu.org|writedroid.in|mytop5.club
 computerpedia.in
+linkatla.com
 myprivatejobs.com
 claimfreetrx.online
 offers4crypto.xyz|ewall.biz
@@ -258,6 +258,7 @@ solarchaine.com
 (remixsounds|helpowi|helpdeep|thinksrace|tipsloanusa).com|(remixone|webseriesreel).in|uprwssp.org|securitywaittimes.us
 shrinke\.*|shrinkme\.*|(linkvhoriz|paid4link).com|bicolink.net|wordcounter.icu|pwrpa.cc|paylinks.cloud
 revly.click
+trangchu.news|downfile.site|(techacode|expertvn).com|azmath.info|expertvn.com|aztravels.net|top10cafe.se
 theconomy.me|(askpaccosi|halosenja|sainny|wellness4live).com|(2the|techbeast).space|(wikiversity|inicerita).online|cryptomonitor.in|break.id
 (theconomy|nightfaucet).me|(imagenesderopaparaperros|linclik|up4cash|smoner|atglinks).com|happy-living.online|galaxy-link.space|oke.io|bitss.sbs|(forextrader|foxylinks).site|tinygo.co
 (blogscare|blogtechh|host2loan|techbixby).com|enit.in|clk.wiki|(oko|aii).sh|moonboom.net|lnbz.la|clk.kim
@@ -302,7 +303,7 @@ coins-town.com
 slinkware.com|aghtas.com|youssefsayed.com|alghtas.xyz|newworldnew.com|tackaway.com
 link.goto.com.np|(appkamods|bankvacency|mealcold|otomi-games).com
 hamrolekh.com|(mgame|oncoin).info|lifeinsurancesblog.xyz|nishankhatri.com.np|quanngon.org
-(lootlinks|onepiecered).co|(loot-links|links-loot|loot-link|edprivatedqu|stownrusis|ebaticalfel|mega-guy|utopianleaks).com|(lootdest|lootlink).org|lootdest.info|linksloot.net|free-content.pro
+(lootlinks|onepiecered).co|(loot-links|links-loot|loot-link|edprivatedqu|stownrusis|ebaticalfel|mega-guy|utopianleaks|eofmukindwo|realiukzemydre|kmendation|bstlar).com|(lootdest|lootlink|best-links).org|lootdest.info|linksloot.net|free-content.pro
 (ashrfd|tpayr|poqzn|ashrfd|rezsx|tryzt|rezst|erzar|waezm|waezg).xyz|(tiktokrealtime|dawenet|vivuq|swgop|vbnmll).com|(sinonimos|antonimos).de|quesignifi.ca|tiktokcounter.net|(lifgam|telcoinfo).online|blackwoodacademy.org|cryptednews.space|mobprice.shop
 (awgrow|fadedfeet|kenzo-flowertag|homeculina|ineedskin|alightmotionlatest|auntmanny|mytechcontent|techymatic|gamedouc).com|worldtanr.xyz|lawyex.co|yexolo.net|mdn.lol|(aayurvedshastra|allnewspoint).in|chefslink.org
 shortit.pw
@@ -484,7 +485,7 @@ nguyenvanbao.com|nghiencar.com
 fc-lc.xyz|(webhostingpost|tophostingapp|digitalmarktrend).com
 mohtawaa.com
 btcbitco.in|readbitcoin.org|btcsatoshi.net|wiour.com|manofadan.com|crypto4yu.com
-mdn.lol|awgrow.com|fadedfeet.com|kenzo-flowertag.com|homeculina.com|ineedskin.com|worldtanr.xyz|lawyex.co|yexolo.net
+mdn.lol|awgrow.com|fadedfeet.com|kenzo-flowertag.com|homeculina.com|ineedskin.com|worldtanr.xyz|lawyex.co|yexolo.net|chefslink.org
 vailonxx.com|fun88.bio
 (aduzz|admediaflex|cryptfaucet|phimne|cdrab|tinybc|tinycmd).com|(bit4me|ecq|sportweb|mgame).info|(wpcheap|offerinfo).net|quanngon.org|datacheap.io
 multiup.org

@@ -165,7 +165,6 @@
 *://*.bigbtc.win/*
 *://*.firefaucet.win/*
 *://*.tmail.io/*
-*://*.tii.la/*
 *://*.skiplink.me/*
 *://*.apanmusic.in/*
 *://*.o-pro.online/*
@@ -173,6 +172,7 @@
 *://*.getzen.cash/*
 *://*.nishankhatri.xyz/*
 *://*.computerpedia.in/*
+*://*.linkatla.com/*
 *://*.myprivatejobs.com/*
 *://*.claimfreetrx.online/*
 *://*.dl.lk21static.xyz/*

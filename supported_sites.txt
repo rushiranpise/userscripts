@@ -222,7 +222,7 @@ shortearn.net
 bigbtc.win
 firefaucet.win
 uptobhai\.*|uplinkto\.*|shortlinkto\.*
-tmail.io
+tmail.io|fitdynamos.com
 (exeo|exego).app|(mrgec|emxaw|ijvam).com
 (on-scroll|diudemy|maqal360).com
 (forexrw7|forex-articles|3rabsports|fx-22).com|gold-24.net|bedrat.xyz|(maos4alaw|offeergames|todogame).online
@@ -255,7 +255,7 @@ revly.click
 trangchu.news|downfile.site|(techacode|expertvn).com|azmath.info|expertvn.com|aztravels.net|top10cafe.se
 theconomy.me|(askpaccosi|halosenja|sainny|wellness4live).com|(2the|techbeast).space|(wikiversity|inicerita).online|cryptomonitor.in|break.id
 (theconomy|nightfaucet).me|(imagenesderopaparaperros|linclik|up4cash|smoner|atglinks).com|happy-living.online|galaxy-link.space|oke.io|bitss.sbs|(forextrader|foxylinks).site|tinygo.co
-(blogscare|blogtechh|host2loan|techbixby|wp2host|insmyst|rtusports|host-buzz).com|enit.in|clk.wiki|(oko|aii).sh|moonboom.net|lnbz.la|clk.kim
+(blogscare|blogtechh|host2loan|techbixby|wp2host|insmyst|rtusports|host-buzz|tech-munch).com|enit.in|clk.wiki|(oko|aii).sh|moonboom.net|lnbz.la|clk.kim
 techyreviewx.com|desiupload.co
 (calmgram|adbitfly|blogsward).com|adbitfly.in
 shorterall.com
@@ -299,7 +299,7 @@ link.goto.com.np|(appkamods|bankvacency|mealcold|otomi-games).com
 hamrolekh.com|(mgame|oncoin).info|lifeinsurancesblog.xyz|nishankhatri.com.np|quanngon.org
 (lootlinks|onepiecered).co|(loot-links|links-loot|loot-link|edprivatedqu|stownrusis|ebaticalfel|mega-guy|utopianleaks|eofmukindwo|realiukzemydre|kmendation|bstlar).com|(lootdest|lootlink|best-links).org|lootdest.info|linksloot.net|free-content.pro
 (tpayr|rezst).xyz|(tiktokrealtime|dawenet|dshytb|starkroboticsfrc|finance240).com|(sinonimos|antonimos).de|quesignifi.ca|tiktokcounter.net|lifgam.online|blackwoodacademy.org|cryptednews.space
-(awgrow|fadedfeet|kenzo-flowertag|homeculina|ineedskin|alightmotionlatest|auntmanny|mytechcontent|techymatic|gamedouc).com|worldtanr.xyz|lawyex.co|yexolo.net|mdn.lol|(aayurvedshastra|allnewspoint).in|chefslink.org
+(awgrow|fadedfeet|kenzo-flowertag|homeculina|ineedskin|alightmotionlatest|auntmanny|mytechcontent|techymatic|gamedouc|businessuniqueidea).com|(yexolo|giftpros).net|(aayurvedshastra|allnewspoint).in|chefslink.org|worldtanr.xyz|lawyex.co|mdn.lol
 shortit.pw
 short.croclix.me|adz7short.space
 adshnk.com|adshrink.it
@@ -518,10 +518,8 @@ timeforearn.com
 urlstox.com
 lollty.com
 okrzone.com
-blog.coin2pay.xyz
 gamerfang.in
 videolyrics.in
-coin2pay.xyz
 blog.mphealth.online
 techrayzer.com
 economiarelevante.com.br
@@ -531,8 +529,6 @@ shareus.io
 www.gifans.com
 zonearn.biz
 nulledsafe.com
-froggyreviews.com
-techmody.io
 slink.bid
 www.pythondunyasi.com
 free4u.nurul-huda.or.id

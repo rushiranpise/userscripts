@@ -157,7 +157,6 @@
 *://*.shortearn.net/*
 *://*.bigbtc.win/*
 *://*.firefaucet.win/*
-*://*.tmail.io/*
 *://*.skiplink.me/*
 *://*.apanmusic.in/*
 *://*.o-pro.online/*
@@ -384,10 +383,8 @@
 *://*.urlstox.com/*
 *://*.lollty.com/*
 *://*.okrzone.com/*
-*://*.blog.coin2pay.xyz/*
 *://*.gamerfang.in/*
 *://*.videolyrics.in/*
-*://*.coin2pay.xyz/*
 *://*.blog.mphealth.online/*
 *://*.techrayzer.com/*
 *://*.economiarelevante.com.br/*
@@ -397,8 +394,6 @@
 *://*.www.gifans.com/*
 *://*.zonearn.biz/*
 *://*.nulledsafe.com/*
-*://*.froggyreviews.com/*
-*://*.techmody.io/*
 *://*.slink.bid/*
 *://*.www.pythondunyasi.com/*
 *://*.free4u.nurul-huda.or.id/*

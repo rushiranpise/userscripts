@@ -117,6 +117,7 @@
 *://*.apkw.ru/*
 *://*.programasvirtualespc.net/*
 *://*.horoscop.info/*
+*://*.bitcrypto.info/*
 *://*.bitcotasks.com/*
 *://*.fansonlinehub.com/*
 *://*.yalifin.xyz/*
@@ -153,6 +154,7 @@
 *://*.shortearn.net/*
 *://*.newassets.hcaptcha.com/*
 *://*.alivedesktop.com/*
+*://*.freebitco.in/*
 *://*.mazen-ve3.com/*
 *://*.shortearn.net/*
 *://*.bigbtc.win/*
@@ -219,7 +221,6 @@
 *://*.sub2unlock.com/*
 *://*.rockmods.net/*
 *://*.doodjob.com/*
-*://*.cricketgurupro.com/*
 *://*.boost.ink/*
 *://*.blog.textpage.xyz/*
 *://*.foodupe.com/*

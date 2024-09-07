@@ -3,7 +3,6 @@
 *://*.mixrootmods.com/*
 *://*.duplichecke.com/*
 *://*.dreamistore.com/*
-*://*.mcafee-com.com/*
 *://*.techyadjectives.com/*
 *://*.cyberstockofficial.in/*
 *://*.mkvflix.org/*
@@ -116,8 +115,6 @@
 *://*.comohoy.com/*
 *://*.apkw.ru/*
 *://*.programasvirtualespc.net/*
-*://*.horoscop.info/*
-*://*.bitcrypto.info/*
 *://*.bitcotasks.com/*
 *://*.fansonlinehub.com/*
 *://*.yalifin.xyz/*
@@ -130,14 +127,12 @@
 *://*.assettoworld.com/*
 *://*.adfoc.us/*
 *://*.oii.io/*
-*://*.cryptonetos.ru/*
 *://*.cpu-miner.leaks.work/*
 *://*.1link.club/*
+*://*.slink.bid/*
 *://*.1mlink.vip/*
 *://*.zegtrends.com/*
-*://*.proviralhost.com/*
 *://*.bestadvise4u.com/*
-*://*.altblogger.net/*
 *://*.linkspy.cc/*
 *://*.fexkomin.xyz/*
 *://*.100puan.com/*
@@ -156,6 +151,7 @@
 *://*.alivedesktop.com/*
 *://*.freebitco.in/*
 *://*.mazen-ve3.com/*
+*://*.soft3arbi.com/*
 *://*.shortearn.net/*
 *://*.bigbtc.win/*
 *://*.firefaucet.win/*
@@ -181,7 +177,6 @@
 *://*.bastinews.xyz/*
 *://*.autodime.com/*
 *://*.amritadrino.com/*
-*://*.coinhub.wiki/*
 *://*.coinsrev.com/*
 *://*.zubatecno.com/*
 *://*.adwerty.com/*
@@ -207,7 +202,6 @@
 *://*.sugarona.com/*
 *://*.cekip.site/*
 *://*.techleets.xyz/*
-*://*.newsturbovid.com/*
 *://*.amanguides.com/*
 *://*.mirrored.to/*
 *://*.flybid.net/*
@@ -215,9 +209,7 @@
 *://*.cpmlink.net/*
 *://*.noodlemagazine.com/*
 *://*.huongdanvuotlink123.blogspot.com/*
-*://*.maxurlz.com/*
 *://*.mohtawaa.com/*
-*://*.linksae.com/*
 *://*.sub2unlock.com/*
 *://*.rockmods.net/*
 *://*.doodjob.com/*
@@ -250,6 +242,7 @@
 *://*.caraccidants.xyz/*
 *://*.videolyrics.in/*
 *://*.trendtrove.vip/*
+*://*.blogsward.com/*
 *://*.nisnisin.com/*
 *://*.candleoflife.fun/*
 *://*.suntechu.in/*
@@ -272,7 +265,6 @@
 *://*.loan.filmypoints.in/*
 *://*.cinemapettai.in/*
 *://*.market.gorating.in/*
-*://*.blog.anywho-com.com/*
 *://*.videoslyrics.com/*
 *://*.earn.tensailab.com/*
 *://*.postazap.com/*
@@ -395,7 +387,6 @@
 *://*.www.gifans.com/*
 *://*.zonearn.biz/*
 *://*.nulledsafe.com/*
-*://*.slink.bid/*
 *://*.www.pythondunyasi.com/*
 *://*.free4u.nurul-huda.or.id/*
 *://*.rotator.nurul-huda.sch.id/*

@@ -108,14 +108,12 @@
 *://*.adtival.network/*
 *://*.dilink.net/*
 *://*.ontechhindi.com/*
-*://*.sfl.gl/*
 *://*.gameblog.in/*
 *://*.sharetext.me/*
 *://*.btcsatoshi.net/*
 *://*.comohoy.com/*
 *://*.apkw.ru/*
 *://*.programasvirtualespc.net/*
-*://*.bitcotasks.com/*
 *://*.fansonlinehub.com/*
 *://*.yalifin.xyz/*
 *://*.terabox.fun/*
@@ -146,9 +144,7 @@
 *://*.stfly.me/*
 *://*.leitup.com/*
 *://*.offeroc.com/*
-*://*.shortearn.net/*
 *://*.newassets.hcaptcha.com/*
-*://*.alivedesktop.com/*
 *://*.freebitco.in/*
 *://*.mazen-ve3.com/*
 *://*.soft3arbi.com/*
@@ -160,7 +156,6 @@
 *://*.o-pro.online/*
 *://*.easyworldbusiness.com/*
 *://*.getzen.cash/*
-*://*.nishankhatri.xyz/*
 *://*.computerpedia.in/*
 *://*.linkatla.com/*
 *://*.myprivatejobs.com/*
@@ -173,8 +168,6 @@
 *://*.playnano.online/*
 *://*.rekonise.com/*
 *://*.acortalink.me/*
-*://*.bloginkz.com/*
-*://*.bastinews.xyz/*
 *://*.autodime.com/*
 *://*.amritadrino.com/*
 *://*.coinsrev.com/*
@@ -184,7 +177,7 @@
 *://*.shopforex.online/*
 *://*.freetrx.fun/*
 *://*.socialwolvez.com/*
-*://*.traffic1s.com/*
+*://*.bitcotasks.com/*
 *://*.suaurl.com/*
 *://*.letsboost.net/*
 *://*.coins-town.com/*
@@ -208,7 +201,6 @@
 *://*.8tm.net/*
 *://*.cpmlink.net/*
 *://*.noodlemagazine.com/*
-*://*.huongdanvuotlink123.blogspot.com/*
 *://*.mohtawaa.com/*
 *://*.sub2unlock.com/*
 *://*.rockmods.net/*
@@ -219,7 +211,6 @@
 *://*.freethailottery.live/*
 *://*.udrop.com/*
 *://*.sub2unlock.net/*
-*://*.ronakfitness.com/*
 *://*.mboost.me/*
 *://*.aiimgvlog.fun/*
 *://*.autofaucet.dutchycorp.space/*
@@ -403,13 +394,10 @@
 *://*.mdiskshortner.link/*
 *://*.clockads.in/*
 *://*.exashorts.fun/*
-*://*.cosmic-matter.pw/*
+*://*.videolyrics.in/*
 *://*.terafly.me/*
 *://*.adnews.me/*
 *://*.kyshort.xyz/*
 *://*.eazyurl.xyz/*
 *://*.linksfly.top/*
-*://*.bestlink.pro/*
 *://*.playstore.pw/*
-*://*.sigmalinks.in/*
-*://*.r1.foxylinks.site/*

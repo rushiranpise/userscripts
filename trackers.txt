@@ -332,13 +332,13 @@ http://bt.okmp3.ru:2710/announce
 
 http://bvarf.tracker.sh:2086/announce
 
-http://ch3oh.ru:6969/announce
-
 http://ipv6.rer.lol:6969/announce
 
 http://jvavav.com:80/announce
 
 http://nyaa.tracker.wf:7777/announce
+
+http://region.nl1.privex.cc:6969/announce
 
 http://retracker.hotplug.ru:2710/announce
 
@@ -356,9 +356,9 @@ http://tracker-zhuqiy.dgj055.icu:80/announce
 
 http://tracker.bt4g.com:2095/announce
 
-http://tracker.dler.org:6969/announce
+http://tracker.dler.com:6969/announce
 
-http://tracker.edkj.club:6969/announce
+http://tracker.dler.org:6969/announce
 
 http://tracker.electro-torrent.pl:80/announce
 
@@ -373,6 +373,8 @@ http://tracker.opentrackr.org:1337/announce
 http://tracker.renfei.net:8080/announce
 
 http://tracker.waaa.moe:6969/announce
+
+http://tracker1.bt.moack.co.kr:80/announce
 
 http://tracker2.dler.org:80/announce
 
@@ -401,8 +403,6 @@ https://pybittrack.retiolus.net:443/announce
 https://retracker2.x2k.ru:443/announce
 
 https://threads.canofsocks.com:443/announce
-
-https://torrent.tracker.durukanbal.com:443/announce
 
 https://tr.burnabyhighstar.com:443/announce
 
@@ -476,6 +476,8 @@ udp://exodus.desync.com:6969/announce
 
 udp://ipv4.rer.lol:2710/announce
 
+udp://ismaarino.com:1234/announce
+
 udp://jutone.com:6969/announce
 
 udp://jvavav.com:6969/announce
@@ -542,8 +544,6 @@ udp://tracker.darkness.services:6969/announce
 
 udp://tracker.ddunlimited.net:6969/announce
 
-udp://tracker.deadorbit.nl:6969/announce
-
 udp://tracker.dler.com:6969/announce
 
 udp://tracker.dler.org:6969/announce
@@ -559,8 +559,6 @@ udp://tracker.fnix.net:6969/announce
 udp://tracker.gmi.gd:6969/announce
 
 udp://tracker.opentrackr.org:1337/announce
-
-udp://tracker.skynetcloud.site:6969/announce
 
 udp://tracker.skyts.net:6969/announce
 

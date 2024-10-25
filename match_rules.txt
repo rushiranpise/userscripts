@@ -86,7 +86,6 @@
 *://*.gogodl.com/*
 *://*.turbobit.net/*
 *://*.4shared.com/*
-*://*.1ink.cc/*
 *://*.keeplinks.org/*
 *://*.1short.io/*
 *://*.earnlink.io/*
@@ -156,9 +155,7 @@
 *://*.o-pro.online/*
 *://*.easyworldbusiness.com/*
 *://*.getzen.cash/*
-*://*.computerpedia.in/*
 *://*.linkatla.com/*
-*://*.myprivatejobs.com/*
 *://*.claimfreetrx.online/*
 *://*.dl.lk21static.xyz/*
 *://*.easylink.gamingwithtr.com/*

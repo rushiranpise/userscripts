@@ -120,7 +120,6 @@
 *://*.karyawan.co.id/*
 *://*.icerik.site/*
 *://*.ponselharian.com/*
-*://*.tonanmedia.my.id/*
 *://*.assettoworld.com/*
 *://*.adfoc.us/*
 *://*.oii.io/*
@@ -128,6 +127,7 @@
 *://*.1link.club/*
 *://*.slink.bid/*
 *://*.1mlink.vip/*
+*://*.blog.yurasu.xyz/*
 *://*.zegtrends.com/*
 *://*.bestadvise4u.com/*
 *://*.linkspy.cc/*
@@ -277,7 +277,6 @@
 *://*.battleroyal.online/*
 *://*.rajdhanimaja.com/*
 *://*.iphoto.site/*
-*://*.copy-paste-fonts.com/*
 *://*.mohtawaa.com/*
 *://*.multiup.org/*
 *://*.modsfire.com/*

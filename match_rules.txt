@@ -23,6 +23,7 @@
 *://*.uppit.com/*
 *://*.krakenfiles.com/*
 *://*.gofile.io/*
+*://*.birlink.vip/*
 *://*.karanpc.com/*
 *://*.file-upload.net/*
 *://*.hexupload.net/*
@@ -52,7 +53,6 @@
 *://*.ac.totsugeki.com/*
 *://*.mega4upload.com/*
 *://*.uploady.io/*
-*://*.up-load.io/*
 *://*.anonym.ninja/*
 *://*.vosan.co/*
 *://*.apkmody.io/*
@@ -114,7 +114,6 @@
 *://*.apkw.ru/*
 *://*.programasvirtualespc.net/*
 *://*.fansonlinehub.com/*
-*://*.yalifin.xyz/*
 *://*.terabox.fun/*
 *://*.ayelads.com/*
 *://*.karyawan.co.id/*
@@ -170,14 +169,11 @@
 *://*.coinsrev.com/*
 *://*.zubatecno.com/*
 *://*.adwerty.com/*
-*://*.modebaca.com/*
-*://*.shopforex.online/*
-*://*.freetrx.fun/*
 *://*.socialwolvez.com/*
 *://*.bitcotasks.com/*
 *://*.suaurl.com/*
 *://*.letsboost.net/*
-*://*.coins-town.com/*
+*://*.playonpc.online/*
 *://*.shortit.pw/*
 *://*.ify.ac/*
 *://*.lanza.me/*
@@ -215,7 +211,6 @@
 *://*.writedroid.in/*
 *://*.web1s.com/*
 *://*.modmania.eu.org/*
-*://*.yalifin.xyz/*
 *://*.ruwet.us/*
 *://*.hrpunjab.in/*
 *://*.autodime.com/*

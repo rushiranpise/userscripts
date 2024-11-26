@@ -81,6 +81,7 @@
 *://*.rawlazy.si/*
 *://*.modsbase.com/*
 *://*.dropgalaxy.com/*
+*://*.downloader.tips/*
 *://*.hitfile.net/*
 *://*.filedm.com/*
 *://*.gogodl.com/*
@@ -105,8 +106,6 @@
 *://*.webhostingtips.club/*
 *://*.shareus.io/*
 *://*.adtival.network/*
-*://*.dilink.net/*
-*://*.ontechhindi.com/*
 *://*.gameblog.in/*
 *://*.sharetext.me/*
 *://*.btcsatoshi.net/*
@@ -173,7 +172,6 @@
 *://*.bitcotasks.com/*
 *://*.suaurl.com/*
 *://*.letsboost.net/*
-*://*.playonpc.online/*
 *://*.shortit.pw/*
 *://*.ify.ac/*
 *://*.lanza.me/*
@@ -214,6 +212,7 @@
 *://*.ruwet.us/*
 *://*.hrpunjab.in/*
 *://*.autodime.com/*
+*://*.techstudify.com/*
 *://*.zubatecno.com/*
 *://*.hiharshit.in/*
 *://*.tanytech.com/*
@@ -264,6 +263,7 @@
 *://*.tech.filohappy.in/*
 *://*.vietnamtravelguide.top/*
 *://*.earn.hostadviser.net/*
+*://*.kelasadsense.com/*
 *://*.viralsinfo.com/*
 *://*.insuranceinfos.in/*
 *://*.www.filmypoints.in/*

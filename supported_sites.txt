@@ -97,6 +97,7 @@ rawlazy.si
 modsbase.com
 dropgalaxy.com
 file-upload.com|file-upload.org
+downloader.tips
 hitfile.net
 (thecubexguide|miuiflash).com|(djxmaza|jytechs).in
 filedm.com
@@ -113,6 +114,7 @@ onimports.com.br
 jameeltips.us
 post.copydev.com
 linegee.net
+bedrat.xyz|uhtrdr47.online
 pro.sh
 proappapk.com|meclipstudy.in
 1bitspace.com
@@ -127,8 +129,6 @@ webhostingtips.club
 michaelemad.com|7misr4day.com
 shareus.io
 adtival.network
-dilink.net
-ontechhindi.com
 gobits.me|zcash.one|clickscoin.com|beycoin.xyz|bitsusdt.com|adsluffa.online
 gameblog.in
 sharetext.me
@@ -149,10 +149,10 @@ coingraph.us|eblog.pro|writeprofit.org
 techanalyzer.eu|(miner-sim|networkhint|askpaccosi).com
 nullscript.info|freebinance.top
 (10short|lollty).pro|mamahawa.com
-(aduzz|tutorialsaya|indobo|baristakesehatan).com|deltabtc.xyz|bit4me.info
+(aduzz|tutorialsaya|indobo|baristakesehatan|merekrut).com|deltabtc.xyz|bit4me.info
 cryptfaucet.com|izseo.net
 (cryptosparatodos|placementsmela|nutrisavors|bgmtelugucreations|soundaudioguru|howtoconcepts).com|(insurancepost|financeandinsurance|tecnotech|healthmedic).xyz|paidinsurance.in
-(netflixrelease|mangareleasedate|freemodapp|zutiza|phixshop|mp4news|trancebazar|taazaalerts|uskloans|feedaso|djhindustan).com|(myfirstname|ignoupur).in|(mdsuuniversity|sarkarisahayata).org|rrbntpc2024.net
+(netflixrelease|mangareleasedate|freemodapp|zutiza|phixshop|mp4news|uskloans|feedaso|djhindustan).com|(myfirstname|ignoupur).in|(mdsuuniversity|sarkarisahayata).org|(rrbntpc2024|kisannews).net
 (crypto2u|bestcoinsites).xyz
 fansonlinehub.com
 (howifx|vocalley|financerites|yogablogfit|healthfirstweb|junkyponk|mythvista|blog-myst).com|ss7.info|sololevelingmanga.pics
@@ -219,7 +219,7 @@ uptobhai\.*|uplinkto\.*|shortlinkto\.*
 tmail.io|(gamezizo|fitdynamos).com
 (exeo|exego).app|(mrgec|emxaw|ijvam|falpus).com|evernia.site
 (on-scroll|diudemy|maqal360).com
-(forexrw7|forex-articles|3rabsports|fx-22|watchtheeye).com|gold-24.net|bedrat.xyz|(offeergames|todogame).online
+(forexrw7|forex-articles|3rabsports|fx-22|watchtheeye).com|gold-24.net|(offeergames|todogame).online
 (leaveadvice|mensventure).com
 jameeltips.us|cryptonworld.space
 hynews.biz|chamcuuhoc.com
@@ -234,7 +234,6 @@ getzen.cash
 deportealdia.live|noweconomy.live|techgeek.digital
 nishankhatri.xyz|(bebkub|importantclass).com
 writedroid.eu.org|modmania.eu.org|writedroid.in|mytop5.club
-computerpedia.in|advicefunda.com
 linkatla.com
 claimfreetrx.online
 offers4crypto.xyz|ewall.biz
@@ -242,17 +241,17 @@ dl.lk21static.xyz
 easylink.gamingwithtr.com
 copy-paste-fonts.com|cryptednews.space
 solarchaine.com
-(remixsounds|helpowi|helpdeep|thinksrace|tipsloanusa).com|(remixone|webseriesreel).in|uprwssp.org|securitywaittimes.us
+(remixsounds|helpdeep|thinksrace).com|uprwssp.org
 stly.link|snaplessons.net|atravan.net
-(computerpedia|techconnection).in|(myprivatejobs|advicefunda).com|bestloanoffer.net
 shrinke\.*|shrinkme\.*|(linkvhoriz|paid4link|icashfly).com|bicolink.net|wordcounter.icu|pwrpa.cc|paylinks.cloud
+(computerpedia|techconnection).in|(myprivatejobs|advicefunda|moneymatteronline).com|bestloanoffer.net|bhulekhnaksha.org
 revly.click
 trangchu.news|downfile.site|(techacode|expertvn).com|azmath.info|expertvn.com|aztravels.net|top10cafe.se|handydecor.com.vn
 theconomy.me|(askpaccosi|halosenja|sainny|wellness4live).com|(2the|techbeast).space|(wikiversity|inicerita).online|cryptomonitor.in|break.id
 (theconomy|nightfaucet).me|(imagenesderopaparaperros|linclik|up4cash|smoner|atglinks).com|happy-living.online|galaxy-link.space|oke.io|forextrader.site|tinygo.co
 (blogtechh|host2loan|techbixby|wptohost|hosttbuzz|blog-blend|policiesreview|blogmystt|wp2hostt|advertisingcamps).com|clk.wiki|(oko|aii).sh|clk.kim
 techyreviewx.com|desiupload.co
-(calmgram|adbitfly|blogsward).com|adbitfly.in
+(calmgram|adbitfly|blogsward|coinjest).com|adbitfly.in
 shorterall.com
 exactpay.online|neverdims.com|videoclip.info|sproutworkers.co|coinsfaucet.fun
 (crypto4yu|manofadan|wiour).com|btcbitco.in|readbitcoin.org
@@ -284,8 +283,8 @@ slinkware.com|aghtas.com|youssefsayed.com|alghtas.xyz|newworldnew.com|tackaway.c
 link.goto.com.np|(appkamods|bankvacency|otomi-games).com
 hamrolekh.com|(mgame|oncoin).info|lifeinsurancesblog.xyz|nishankhatri.com.np|quanngon.org
 (lootlinks|onepiecered).co|(loot-links|links-loot|loot-link|mega-guy|utopianleaks|eofmukindwo|realiukzemydre|kmendation|bstlar|tonordersitye|bleleadersto|daughablelea).com|(lootdest|lootlink|best-links).org|lootdest.info|linksloot.net|free-content.pro
-(homeculina|ionclub777|ineedskin|auntmanny|businessuniqueidea|plumptofit|cookingpumpkin|elishea|audioinspects|celebperson|dreamhomelabs|fishingbreeze).com|(financewrapper|recipes4all).net|(aayurvedshastra|allnewspoint).in|chefslink.org|lawyex.co|mdn.lol
-playonpc.online
+(homeculina|ionclub777|ineedskin|auntmanny|businessuniqueidea|plumptofit|cookingpumpkin|elishea|audioinspects|celebperson|dreamhomelabs|fishingbreeze).com|(financewrapper|recipes4all|solidcoins).net|(aayurvedshastra|allnewspoint).in|chefslink.org|lawyex.co|mdn.lol
+playonpc.online|quins.us|retrotechreborn.com
 shortit.pw
 short.croclix.me|adz7short.space
 adshnk.com|adshrink.it
@@ -340,6 +339,7 @@ modmania.eu.org
 ruwet.us
 hrpunjab.in
 autodime.com
+techstudify.com
 zubatecno.com
 hiharshit.in
 tanytech.com
@@ -390,6 +390,7 @@ djnonstopmusic.in
 tech.filohappy.in
 vietnamtravelguide.top
 earn.hostadviser.net
+kelasadsense.com
 viralsinfo.com
 insuranceinfos.in
 www.filmypoints.in

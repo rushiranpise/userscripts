@@ -108,7 +108,6 @@
 *://*.adtival.network/*
 *://*.gameblog.in/*
 *://*.sharetext.me/*
-*://*.btcsatoshi.net/*
 *://*.comohoy.com/*
 *://*.apkw.ru/*
 *://*.programasvirtualespc.net/*
@@ -275,6 +274,7 @@
 *://*.mohtawaa.com/*
 *://*.multiup.org/*
 *://*.modsfire.com/*
+*://*.snipn.cc/*
 *://*.social-unlock.com/*
 *://*.nft.blogyindia.com/*
 *://*.my.dropz.xyz/*
@@ -315,7 +315,6 @@
 *://*.shortyearn.com/*
 *://*.upshrink.com/*
 *://*.tr.link/*
-*://*.nanolinks.in/*
 *://*.megaurl.in/*
 *://*.adshort.co/*
 *://*.atglinks.comk/*
@@ -356,10 +355,7 @@
 *://*.ay.live/*
 *://*.timeforearn.com/*
 *://*.urlstox.com/*
-*://*.lollty.com/*
-*://*.okrzone.com/*
 *://*.gamerfang.in/*
-*://*.videolyrics.in/*
 *://*.blog.mphealth.online/*
 *://*.techrayzer.com/*
 *://*.economiarelevante.com.br/*

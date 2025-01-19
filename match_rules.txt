@@ -1,3 +1,4 @@
+*://*.linkpay.top/*
 *://*.mixrootmods.com/*
 *://*.go.link4rev.site/*
 *://*.infinityskull.com/*
@@ -122,8 +123,6 @@
 *://*.fexkomin.xyz/*
 *://*.100puan.com/*
 *://*.sub2get.com/*
-*://*.mneyvip.com/*
-*://*.jobform.in/*
 *://*.go.shareus.in/*
 *://*.playpaste.com/*
 *://*.suratresmi.id/*
@@ -200,7 +199,8 @@
 *://*.diglies.com/*
 *://*.ruwet.us/*
 *://*.autodime.com/*
-*://*.techstudify.com/*
+*://*.fitnesswifi.com/*
+*://*.newshuta.in/*
 *://*.zubatecno.com/*
 *://*.olhonagrana.com/*
 *://*.1apple.xyz/*
@@ -238,6 +238,7 @@
 *://*.reminimod.co/*
 *://*.tech.filmypoints.in/*
 *://*.dpbossreal.com/*
+*://*.indiamaja.com/*
 *://*.tbhlabsnews.com/*
 *://*.interestingfactsare.com/*
 *://*.dealprice.co/*
@@ -249,9 +250,11 @@
 *://*.www.filmypoints.in/*
 *://*.cafe.warrenrahul.in/*
 *://*.techurlshort.in/*
+*://*.ninjamodz.litonmods.com/*
 *://*.onlinerecruiters.in/*
-*://*.battleroyal.online/*
+*://*.earnmoneyyt.com/*
 *://*.rajdhanimaja.com/*
+*://*.ninjamodz.mtcremix.com/*
 *://*.mohtawaa.com/*
 *://*.multiup.org/*
 *://*.modsfire.com/*

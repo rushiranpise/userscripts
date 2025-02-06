@@ -20,7 +20,7 @@
 // @match      *://*.carsmania.net/*
 // @match      *://*.ewall.biz/*
 // @grant      none
-// @version    7.0
+// @version    7.1
 // @author     Bloggerpemula
 // @run-at     document-start
 // @description Bypass Addition for Bypass All Shortlinks
@@ -48,7 +48,7 @@
     if (elementExists(query)) {window[funcName](function() {(query).click();}, timeInSec * 1000);}}
   function SubmitBp(selector, time) {setTimeout(()=>{let elem = (typeof selector === 'string') ? bp(selector).closest('form') : selector; elem.requestSubmit();}, time*1000);}
   function Captchacheck(selector) {if (elementExists("iframe[src^='https://newassets.hcaptcha.com']")) {return window.hcaptcha.getResponse().length !== 0;
-    } else if (elementExists("input[name='cf-turnstile-response']") && !elementExists('.loading-spinner.spacer')) {return window.turnstile.getResponse().length !== 0;} else if (elementExists("iframe[title='reCAPTCHA']")) {return window.grecaptcha.getResponse().length !== 0;
+    } else if (elementExists("input[name='cf-turnstile-response']") && !elementExists('.core-msg.spacer.spacer-top')) {return window.turnstile.getResponse().length !== 0;} else if (elementExists("iframe[title='reCAPTCHA']")) {return window.grecaptcha.getResponse().length !== 0;
     } else if (elementExists('#iconcaptcha')) {let b = setInterval(() => {let p = bp('.iconcaptcha-holder.iconcaptcha-theme-light.iconcaptcha-success'); if (p) {clearInterval(b); SubmitBp(selector, 1);}}, 1000);} else {return;}}
   function GetForm() {var forms = document.forms; for (var i = 0; i < forms.length; i++) {var bait = forms[i].action;
      if (/bypass.html|adblock.html/.test(bait)) continue; return forms[i];}}

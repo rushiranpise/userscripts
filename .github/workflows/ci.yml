@@ -78,7 +78,7 @@ jobs:
           python 1_download_untouched_and_patch_it.py
           python 2_generate_includes.py
           python 3_patch.py
-          python 4_add_extra_bypasses.py
+          # python 4_add_extra_bypasses.py
 
           rm -rf *.py
           

@@ -42,7 +42,6 @@
 /^(https?:\/\/)(.+)?((keedabankingnews|aceforce2apk).com|themezon.net|healthvainsure.site|rokni.xyz|bloggingwow.store|dsmusic.in)(\/.*)/
 /^(https?:\/\/)(.+)?((aduzz|tutorialsaya|baristakesehatan|merekrut).com|deltabtc.xyz|bit4me.info)(\/.*)/
 /^(https?:\/\/)(.+)?(yoshare.net|olhonagrana.com)(\/.*)/
-/^(https?:\/\/)(.+)?(hxfile.co|ex-load.com|megadb.net)(\/.*)/
 /^(https?:\/\/)(.+)?(coincroco.com|surflink.tech|cointox.net)(\/.*)/
 /^(https?:\/\/)(.+)?(solidcoins.net|fishingbreeze.com)(\/.*)/
 /^(https?:\/\/)(.+)?((superheromaniac|spatsify|mastkhabre|ukrupdate).com)(\/.*)/
@@ -77,7 +76,7 @@
 /^(https?:\/\/)(.+)?(tutwuri.id|(besargaji|link2unlock).com)(\/.*)/
 /^(https?:\/\/)(.+)?((lyricsbaazaar|ezeviral).com)(\/.*)/
 /^(https?:\/\/)(.+)?((mangareleasedate|sabkiyojana|teqwit|bulkpit|odiafm).com|(loopmyhub|thepopxp).shop|cryptoblast.online)(\/.*)/
-/^(https?:\/\/)(.+)?((playonpc|yolasblog|playarcade).online|(quins|megahosting).us|(retrotechreborn|insurelean|ecosolardigest|finance240|2wheelslife|historyofyesterday|tradeshowrating).com|gally.shop|evegor.net|freeat30.org|(qanin|ivnlnews).xyz)(\/.*)/
+/^(https?:\/\/)(.+)?((playonpc|yolasblog).online|quins.us|(retrotechreborn|insurelean|ecosolardigest|finance240|2wheelslife|historyofyesterday).com|gally.shop|freeat30.org|ivnlnews.xyz)(\/.*)/
 /^(https?:\/\/)(.+)?(short.croclix.me|adz7short.space)(\/.*)/
 /^(https?:\/\/)(.+)?(crypto-fi.net|claimcrypto.cc|xtrabits.click|(web9academy|bioinflu|bico8).com|(ourcoincash|studyis).xyz)(\/.*)/
 /^(https?:\/\/)(.+)?(dutchycorp.ovh|(beingtek|encurt4|10short).com|(zagl|shrinkforearn|beinglink).in|seulink.digital|oii.io|hamody.pro|metasafelink.site|wordcounter.icu|pwrpa.cc|flyad.vip|seulink.online|pahe.plus|tfly.link)(\/.*)/

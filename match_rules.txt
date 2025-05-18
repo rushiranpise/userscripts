@@ -25,8 +25,11 @@
 *://*.aysodamag.com/*
 *://*.file-upload.net/*
 *://*.hexupload.net/*
+*://*.gofile.io/*
 *://*.cryptonewssite.rf.gd/*
+*://*.rapidgator.net/*
 *://*.dbree.me/*
+*://*.dropgalaxy.com/*
 *://*.1bitspace.com/*
 *://*.cshort.org/*
 *://*.revlink.pro/*
@@ -34,6 +37,7 @@
 *://*.panyhealth.com/*
 *://*.playpaste.com/*
 *://*.lanza.me/*
+*://*.karanpc.com/*
 *://*.lifeezee.com/*
 *://*.jioupload.icu/*
 *://*.douploads.net/*
@@ -43,6 +47,7 @@
 *://*.terabox.fun/*
 *://*.shortlinks2btc.somee.com/*
 *://*.kisalt.digital/*
+*://*.buzzheavier.com/*
 *://*.lksfy.com/*
 *://*.linksly.co/*
 *://*.apkadmin.com/*
@@ -90,6 +95,7 @@
 *://*.fansonlinehub.com/*
 *://*.mexa.sh/*
 *://*.up-4ever.net/*
+*://*.udrop.com/*
 *://*.hitfile.net/*
 *://*.mirrored.to/*
 *://*.mboost.me/*

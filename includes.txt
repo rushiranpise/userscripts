@@ -30,8 +30,11 @@
 // @match *://*.aysodamag.com/*
 // @match *://*.file-upload.net/*
 // @match *://*.hexupload.net/*
+// @match *://*.gofile.io/*
 // @match *://*.cryptonewssite.rf.gd/*
+// @match *://*.rapidgator.net/*
 // @match *://*.dbree.me/*
+// @match *://*.dropgalaxy.com/*
 // @match *://*.1bitspace.com/*
 // @match *://*.cshort.org/*
 // @match *://*.revlink.pro/*
@@ -39,6 +42,7 @@
 // @match *://*.panyhealth.com/*
 // @match *://*.playpaste.com/*
 // @match *://*.lanza.me/*
+// @match *://*.karanpc.com/*
 // @match *://*.lifeezee.com/*
 // @match *://*.jioupload.icu/*
 // @match *://*.douploads.net/*
@@ -48,6 +52,7 @@
 // @match *://*.terabox.fun/*
 // @match *://*.shortlinks2btc.somee.com/*
 // @match *://*.kisalt.digital/*
+// @match *://*.buzzheavier.com/*
 // @match *://*.lksfy.com/*
 // @match *://*.linksly.co/*
 // @match *://*.apkadmin.com/*
@@ -95,6 +100,7 @@
 // @match *://*.fansonlinehub.com/*
 // @match *://*.mexa.sh/*
 // @match *://*.up-4ever.net/*
+// @match *://*.udrop.com/*
 // @match *://*.hitfile.net/*
 // @match *://*.mirrored.to/*
 // @match *://*.mboost.me/*
@@ -205,7 +211,6 @@
 // @include /^(https?:\/\/)(.+)?((keedabankingnews|aceforce2apk).com|themezon.net|healthvainsure.site|rokni.xyz|bloggingwow.store|dsmusic.in)(\/.*)/
 // @include /^(https?:\/\/)(.+)?((aduzz|tutorialsaya|baristakesehatan|merekrut).com|deltabtc.xyz|bit4me.info)(\/.*)/
 // @include /^(https?:\/\/)(.+)?(yoshare.net|olhonagrana.com)(\/.*)/
-// @include /^(https?:\/\/)(.+)?(hxfile.co|ex-load.com|megadb.net)(\/.*)/
 // @include /^(https?:\/\/)(.+)?(coincroco.com|surflink.tech|cointox.net)(\/.*)/
 // @include /^(https?:\/\/)(.+)?(solidcoins.net|fishingbreeze.com)(\/.*)/
 // @include /^(https?:\/\/)(.+)?((superheromaniac|spatsify|mastkhabre|ukrupdate).com)(\/.*)/
@@ -240,7 +245,7 @@
 // @include /^(https?:\/\/)(.+)?(tutwuri.id|(besargaji|link2unlock).com)(\/.*)/
 // @include /^(https?:\/\/)(.+)?((lyricsbaazaar|ezeviral).com)(\/.*)/
 // @include /^(https?:\/\/)(.+)?((mangareleasedate|sabkiyojana|teqwit|bulkpit|odiafm).com|(loopmyhub|thepopxp).shop|cryptoblast.online)(\/.*)/
-// @include /^(https?:\/\/)(.+)?((playonpc|yolasblog|playarcade).online|(quins|megahosting).us|(retrotechreborn|insurelean|ecosolardigest|finance240|2wheelslife|historyofyesterday|tradeshowrating).com|gally.shop|evegor.net|freeat30.org|(qanin|ivnlnews).xyz)(\/.*)/
+// @include /^(https?:\/\/)(.+)?((playonpc|yolasblog).online|quins.us|(retrotechreborn|insurelean|ecosolardigest|finance240|2wheelslife|historyofyesterday).com|gally.shop|freeat30.org|ivnlnews.xyz)(\/.*)/
 // @include /^(https?:\/\/)(.+)?(short.croclix.me|adz7short.space)(\/.*)/
 // @include /^(https?:\/\/)(.+)?(crypto-fi.net|claimcrypto.cc|xtrabits.click|(web9academy|bioinflu|bico8).com|(ourcoincash|studyis).xyz)(\/.*)/
 // @include /^(https?:\/\/)(.+)?(dutchycorp.ovh|(beingtek|encurt4|10short).com|(zagl|shrinkforearn|beinglink).in|seulink.digital|oii.io|hamody.pro|metasafelink.site|wordcounter.icu|pwrpa.cc|flyad.vip|seulink.online|pahe.plus|tfly.link)(\/.*)/
